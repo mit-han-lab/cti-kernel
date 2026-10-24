@@ -1,0 +1,3 @@
+dev,shape,B,ctx,Q,C,provider,merge,splits,n,pairs,cand_us,vllm_ratio,vllm_eps,sglang_ratio,sglang_eps,gate,correct
+gb10,draft_noncausal,2,131056,16,131072,cute-splitkv,legacy,2,5,60,4891.7,0.715,0.05,1.078,0.042,FAIL,True
+gb10,q3_target,2,131056,16,131072,cute-splitkv,distributed,1,8,60,4612.5,0.67,0.038,1.01,0.033,PASS,True

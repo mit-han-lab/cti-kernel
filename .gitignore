@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.dist-info/
+
+/build/
+/dist/
+/.venv/
+/venv/
+/env/
+/.worklog/
+
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.clangd
+
+# generated profiler reports
+*.nsys-rep
+*.ncu-rep

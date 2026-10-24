@@ -1,0 +1,45 @@
+[default.extend-words]
+# Whether a kernel shape compiles (LoRA PTX qualification).
+compilability = "compilability"
+# PTX `setp` (set predicate), the model's `A_log` parameter and vLLM's `ba` ([b, a]
+# gate projection) buffer, also a fragment of hex kernel ids; not misspellings.
+setp = "setp"
+alog = "alog"
+# GDN merged beta/alpha projection.
+ba = "ba"
+# Unsigned FP8 scale formats (UE4M3, UE8M0).
+ue = "ue"
+
+# Shared-expert sigmoid gate abbreviation in the preserved MoE ports.
+gam = "gam"
+# `torch.arange` in Markdown code examples.
+arange = "arange"
+
+# CuTe DSL idioms in the GDN port (thread partitions `thr`, copy atoms `cpy`, the
+# transposed operand `ot`) and its precision-case family name `colinear`.
+thr = "thr"
+cpy = "cpy"
+ot = "ot"
+colinear = "colinear"
+
+# Marlin's upstream lab name (IST-DASLab) and the GEMM term "subtile".
+ist = "ist"
+subtile = "subtile"
+
+[default.extend-identifiers]
+# Public PyTorch CUDA device property.
+shared_memory_per_block_optin = "shared_memory_per_block_optin"
+# CUDA runtime device attribute.
+cudaDevAttrMaxSharedMemoryPerBlockOptin = "cudaDevAttrMaxSharedMemoryPerBlockOptin"
+# Pinned SGLang production verifier keyword names.
+retrive_index = "retrive_index"
+retrive_next_token = "retrive_next_token"
+retrive_next_sibling = "retrive_next_sibling"
+
+[files]
+# Compact ceiling provenance carries full-file SHA-256 hashes.
+# The GDN port's ULP regression cases are base85-packed tensors.
+extend-exclude = [
+  "benchmark/sol/ceilings/*.json",
+  "benchmark/kernel_tuning/gdn_prefill_port/_ulp_cases.py",
+]

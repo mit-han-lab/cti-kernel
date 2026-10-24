@@ -1,0 +1,37 @@
+{
+ "op": "gdn.prefill.provider",
+ "version": 1,
+ "device_class": "sm120-188",
+ "source": "benchmark.kernel_tuning.gdn_prefill_compare (whole layer, 12 paired cold-L2 ABAB graph replays) at c5624c97 with the port and v1 forced per row; precision: cp2_precision.py on c5624c97 (10-12 bounds vs fla-core, 5 seeds): 16x32/16x48 x ordinary/slow/heavy x T 16-16384 and packed [64,64], [128]x4, [8,200,8,296], [512]x4, [2048]x4, [4096,4096], [6000,1500,500,192], [1024]x8 (8-sequence frozen inputs extended for this run); every RMS ratio <= 1.05x, geomeans <= 1.01; max misses are the named outliers (tests/gpu/test_gdn_port_product.py PORT_MAX_EXPECTED) or shared with v1 (16x32 T 16-256: the identical BF16 element, v1 max ratio equal); RTX 5090 and RTX PRO 6000 identical",
+ "rule": "port on every bucket (all T, N = 1..256) at (16, 32) and (16, 48): one row per sequence bucket at the smallest token edge; (8, 16) and (8, 24) unchanged",
+ "picks": {
+  "port": 18
+ },
+ "columns": "rows: port speedup over CuTe v1 (v1 us / port us), standard grid",
+ "rows": {
+  "16x48 [16]": 2.166,
+  "16x48 [64]": 2.249,
+  "16x48 [128]": 1.5,
+  "16x48 [256]": 1.218,
+  "16x48 [512]": 1.386,
+  "16x48 [1024]": 1.557,
+  "16x48 [2048]": 1.833,
+  "16x48 [4096]": 1.991,
+  "16x48 [8192]": 2.113,
+  "16x48 [16384]": 2.219,
+  "16x48 [64,64]": 2.502,
+  "16x48 [128]x4": 1.611,
+  "16x48 [8,200,8,296]": 1.568,
+  "16x48 [4096,4096]": 2.263,
+  "16x48 [2048]x4": 2.009,
+  "16x48 [1024]x8": 2.336,
+  "16x48 [6000,1500,500,192]": 1.379,
+  "16x32 [1024]": 1.098,
+  "16x32 [1536]": 1.279,
+  "16x32 [2048]": 1.259,
+  "16x32 [4096]": 1.487,
+  "16x32 [8192]": 1.682,
+  "16x32 [16384]": 1.706
+ },
+ "note": "16x32 short and packed rows measured by the gate bench after this table (the forced-port grid ran 16x48 only)"
+}

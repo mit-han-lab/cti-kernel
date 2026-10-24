@@ -1,0 +1,865 @@
+device,shape,Q,B,ctx,capacity,stopgap_provider,stopgap_us,fi_fixed_us,cute_us,vllm_flash_attn_us,sglang_fi071_us,faster_market,ratio_vs_faster_market,pass
+RTX 5090,draft_noncausal,4,1,100,exact,DraftAttention CuTe,4.80,6.28,4.80,5.51,5.35,SGLang FI 0.7.1,0.897,PASS
+RTX 5090,draft_noncausal,4,1,400,exact,DraftAttention CuTe,5.71,7.44,5.71,16.08,8.27,SGLang FI 0.7.1,0.690,PASS
+RTX 5090,draft_noncausal,4,1,1000,exact,DraftAttention CuTe,7.16,8.92,7.16,30.49,9.04,SGLang FI 0.7.1,0.792,PASS
+RTX 5090,draft_noncausal,4,2,100,exact,DraftAttention CuTe,4.84,7.20,4.84,5.58,6.87,vllm_flash_attn,0.867,PASS
+RTX 5090,draft_noncausal,4,2,400,exact,DraftAttention CuTe,6.56,9.45,6.56,16.16,11.69,SGLang FI 0.7.1,0.561,PASS
+RTX 5090,draft_noncausal,4,2,1000,exact,DraftAttention CuTe,9.44,13.03,9.44,30.61,13.12,SGLang FI 0.7.1,0.719,PASS
+RTX 5090,draft_noncausal,4,3,100,exact,DraftAttention CuTe,4.90,7.65,4.90,5.70,10.69,vllm_flash_attn,0.860,PASS
+RTX 5090,draft_noncausal,4,3,400,exact,DraftAttention CuTe,7.61,10.73,7.61,16.17,12.45,SGLang FI 0.7.1,0.611,PASS
+RTX 5090,draft_noncausal,4,3,1000,exact,DraftAttention CuTe,12.68,14.56,12.68,30.82,14.69,SGLang FI 0.7.1,0.863,PASS
+RTX 5090,draft_noncausal,4,4,100,exact,DraftAttention CuTe,4.93,7.85,4.93,5.84,10.73,vllm_flash_attn,0.845,PASS
+RTX 5090,draft_noncausal,4,4,400,exact,DraftAttention CuTe,8.45,11.77,8.45,16.27,13.12,SGLang FI 0.7.1,0.644,PASS
+RTX 5090,draft_noncausal,4,4,1000,exact,DraftAttention CuTe,15.25,16.57,15.25,31.19,16.75,SGLang FI 0.7.1,0.911,PASS
+RTX 5090,draft_noncausal,5,1,100,exact,DraftAttention CuTe,4.69,7.00,4.69,5.56,6.86,vllm_flash_attn,0.843,PASS
+RTX 5090,draft_noncausal,5,1,400,exact,DraftAttention CuTe,5.67,8.36,5.67,16.19,11.36,SGLang FI 0.7.1,0.499,PASS
+RTX 5090,draft_noncausal,5,1,1000,exact,DraftAttention CuTe,7.16,11.67,7.16,30.49,11.75,SGLang FI 0.7.1,0.609,PASS
+RTX 5090,draft_noncausal,5,2,100,exact,DraftAttention CuTe,4.78,7.39,4.78,5.64,6.95,vllm_flash_attn,0.848,PASS
+RTX 5090,draft_noncausal,5,2,400,exact,DraftAttention CuTe,6.43,9.43,6.43,16.16,11.82,SGLang FI 0.7.1,0.544,PASS
+RTX 5090,draft_noncausal,5,2,1000,exact,DraftAttention CuTe,9.44,13.60,9.44,30.61,13.26,SGLang FI 0.7.1,0.712,PASS
+RTX 5090,draft_noncausal,5,3,100,exact,DraftAttention CuTe,4.80,7.77,4.80,5.73,10.75,vllm_flash_attn,0.838,PASS
+RTX 5090,draft_noncausal,5,3,400,exact,DraftAttention CuTe,7.57,10.86,7.57,16.18,12.59,SGLang FI 0.7.1,0.601,PASS
+RTX 5090,draft_noncausal,5,3,1000,exact,DraftAttention CuTe,12.76,14.81,12.76,30.94,14.92,SGLang FI 0.7.1,0.855,PASS
+RTX 5090,draft_noncausal,5,4,100,exact,DraftAttention CuTe,4.82,8.28,4.82,6.11,16.98,vllm_flash_attn,0.789,PASS
+RTX 5090,draft_noncausal,5,4,400,exact,DraftAttention CuTe,8.35,14.99,8.35,16.22,18.91,vllm_flash_attn,0.515,PASS
+RTX 5090,draft_noncausal,5,4,1000,exact,DraftAttention CuTe,15.17,27.52,15.17,31.20,20.42,SGLang FI 0.7.1,0.743,PASS
+RTX 5090,draft_noncausal,6,1,100,exact,DraftAttention CuTe,4.72,7.18,4.72,5.60,6.88,vllm_flash_attn,0.844,PASS
+RTX 5090,draft_noncausal,6,1,400,exact,DraftAttention CuTe,5.71,8.40,5.71,16.26,11.42,SGLang FI 0.7.1,0.500,PASS
+RTX 5090,draft_noncausal,6,1,1000,exact,DraftAttention CuTe,7.23,11.77,7.23,30.59,11.93,SGLang FI 0.7.1,0.606,PASS
+RTX 5090,draft_noncausal,6,2,100,exact,DraftAttention CuTe,4.81,7.56,4.81,5.65,7.07,vllm_flash_attn,0.851,PASS
+RTX 5090,draft_noncausal,6,2,400,exact,DraftAttention CuTe,6.53,9.73,6.53,16.31,11.98,SGLang FI 0.7.1,0.546,PASS
+RTX 5090,draft_noncausal,6,2,1000,exact,DraftAttention CuTe,9.62,13.41,9.62,30.86,13.44,SGLang FI 0.7.1,0.715,PASS
+RTX 5090,draft_noncausal,6,3,100,exact,DraftAttention CuTe,4.88,8.06,4.88,5.79,10.93,vllm_flash_attn,0.842,PASS
+RTX 5090,draft_noncausal,6,3,400,exact,DraftAttention CuTe,7.68,11.21,7.68,16.35,12.80,SGLang FI 0.7.1,0.600,PASS
+RTX 5090,draft_noncausal,6,3,1000,exact,DraftAttention CuTe,12.97,15.16,12.97,31.17,15.27,SGLang FI 0.7.1,0.850,PASS
+RTX 5090,draft_noncausal,6,4,100,exact,DraftAttention CuTe,4.96,8.64,4.96,5.96,17.23,vllm_flash_attn,0.832,PASS
+RTX 5090,draft_noncausal,6,4,400,exact,DraftAttention CuTe,8.67,15.44,8.67,16.42,19.24,vllm_flash_attn,0.528,PASS
+RTX 5090,draft_noncausal,6,4,1000,exact,DraftAttention CuTe,15.65,21.03,15.65,31.62,20.90,SGLang FI 0.7.1,0.749,PASS
+RTX 5090,draft_noncausal,8,1,100,exact,DraftAttention CuTe,4.91,7.24,4.91,5.58,6.90,vllm_flash_attn,0.880,PASS
+RTX 5090,draft_noncausal,8,1,400,exact,DraftAttention CuTe,5.92,8.54,5.92,16.23,11.51,SGLang FI 0.7.1,0.514,PASS
+RTX 5090,draft_noncausal,8,1,1000,exact,DraftAttention CuTe,7.43,11.91,7.43,30.67,12.08,SGLang FI 0.7.1,0.615,PASS
+RTX 5090,draft_noncausal,8,2,100,exact,DraftAttention CuTe,5.07,7.88,5.07,5.68,7.21,vllm_flash_attn,0.891,PASS
+RTX 5090,draft_noncausal,8,2,400,exact,DraftAttention CuTe,6.73,9.95,6.73,16.30,12.24,SGLang FI 0.7.1,0.550,PASS
+RTX 5090,draft_noncausal,8,2,1000,exact,DraftAttention CuTe,9.63,13.61,9.63,30.78,13.86,SGLang FI 0.7.1,0.694,PASS
+RTX 5090,draft_noncausal,8,3,100,exact,DraftAttention CuTe,5.14,8.67,5.14,5.78,17.26,vllm_flash_attn,0.890,PASS
+RTX 5090,draft_noncausal,8,3,400,exact,DraftAttention CuTe,8.05,11.80,8.05,16.33,19.00,vllm_flash_attn,0.493,PASS
+RTX 5090,draft_noncausal,8,3,1000,exact,DraftAttention CuTe,13.47,20.23,13.47,31.11,20.24,SGLang FI 0.7.1,0.666,PASS
+RTX 5090,draft_noncausal,8,4,100,exact,DraftAttention CuTe,5.27,9.11,5.27,5.97,17.65,vllm_flash_attn,0.883,PASS
+RTX 5090,draft_noncausal,8,4,400,exact,DraftAttention CuTe,8.91,15.83,8.91,16.45,19.70,vllm_flash_attn,0.541,PASS
+RTX 5090,draft_noncausal,8,4,1000,exact,DraftAttention CuTe,15.96,21.40,15.96,31.65,21.37,SGLang FI 0.7.1,0.747,PASS
+RTX 5090,draft_noncausal,9,1,100,exact,DraftAttention CuTe,4.77,7.40,4.77,5.67,7.01,vllm_flash_attn,0.841,PASS
+RTX 5090,draft_noncausal,9,1,400,exact,DraftAttention CuTe,5.68,8.70,5.68,16.40,11.66,SGLang FI 0.7.1,0.487,PASS
+RTX 5090,draft_noncausal,9,1,1000,exact,DraftAttention CuTe,7.63,12.02,7.63,30.84,12.11,SGLang FI 0.7.1,0.630,PASS
+RTX 5090,draft_noncausal,9,2,100,exact,DraftAttention CuTe,4.90,8.26,4.90,5.70,10.88,vllm_flash_attn,0.861,PASS
+RTX 5090,draft_noncausal,9,2,400,exact,DraftAttention CuTe,6.82,10.39,6.82,16.42,18.57,vllm_flash_attn,0.415,PASS
+RTX 5090,draft_noncausal,9,2,1000,exact,DraftAttention CuTe,10.39,19.27,10.39,31.04,19.34,SGLang FI 0.7.1,0.537,PASS
+RTX 5090,draft_noncausal,9,3,100,exact,DraftAttention CuTe,4.96,8.77,4.96,5.79,17.51,vllm_flash_attn,0.856,PASS
+RTX 5090,draft_noncausal,9,3,400,exact,DraftAttention CuTe,8.32,11.91,8.32,16.36,19.25,vllm_flash_attn,0.509,PASS
+RTX 5090,draft_noncausal,9,3,1000,exact,DraftAttention CuTe,14.40,20.31,14.40,31.22,20.33,SGLang FI 0.7.1,0.708,PASS
+RTX 5090,draft_noncausal,9,4,100,exact,DraftAttention CuTe,5.20,9.38,5.20,6.02,17.83,vllm_flash_attn,0.865,PASS
+RTX 5090,draft_noncausal,9,4,400,exact,DraftAttention CuTe,9.45,15.87,9.45,16.53,19.85,vllm_flash_attn,0.572,PASS
+RTX 5090,draft_noncausal,9,4,1000,exact,DraftAttention CuTe,16.87,21.42,16.87,31.54,21.44,SGLang FI 0.7.1,0.787,PASS
+RTX 5090,draft_noncausal,12,1,100,exact,DraftAttention CuTe,4.77,7.71,4.77,5.66,7.13,vllm_flash_attn,0.843,PASS
+RTX 5090,draft_noncausal,12,1,400,exact,DraftAttention CuTe,5.73,8.96,5.73,16.34,11.86,SGLang FI 0.7.1,0.483,PASS
+RTX 5090,draft_noncausal,12,1,1000,exact,DraftAttention CuTe,7.71,12.47,7.71,30.91,12.46,SGLang FI 0.7.1,0.619,PASS
+RTX 5090,draft_noncausal,12,2,100,exact,DraftAttention CuTe,5.02,8.74,5.02,5.77,11.08,vllm_flash_attn,0.869,PASS
+RTX 5090,draft_noncausal,12,2,400,exact,DraftAttention CuTe,7.06,10.79,7.06,16.37,18.86,vllm_flash_attn,0.431,PASS
+RTX 5090,draft_noncausal,12,2,1000,exact,DraftAttention CuTe,10.64,19.59,10.64,30.94,19.65,SGLang FI 0.7.1,0.542,PASS
+RTX 5090,draft_noncausal,12,3,100,exact,DraftAttention CuTe,5.09,9.43,5.09,5.85,17.82,vllm_flash_attn,0.869,PASS
+RTX 5090,draft_noncausal,12,3,400,exact,DraftAttention CuTe,8.43,12.62,8.43,16.36,19.58,vllm_flash_attn,0.515,PASS
+RTX 5090,draft_noncausal,12,3,1000,exact,DraftAttention CuTe,14.75,20.82,14.75,31.25,20.71,SGLang FI 0.7.1,0.712,PASS
+RTX 5090,draft_noncausal,12,4,100,exact,DraftAttention CuTe,5.42,10.15,5.42,6.11,18.35,vllm_flash_attn,0.887,PASS
+RTX 5090,draft_noncausal,12,4,400,exact,DraftAttention CuTe,9.62,16.55,9.62,16.54,20.36,vllm_flash_attn,0.582,PASS
+RTX 5090,draft_noncausal,12,4,1000,exact,DraftAttention CuTe,17.34,22.36,17.34,31.66,21.97,SGLang FI 0.7.1,0.789,PASS
+RTX 5090,draft_noncausal,16,1,100,32768,DraftAttention CuTe,5.14,8.26,5.14,5.69,7.34,vllm_flash_attn,0.903,PASS
+RTX 5090,draft_noncausal,16,1,100,exact,DraftAttention CuTe,5.08,8.29,5.08,5.70,7.35,vllm_flash_attn,0.891,PASS
+RTX 5090,draft_noncausal,16,1,400,32768,DraftAttention CuTe,6.19,9.50,6.19,16.36,12.21,SGLang FI 0.7.1,0.507,PASS
+RTX 5090,draft_noncausal,16,1,400,exact,DraftAttention CuTe,6.05,9.50,6.05,16.25,12.23,SGLang FI 0.7.1,0.495,PASS
+RTX 5090,draft_noncausal,16,1,1000,32768,DraftAttention CuTe,8.08,12.82,8.08,30.98,12.89,SGLang FI 0.7.1,0.627,PASS
+RTX 5090,draft_noncausal,16,1,1000,exact,DraftAttention CuTe,7.95,12.76,7.95,30.72,12.91,SGLang FI 0.7.1,0.616,PASS
+RTX 5090,draft_noncausal,16,2,100,32768,DraftAttention CuTe,6.85,9.38,6.85,5.80,11.47,vllm_flash_attn,1.180,LOSS
+RTX 5090,draft_noncausal,16,2,100,exact,DraftAttention CuTe,5.34,9.38,5.34,5.78,11.47,vllm_flash_attn,0.925,PASS
+RTX 5090,draft_noncausal,16,2,400,32768,DraftAttention CuTe,8.22,11.52,8.22,16.40,19.23,vllm_flash_attn,0.501,PASS
+RTX 5090,draft_noncausal,16,2,400,exact,DraftAttention CuTe,7.26,11.36,7.26,16.28,19.22,vllm_flash_attn,0.446,PASS
+RTX 5090,draft_noncausal,16,2,1000,32768,DraftAttention CuTe,11.13,20.15,11.13,31.10,20.08,SGLang FI 0.7.1,0.554,PASS
+RTX 5090,draft_noncausal,16,2,1000,exact,DraftAttention CuTe,11.14,19.98,11.14,30.89,20.11,SGLang FI 0.7.1,0.554,PASS
+RTX 5090,draft_noncausal,16,3,100,32768,DraftAttention CuTe,6.86,10.18,6.86,5.89,18.32,vllm_flash_attn,1.164,LOSS
+RTX 5090,draft_noncausal,16,3,100,exact,DraftAttention CuTe,5.53,10.28,5.53,5.90,18.35,vllm_flash_attn,0.937,PASS
+RTX 5090,draft_noncausal,16,3,400,32768,DraftAttention CuTe,9.57,13.42,9.57,16.40,20.13,vllm_flash_attn,0.584,PASS
+RTX 5090,draft_noncausal,16,3,400,exact,DraftAttention CuTe,8.81,13.49,8.81,16.41,20.12,vllm_flash_attn,0.537,PASS
+RTX 5090,draft_noncausal,16,3,1000,32768,DraftAttention CuTe,13.99,21.58,13.99,31.41,21.47,SGLang FI 0.7.1,0.652,PASS
+RTX 5090,draft_noncausal,16,3,1000,exact,DraftAttention CuTe,16.16,21.58,16.16,31.26,21.51,SGLang FI 0.7.1,0.752,PASS
+RTX 5090,draft_noncausal,16,4,100,32768,DraftAttention CuTe,7.14,10.98,7.14,6.15,18.67,vllm_flash_attn,1.161,LOSS
+RTX 5090,draft_noncausal,16,4,100,exact,DraftAttention CuTe,5.90,10.99,5.90,6.12,18.65,vllm_flash_attn,0.964,PASS
+RTX 5090,draft_noncausal,16,4,400,32768,DraftAttention CuTe,10.36,17.50,10.36,16.64,21.08,vllm_flash_attn,0.623,PASS
+RTX 5090,draft_noncausal,16,4,400,exact,DraftAttention CuTe,9.92,17.32,9.92,16.55,21.17,vllm_flash_attn,0.600,PASS
+RTX 5090,draft_noncausal,16,4,1000,32768,DraftAttention CuTe,16.38,23.05,16.38,31.94,22.83,SGLang FI 0.7.1,0.718,PASS
+RTX 5090,draft_noncausal,16,4,1000,exact,DraftAttention CuTe,18.61,22.94,18.61,31.77,22.87,SGLang FI 0.7.1,0.814,PASS
+RTX 5090,q35_target,4,1,100,exact,FlashInferFixedQueryAttention,6.59,6.59,,9.21,7.52,SGLang FI 0.7.1,0.876,PASS
+RTX 5090,q35_target,4,1,400,exact,FlashInferFixedQueryAttention,8.04,8.04,,26.66,8.78,SGLang FI 0.7.1,0.915,PASS
+RTX 5090,q35_target,4,1,1000,exact,FlashInferFixedQueryAttention,9.42,9.42,,57.72,9.54,SGLang FI 0.7.1,0.987,PASS
+RTX 5090,q35_target,4,2,100,exact,FlashInferFixedQueryAttention,6.08,6.08,,9.28,14.99,vllm_flash_attn,0.655,PASS
+RTX 5090,q35_target,4,2,400,exact,FlashInferFixedQueryAttention,8.57,8.57,,26.78,17.82,SGLang FI 0.7.1,0.481,PASS
+RTX 5090,q35_target,4,2,1000,exact,FlashInferFixedQueryAttention,18.25,18.25,,57.83,18.33,SGLang FI 0.7.1,0.996,PASS
+RTX 5090,q35_target,4,3,100,exact,FlashInferFixedQueryAttention,6.31,6.31,,9.34,14.98,vllm_flash_attn,0.675,PASS
+RTX 5090,q35_target,4,3,400,exact,FlashInferFixedQueryAttention,9.51,9.51,,26.81,18.02,SGLang FI 0.7.1,0.528,PASS
+RTX 5090,q35_target,4,3,1000,exact,FlashInferFixedQueryAttention,18.66,18.66,,57.84,18.88,SGLang FI 0.7.1,0.988,PASS
+RTX 5090,q35_target,4,4,100,exact,FlashInferFixedQueryAttention,6.40,6.40,,9.34,15.14,vllm_flash_attn,0.685,PASS
+RTX 5090,q35_target,4,4,400,exact,FlashInferFixedQueryAttention,12.13,12.13,,26.78,18.23,SGLang FI 0.7.1,0.665,PASS
+RTX 5090,q35_target,4,4,1000,exact,FlashInferFixedQueryAttention,19.05,19.05,,57.99,18.94,SGLang FI 0.7.1,1.006,LOSS
+RTX 5090,q35_target,5,1,100,exact,FlashInferFixedQueryAttention,5.96,5.96,,9.29,15.01,vllm_flash_attn,0.641,PASS
+RTX 5090,q35_target,5,1,400,exact,FlashInferFixedQueryAttention,7.57,7.57,,26.79,17.83,SGLang FI 0.7.1,0.424,PASS
+RTX 5090,q35_target,5,1,1000,exact,FlashInferFixedQueryAttention,17.91,17.91,,57.73,17.98,SGLang FI 0.7.1,0.996,PASS
+RTX 5090,q35_target,5,2,100,exact,FlashInferFixedQueryAttention,6.33,6.33,,9.34,15.07,vllm_flash_attn,0.677,PASS
+RTX 5090,q35_target,5,2,400,exact,FlashInferFixedQueryAttention,8.69,8.69,,26.79,17.91,SGLang FI 0.7.1,0.485,PASS
+RTX 5090,q35_target,5,2,1000,exact,FlashInferFixedQueryAttention,18.33,18.33,,57.83,18.33,SGLang FI 0.7.1,1.000,LOSS
+RTX 5090,q35_target,5,3,100,exact,FlashInferFixedQueryAttention,6.61,6.61,,9.38,15.11,vllm_flash_attn,0.704,PASS
+RTX 5090,q35_target,5,3,400,exact,FlashInferFixedQueryAttention,9.90,9.90,,26.85,18.17,SGLang FI 0.7.1,0.545,PASS
+RTX 5090,q35_target,5,3,1000,exact,FlashInferFixedQueryAttention,18.88,18.88,,57.96,18.88,SGLang FI 0.7.1,1.000,LOSS
+RTX 5090,q35_target,5,4,100,exact,FlashInferFixedQueryAttention,6.73,6.73,,9.39,15.28,vllm_flash_attn,0.718,PASS
+RTX 5090,q35_target,5,4,400,exact,FlashInferFixedQueryAttention,11.92,11.92,,26.79,18.40,SGLang FI 0.7.1,0.648,PASS
+RTX 5090,q35_target,5,4,1000,exact,FlashInferFixedQueryAttention,19.10,19.10,,57.98,19.11,SGLang FI 0.7.1,0.999,PASS
+RTX 5090,q35_target,6,1,100,exact,FlashInferFixedQueryAttention,6.18,6.18,,9.32,15.17,vllm_flash_attn,0.664,PASS
+RTX 5090,q35_target,6,1,400,exact,FlashInferFixedQueryAttention,7.79,7.79,,26.89,18.02,SGLang FI 0.7.1,0.433,PASS
+RTX 5090,q35_target,6,1,1000,exact,FlashInferFixedQueryAttention,18.16,18.16,,57.97,18.28,SGLang FI 0.7.1,0.993,PASS
+RTX 5090,q35_target,6,2,100,exact,FlashInferFixedQueryAttention,6.73,6.73,,9.37,15.31,vllm_flash_attn,0.718,PASS
+RTX 5090,q35_target,6,2,400,exact,FlashInferFixedQueryAttention,9.12,9.12,,26.98,18.21,SGLang FI 0.7.1,0.501,PASS
+RTX 5090,q35_target,6,2,1000,exact,FlashInferFixedQueryAttention,18.86,18.86,,58.14,18.78,SGLang FI 0.7.1,1.005,LOSS
+RTX 5090,q35_target,6,3,100,exact,FlashInferFixedQueryAttention,6.85,6.85,,9.50,15.42,vllm_flash_attn,0.721,PASS
+RTX 5090,q35_target,6,3,400,exact,FlashInferFixedQueryAttention,10.22,10.22,,26.98,18.60,SGLang FI 0.7.1,0.550,PASS
+RTX 5090,q35_target,6,3,1000,exact,FlashInferFixedQueryAttention,19.16,19.16,,58.27,19.21,SGLang FI 0.7.1,0.998,PASS
+RTX 5090,q35_target,6,4,100,exact,FlashInferFixedQueryAttention,7.01,7.01,,9.50,15.59,vllm_flash_attn,0.738,PASS
+RTX 5090,q35_target,6,4,400,exact,FlashInferFixedQueryAttention,12.29,12.29,,26.99,18.83,SGLang FI 0.7.1,0.653,PASS
+RTX 5090,q35_target,6,4,1000,exact,FlashInferFixedQueryAttention,19.63,19.63,,58.41,19.80,SGLang FI 0.7.1,0.991,PASS
+RTX 5090,q35_target,8,1,100,exact,FlashInferFixedQueryAttention,6.37,6.37,,9.34,15.21,vllm_flash_attn,0.682,PASS
+RTX 5090,q35_target,8,1,400,exact,FlashInferFixedQueryAttention,7.90,7.90,,26.83,18.24,SGLang FI 0.7.1,0.433,PASS
+RTX 5090,q35_target,8,1,1000,exact,FlashInferFixedQueryAttention,18.46,18.46,,58.01,18.51,SGLang FI 0.7.1,0.997,PASS
+RTX 5090,q35_target,8,2,100,exact,FlashInferFixedQueryAttention,7.14,7.14,,9.42,15.53,vllm_flash_attn,0.758,PASS
+RTX 5090,q35_target,8,2,400,exact,FlashInferFixedQueryAttention,9.44,9.44,,26.92,18.41,SGLang FI 0.7.1,0.513,PASS
+RTX 5090,q35_target,8,2,1000,exact,FlashInferFixedQueryAttention,19.06,19.06,,58.04,19.05,SGLang FI 0.7.1,1.000,LOSS
+RTX 5090,q35_target,8,3,100,exact,FlashInferFixedQueryAttention,7.39,7.39,,9.49,15.69,vllm_flash_attn,0.779,PASS
+RTX 5090,q35_target,8,3,400,exact,FlashInferFixedQueryAttention,10.67,10.67,,26.96,18.79,SGLang FI 0.7.1,0.568,PASS
+RTX 5090,q35_target,8,3,1000,exact,FlashInferFixedQueryAttention,19.47,19.47,,58.27,19.58,SGLang FI 0.7.1,0.994,PASS
+RTX 5090,q35_target,8,4,100,exact,FlashInferFixedQueryAttention,7.53,7.53,,9.51,15.92,vllm_flash_attn,0.792,PASS
+RTX 5090,q35_target,8,4,400,exact,FlashInferFixedQueryAttention,12.88,12.88,,27.02,19.12,SGLang FI 0.7.1,0.674,PASS
+RTX 5090,q35_target,8,4,1000,exact,FlashInferFixedQueryAttention,20.03,20.03,,58.43,20.15,SGLang FI 0.7.1,0.994,PASS
+RTX 5090,q35_target,9,1,100,exact,FlashInferFixedQueryAttention,6.52,6.52,,9.41,15.50,vllm_flash_attn,0.693,PASS
+RTX 5090,q35_target,9,1,400,exact,FlashInferFixedQueryAttention,8.08,8.08,,27.17,18.45,SGLang FI 0.7.1,0.438,PASS
+RTX 5090,q35_target,9,1,1000,exact,FlashInferFixedQueryAttention,18.56,18.56,,58.50,18.67,SGLang FI 0.7.1,0.994,PASS
+RTX 5090,q35_target,9,2,100,exact,FlashInferFixedQueryAttention,7.21,7.21,,9.45,15.79,vllm_flash_attn,0.763,PASS
+RTX 5090,q35_target,9,2,400,exact,FlashInferFixedQueryAttention,9.43,9.43,,27.22,18.64,SGLang FI 0.7.1,0.506,PASS
+RTX 5090,q35_target,9,2,1000,exact,FlashInferFixedQueryAttention,19.17,19.17,,58.71,19.27,SGLang FI 0.7.1,0.995,PASS
+RTX 5090,q35_target,9,3,100,exact,FlashInferFixedQueryAttention,7.61,7.61,,9.48,15.88,vllm_flash_attn,0.803,PASS
+RTX 5090,q35_target,9,3,400,exact,FlashInferFixedQueryAttention,10.83,10.83,,27.09,18.98,SGLang FI 0.7.1,0.570,PASS
+RTX 5090,q35_target,9,3,1000,exact,FlashInferFixedQueryAttention,19.56,19.56,,58.72,19.66,SGLang FI 0.7.1,0.995,PASS
+RTX 5090,q35_target,9,4,100,exact,FlashInferFixedQueryAttention,7.85,7.85,,9.51,16.10,vllm_flash_attn,0.825,PASS
+RTX 5090,q35_target,9,4,400,exact,FlashInferFixedQueryAttention,13.11,13.11,,27.18,19.27,SGLang FI 0.7.1,0.680,PASS
+RTX 5090,q35_target,9,4,1000,exact,FlashInferFixedQueryAttention,20.10,20.10,,58.83,20.08,SGLang FI 0.7.1,1.001,LOSS
+RTX 5090,q35_target,12,1,100,exact,FlashInferFixedQueryAttention,6.94,6.94,,9.46,15.76,vllm_flash_attn,0.734,PASS
+RTX 5090,q35_target,12,1,400,exact,FlashInferFixedQueryAttention,8.98,8.98,,27.14,18.88,SGLang FI 0.7.1,0.476,PASS
+RTX 5090,q35_target,12,1,1000,exact,FlashInferFixedQueryAttention,18.99,18.99,,58.61,18.95,SGLang FI 0.7.1,1.002,LOSS
+RTX 5090,q35_target,12,2,100,exact,FlashInferFixedQueryAttention,7.93,7.93,,9.50,16.26,vllm_flash_attn,0.834,PASS
+RTX 5090,q35_target,12,2,400,exact,FlashInferFixedQueryAttention,10.05,10.05,,27.15,19.06,SGLang FI 0.7.1,0.528,PASS
+RTX 5090,q35_target,12,2,1000,exact,FlashInferFixedQueryAttention,19.75,19.75,,58.53,19.82,SGLang FI 0.7.1,0.996,PASS
+RTX 5090,q35_target,12,3,100,exact,FlashInferFixedQueryAttention,8.35,8.35,,9.50,16.43,vllm_flash_attn,0.879,PASS
+RTX 5090,q35_target,12,3,400,exact,FlashInferFixedQueryAttention,11.89,11.89,,27.11,19.59,SGLang FI 0.7.1,0.607,PASS
+RTX 5090,q35_target,12,3,1000,exact,FlashInferFixedQueryAttention,20.33,20.33,,58.66,20.43,SGLang FI 0.7.1,0.995,PASS
+RTX 5090,q35_target,12,4,100,exact,FlashInferFixedQueryAttention,8.58,8.58,,9.56,16.77,vllm_flash_attn,0.897,PASS
+RTX 5090,q35_target,12,4,400,exact,FlashInferFixedQueryAttention,14.07,14.07,,27.24,19.98,SGLang FI 0.7.1,0.704,PASS
+RTX 5090,q35_target,12,4,1000,exact,FlashInferFixedQueryAttention,20.81,20.81,,58.82,20.79,SGLang FI 0.7.1,1.001,LOSS
+RTX 5090,q35_target,16,1,100,32768,FlashInferFixedQueryAttention,7.79,7.79,,9.51,17.72,vllm_flash_attn,0.819,PASS
+RTX 5090,q35_target,16,1,100,exact,FlashInferFixedQueryAttention,7.66,7.66,,9.47,17.71,vllm_flash_attn,0.808,PASS
+RTX 5090,q35_target,16,1,400,32768,FlashInferFixedQueryAttention,9.72,9.72,,27.05,19.29,SGLang FI 0.7.1,0.504,PASS
+RTX 5090,q35_target,16,1,400,exact,FlashInferFixedQueryAttention,9.77,9.77,,26.87,19.26,SGLang FI 0.7.1,0.507,PASS
+RTX 5090,q35_target,16,1,1000,32768,FlashInferFixedQueryAttention,19.70,19.70,,58.39,19.60,SGLang FI 0.7.1,1.005,LOSS
+RTX 5090,q35_target,16,1,1000,exact,FlashInferFixedQueryAttention,19.60,19.60,,58.02,19.56,SGLang FI 0.7.1,1.002,LOSS
+RTX 5090,q35_target,16,2,100,32768,FlashInferFixedQueryAttention,8.72,8.72,,9.53,18.32,vllm_flash_attn,0.915,PASS
+RTX 5090,q35_target,16,2,100,exact,FlashInferFixedQueryAttention,8.62,8.62,,9.53,18.33,vllm_flash_attn,0.905,PASS
+RTX 5090,q35_target,16,2,400,32768,FlashInferFixedQueryAttention,11.28,11.28,,27.12,19.80,SGLang FI 0.7.1,0.570,PASS
+RTX 5090,q35_target,16,2,400,exact,FlashInferFixedQueryAttention,11.19,11.19,,27.07,19.70,SGLang FI 0.7.1,0.568,PASS
+RTX 5090,q35_target,16,2,1000,32768,FlashInferFixedQueryAttention,20.57,20.57,,58.43,20.66,SGLang FI 0.7.1,0.996,PASS
+RTX 5090,q35_target,16,2,1000,exact,FlashInferFixedQueryAttention,20.56,20.56,,58.41,20.59,SGLang FI 0.7.1,0.998,PASS
+RTX 5090,q35_target,16,3,100,32768,FlashInferFixedQueryAttention,9.22,9.22,,9.60,18.70,vllm_flash_attn,0.960,PASS
+RTX 5090,q35_target,16,3,100,exact,FlashInferFixedQueryAttention,9.21,9.21,,9.59,18.70,vllm_flash_attn,0.960,PASS
+RTX 5090,q35_target,16,3,400,32768,FlashInferFixedQueryAttention,13.38,13.38,,27.12,20.25,SGLang FI 0.7.1,0.660,PASS
+RTX 5090,q35_target,16,3,400,exact,FlashInferFixedQueryAttention,13.50,13.50,,27.21,20.26,SGLang FI 0.7.1,0.666,PASS
+RTX 5090,q35_target,16,3,1000,32768,FlashInferFixedQueryAttention,21.19,21.19,,58.60,21.11,SGLang FI 0.7.1,1.004,LOSS
+RTX 5090,q35_target,16,3,1000,exact,FlashInferFixedQueryAttention,21.26,21.26,,58.47,21.10,SGLang FI 0.7.1,1.007,LOSS
+RTX 5090,q35_target,16,4,100,32768,FlashInferFixedQueryAttention,9.56,9.56,,9.67,19.12,vllm_flash_attn,0.989,PASS
+RTX 5090,q35_target,16,4,100,exact,FlashInferFixedQueryAttention,9.64,9.64,,9.59,19.10,vllm_flash_attn,1.005,LOSS
+RTX 5090,q35_target,16,4,400,32768,FlashInferFixedQueryAttention,16.05,16.05,,27.34,20.72,SGLang FI 0.7.1,0.774,PASS
+RTX 5090,q35_target,16,4,400,exact,FlashInferFixedQueryAttention,15.99,15.99,,27.27,20.79,SGLang FI 0.7.1,0.769,PASS
+RTX 5090,q35_target,16,4,1000,32768,FlashInferFixedQueryAttention,21.90,21.90,,58.84,21.68,SGLang FI 0.7.1,1.010,LOSS
+RTX 5090,q35_target,16,4,1000,exact,FlashInferFixedQueryAttention,21.91,21.91,,58.81,21.72,SGLang FI 0.7.1,1.009,LOSS
+RTX 5090,q3_target,4,1,100,exact,DraftAttention CuTe,4.78,6.28,4.78,5.58,5.32,SGLang FI 0.7.1,0.898,PASS
+RTX 5090,q3_target,4,1,400,exact,DraftAttention CuTe,5.69,7.46,5.69,16.35,8.27,SGLang FI 0.7.1,0.688,PASS
+RTX 5090,q3_target,4,1,1000,exact,DraftAttention CuTe,7.17,8.98,7.17,30.80,9.07,SGLang FI 0.7.1,0.791,PASS
+RTX 5090,q3_target,4,2,100,exact,DraftAttention CuTe,4.87,7.27,4.87,5.68,7.09,vllm_flash_attn,0.857,PASS
+RTX 5090,q3_target,4,2,400,exact,DraftAttention CuTe,6.56,9.43,6.56,16.38,11.85,SGLang FI 0.7.1,0.554,PASS
+RTX 5090,q3_target,4,2,1000,exact,DraftAttention CuTe,9.43,13.13,9.43,30.88,13.28,SGLang FI 0.7.1,0.710,PASS
+RTX 5090,q3_target,4,3,100,exact,DraftAttention CuTe,4.93,7.68,4.93,5.79,10.81,vllm_flash_attn,0.850,PASS
+RTX 5090,q3_target,4,3,400,exact,DraftAttention CuTe,7.56,10.78,7.56,16.37,12.66,SGLang FI 0.7.1,0.597,PASS
+RTX 5090,q3_target,4,3,1000,exact,DraftAttention CuTe,12.84,14.61,12.84,31.10,14.89,SGLang FI 0.7.1,0.862,PASS
+RTX 5090,q3_target,4,4,100,exact,DraftAttention CuTe,4.95,7.87,4.95,5.93,10.90,vllm_flash_attn,0.835,PASS
+RTX 5090,q3_target,4,4,400,exact,DraftAttention CuTe,8.46,11.85,8.46,16.38,13.23,SGLang FI 0.7.1,0.640,PASS
+RTX 5090,q3_target,4,4,1000,exact,DraftAttention CuTe,15.17,16.49,15.17,31.28,16.79,SGLang FI 0.7.1,0.903,PASS
+RTX 5090,q3_target,5,1,100,exact,DraftAttention CuTe,4.65,7.05,4.65,5.62,7.02,vllm_flash_attn,0.828,PASS
+RTX 5090,q3_target,5,1,400,exact,DraftAttention CuTe,5.68,8.36,5.68,16.41,11.43,SGLang FI 0.7.1,0.497,PASS
+RTX 5090,q3_target,5,1,1000,exact,DraftAttention CuTe,7.17,11.72,7.17,30.81,11.92,SGLang FI 0.7.1,0.602,PASS
+RTX 5090,q3_target,5,2,100,exact,DraftAttention CuTe,4.75,7.39,4.75,5.70,7.17,vllm_flash_attn,0.834,PASS
+RTX 5090,q3_target,5,2,400,exact,DraftAttention CuTe,6.43,9.50,6.43,16.41,11.98,SGLang FI 0.7.1,0.536,PASS
+RTX 5090,q3_target,5,2,1000,exact,DraftAttention CuTe,9.43,13.18,9.43,30.86,13.37,SGLang FI 0.7.1,0.705,PASS
+RTX 5090,q3_target,5,3,100,exact,DraftAttention CuTe,4.80,7.84,4.80,5.80,10.91,vllm_flash_attn,0.828,PASS
+RTX 5090,q3_target,5,3,400,exact,DraftAttention CuTe,7.50,10.91,7.50,16.42,12.75,SGLang FI 0.7.1,0.588,PASS
+RTX 5090,q3_target,5,3,1000,exact,DraftAttention CuTe,12.80,14.83,12.80,31.12,15.02,SGLang FI 0.7.1,0.852,PASS
+RTX 5090,q3_target,5,4,100,exact,DraftAttention CuTe,4.82,8.32,4.82,5.97,17.10,vllm_flash_attn,0.808,PASS
+RTX 5090,q3_target,5,4,400,exact,DraftAttention CuTe,8.46,15.05,8.46,16.43,19.07,vllm_flash_attn,0.515,PASS
+RTX 5090,q3_target,5,4,1000,exact,DraftAttention CuTe,15.14,20.35,15.14,31.56,20.47,SGLang FI 0.7.1,0.740,PASS
+RTX 5090,q3_target,6,1,100,exact,DraftAttention CuTe,4.66,7.12,4.66,5.64,7.04,vllm_flash_attn,0.827,PASS
+RTX 5090,q3_target,6,1,400,exact,DraftAttention CuTe,5.72,8.45,5.72,16.46,11.59,SGLang FI 0.7.1,0.493,PASS
+RTX 5090,q3_target,6,1,1000,exact,DraftAttention CuTe,7.23,11.89,7.23,30.91,12.09,SGLang FI 0.7.1,0.598,PASS
+RTX 5090,q3_target,6,2,100,exact,DraftAttention CuTe,4.76,7.57,4.76,5.73,7.29,vllm_flash_attn,0.831,PASS
+RTX 5090,q3_target,6,2,400,exact,DraftAttention CuTe,6.53,9.77,6.53,16.55,12.08,SGLang FI 0.7.1,0.541,PASS
+RTX 5090,q3_target,6,2,1000,exact,DraftAttention CuTe,9.57,13.37,9.57,31.06,13.54,SGLang FI 0.7.1,0.707,PASS
+RTX 5090,q3_target,6,3,100,exact,DraftAttention CuTe,4.88,8.11,4.88,5.88,11.12,vllm_flash_attn,0.831,PASS
+RTX 5090,q3_target,6,3,400,exact,DraftAttention CuTe,7.67,11.21,7.67,16.56,12.93,SGLang FI 0.7.1,0.593,PASS
+RTX 5090,q3_target,6,3,1000,exact,DraftAttention CuTe,12.99,15.04,12.99,31.34,15.34,SGLang FI 0.7.1,0.847,PASS
+RTX 5090,q3_target,6,4,100,exact,DraftAttention CuTe,4.97,8.67,4.97,6.06,17.37,vllm_flash_attn,0.820,PASS
+RTX 5090,q3_target,6,4,400,exact,DraftAttention CuTe,8.72,15.44,8.72,16.62,19.31,vllm_flash_attn,0.525,PASS
+RTX 5090,q3_target,6,4,1000,exact,DraftAttention CuTe,15.42,20.77,15.42,31.66,20.81,SGLang FI 0.7.1,0.741,PASS
+RTX 5090,q3_target,8,1,100,exact,DraftAttention CuTe,4.87,7.22,4.87,5.65,7.07,vllm_flash_attn,0.863,PASS
+RTX 5090,q3_target,8,1,400,exact,DraftAttention CuTe,5.95,8.60,5.95,16.48,11.66,SGLang FI 0.7.1,0.511,PASS
+RTX 5090,q3_target,8,1,1000,exact,DraftAttention CuTe,7.44,12.00,7.44,31.02,12.21,SGLang FI 0.7.1,0.610,PASS
+RTX 5090,q3_target,8,2,100,exact,DraftAttention CuTe,5.05,7.95,5.05,5.75,7.44,vllm_flash_attn,0.878,PASS
+RTX 5090,q3_target,8,2,400,exact,DraftAttention CuTe,6.78,10.03,6.78,16.55,12.40,SGLang FI 0.7.1,0.547,PASS
+RTX 5090,q3_target,8,2,1000,exact,DraftAttention CuTe,9.59,13.68,9.59,31.00,13.86,SGLang FI 0.7.1,0.692,PASS
+RTX 5090,q3_target,8,3,100,exact,DraftAttention CuTe,5.15,8.73,5.15,5.86,17.37,vllm_flash_attn,0.879,PASS
+RTX 5090,q3_target,8,3,400,exact,DraftAttention CuTe,8.05,11.84,8.05,16.54,19.11,vllm_flash_attn,0.487,PASS
+RTX 5090,q3_target,8,3,1000,exact,DraftAttention CuTe,13.54,20.12,13.54,31.25,20.39,SGLang FI 0.7.1,0.664,PASS
+RTX 5090,q3_target,8,4,100,exact,DraftAttention CuTe,5.27,9.15,5.27,6.06,17.79,vllm_flash_attn,0.870,PASS
+RTX 5090,q3_target,8,4,400,exact,DraftAttention CuTe,8.95,15.85,8.95,16.62,19.68,vllm_flash_attn,0.538,PASS
+RTX 5090,q3_target,8,4,1000,exact,DraftAttention CuTe,15.78,21.12,15.78,31.81,21.14,SGLang FI 0.7.1,0.746,PASS
+RTX 5090,q3_target,9,1,100,exact,DraftAttention CuTe,4.72,7.41,4.72,5.72,7.19,vllm_flash_attn,0.826,PASS
+RTX 5090,q3_target,9,1,400,exact,DraftAttention CuTe,5.68,8.80,5.68,16.65,11.81,SGLang FI 0.7.1,0.481,PASS
+RTX 5090,q3_target,9,1,1000,exact,DraftAttention CuTe,7.60,12.11,7.60,31.15,12.33,SGLang FI 0.7.1,0.617,PASS
+RTX 5090,q3_target,9,2,100,exact,DraftAttention CuTe,4.90,8.28,4.90,5.78,10.97,vllm_flash_attn,0.848,PASS
+RTX 5090,q3_target,9,2,400,exact,DraftAttention CuTe,6.81,10.35,6.81,16.67,18.87,vllm_flash_attn,0.408,PASS
+RTX 5090,q3_target,9,2,1000,exact,DraftAttention CuTe,10.38,19.24,10.38,31.33,19.41,SGLang FI 0.7.1,0.535,PASS
+RTX 5090,q3_target,9,3,100,exact,DraftAttention CuTe,4.96,8.83,4.96,5.86,17.66,vllm_flash_attn,0.846,PASS
+RTX 5090,q3_target,9,3,400,exact,DraftAttention CuTe,8.27,11.98,8.27,16.59,19.32,vllm_flash_attn,0.499,PASS
+RTX 5090,q3_target,9,3,1000,exact,DraftAttention CuTe,14.35,20.27,14.35,31.46,20.43,SGLang FI 0.7.1,0.702,PASS
+RTX 5090,q3_target,9,4,100,exact,DraftAttention CuTe,5.20,9.39,5.20,6.10,17.98,vllm_flash_attn,0.853,PASS
+RTX 5090,q3_target,9,4,400,exact,DraftAttention CuTe,9.48,15.97,9.48,16.65,19.95,vllm_flash_attn,0.569,PASS
+RTX 5090,q3_target,9,4,1000,exact,DraftAttention CuTe,16.76,21.32,16.76,31.72,21.42,SGLang FI 0.7.1,0.783,PASS
+RTX 5090,q3_target,12,1,100,exact,DraftAttention CuTe,4.75,7.61,4.75,5.70,7.31,vllm_flash_attn,0.834,PASS
+RTX 5090,q3_target,12,1,400,exact,DraftAttention CuTe,5.74,9.13,5.74,16.60,12.01,SGLang FI 0.7.1,0.478,PASS
+RTX 5090,q3_target,12,1,1000,exact,DraftAttention CuTe,7.70,12.48,7.70,31.22,12.59,SGLang FI 0.7.1,0.612,PASS
+RTX 5090,q3_target,12,2,100,exact,DraftAttention CuTe,5.01,8.77,5.01,5.82,11.18,vllm_flash_attn,0.861,PASS
+RTX 5090,q3_target,12,2,400,exact,DraftAttention CuTe,7.06,10.83,7.06,16.59,18.94,vllm_flash_attn,0.426,PASS
+RTX 5090,q3_target,12,2,1000,exact,DraftAttention CuTe,10.58,19.61,10.58,31.23,19.74,SGLang FI 0.7.1,0.536,PASS
+RTX 5090,q3_target,12,3,100,exact,DraftAttention CuTe,5.09,9.45,5.09,5.91,17.98,vllm_flash_attn,0.861,PASS
+RTX 5090,q3_target,12,3,400,exact,DraftAttention CuTe,8.44,12.51,8.44,16.59,19.74,vllm_flash_attn,0.509,PASS
+RTX 5090,q3_target,12,3,1000,exact,DraftAttention CuTe,14.84,20.77,14.84,31.49,20.98,SGLang FI 0.7.1,0.708,PASS
+RTX 5090,q3_target,12,4,100,exact,DraftAttention CuTe,5.42,10.21,5.42,6.14,18.54,vllm_flash_attn,0.882,PASS
+RTX 5090,q3_target,12,4,400,exact,DraftAttention CuTe,9.78,16.65,9.78,16.71,20.45,vllm_flash_attn,0.585,PASS
+RTX 5090,q3_target,12,4,1000,exact,DraftAttention CuTe,17.24,22.00,17.24,31.97,22.00,SGLang FI 0.7.1,0.784,PASS
+RTX 5090,q3_target,16,1,100,32768,DraftAttention CuTe,5.08,8.31,5.08,5.76,7.52,vllm_flash_attn,0.880,PASS
+RTX 5090,q3_target,16,1,100,exact,DraftAttention CuTe,5.02,8.31,5.02,5.77,7.52,vllm_flash_attn,0.870,PASS
+RTX 5090,q3_target,16,1,400,32768,DraftAttention CuTe,6.20,9.77,6.20,16.51,12.33,SGLang FI 0.7.1,0.503,PASS
+RTX 5090,q3_target,16,1,400,exact,DraftAttention CuTe,6.03,9.75,6.03,16.52,12.33,SGLang FI 0.7.1,0.489,PASS
+RTX 5090,q3_target,16,1,1000,32768,DraftAttention CuTe,8.11,12.82,8.11,31.13,12.96,SGLang FI 0.7.1,0.625,PASS
+RTX 5090,q3_target,16,1,1000,exact,DraftAttention CuTe,7.97,12.76,7.97,31.01,12.95,SGLang FI 0.7.1,0.616,PASS
+RTX 5090,q3_target,16,2,100,32768,DraftAttention CuTe,6.65,9.38,6.65,5.86,11.52,vllm_flash_attn,1.136,LOSS
+RTX 5090,q3_target,16,2,100,exact,DraftAttention CuTe,5.31,9.39,5.31,5.83,11.53,vllm_flash_attn,0.910,PASS
+RTX 5090,q3_target,16,2,400,32768,DraftAttention CuTe,8.17,11.50,8.17,16.62,19.30,vllm_flash_attn,0.492,PASS
+RTX 5090,q3_target,16,2,400,exact,DraftAttention CuTe,7.25,11.34,7.25,16.51,19.27,vllm_flash_attn,0.439,PASS
+RTX 5090,q3_target,16,2,1000,32768,DraftAttention CuTe,11.06,20.11,11.06,31.29,20.10,SGLang FI 0.7.1,0.550,PASS
+RTX 5090,q3_target,16,2,1000,exact,DraftAttention CuTe,11.13,19.94,11.13,31.07,20.02,SGLang FI 0.7.1,0.556,PASS
+RTX 5090,q3_target,16,3,100,32768,DraftAttention CuTe,6.72,10.22,6.72,5.95,18.48,vllm_flash_attn,1.131,LOSS
+RTX 5090,q3_target,16,3,100,exact,DraftAttention CuTe,5.50,10.33,5.50,5.96,18.48,vllm_flash_attn,0.923,PASS
+RTX 5090,q3_target,16,3,400,32768,DraftAttention CuTe,9.57,13.53,9.57,16.61,20.21,vllm_flash_attn,0.576,PASS
+RTX 5090,q3_target,16,3,400,exact,DraftAttention CuTe,8.74,13.61,8.74,16.60,20.10,vllm_flash_attn,0.526,PASS
+RTX 5090,q3_target,16,3,1000,32768,DraftAttention CuTe,13.74,21.41,13.74,31.49,21.46,SGLang FI 0.7.1,0.640,PASS
+RTX 5090,q3_target,16,3,1000,exact,DraftAttention CuTe,16.22,21.44,16.22,31.37,21.47,SGLang FI 0.7.1,0.756,PASS
+RTX 5090,q3_target,16,4,100,32768,DraftAttention CuTe,7.09,11.04,7.09,6.19,18.86,vllm_flash_attn,1.145,LOSS
+RTX 5090,q3_target,16,4,100,exact,DraftAttention CuTe,5.86,11.06,5.86,6.18,18.87,vllm_flash_attn,0.948,PASS
+RTX 5090,q3_target,16,4,400,32768,DraftAttention CuTe,10.28,17.50,10.28,16.79,21.12,vllm_flash_attn,0.612,PASS
+RTX 5090,q3_target,16,4,400,exact,DraftAttention CuTe,9.84,17.43,9.84,16.73,21.12,vllm_flash_attn,0.588,PASS
+RTX 5090,q3_target,16,4,1000,32768,DraftAttention CuTe,16.08,22.63,16.08,31.98,22.71,SGLang FI 0.7.1,0.708,PASS
+RTX 5090,q3_target,16,4,1000,exact,DraftAttention CuTe,18.46,22.62,18.46,31.77,22.81,SGLang FI 0.7.1,0.809,PASS
+GB10,draft_noncausal,4,1,100,exact,DraftAttention CuTe,5.45,8.21,5.45,5.07,8.31,vllm_flash_attn,1.075,LOSS
+GB10,draft_noncausal,4,1,400,exact,DraftAttention CuTe,13.05,14.77,13.05,15.17,15.10,SGLang FI 0.7.1,0.864,PASS
+GB10,draft_noncausal,4,1,1000,exact,DraftAttention CuTe,23.17,25.94,23.17,29.87,26.00,SGLang FI 0.7.1,0.891,PASS
+GB10,draft_noncausal,4,2,100,exact,DraftAttention CuTe,6.21,9.54,6.21,9.46,9.04,SGLang FI 0.7.1,0.686,PASS
+GB10,draft_noncausal,4,2,400,exact,DraftAttention CuTe,19.98,22.08,19.98,27.28,21.94,SGLang FI 0.7.1,0.911,PASS
+GB10,draft_noncausal,4,2,1000,exact,DraftAttention CuTe,41.38,43.95,41.38,53.60,44.07,SGLang FI 0.7.1,0.939,PASS
+GB10,draft_noncausal,4,3,100,exact,DraftAttention CuTe,6.53,9.11,6.53,9.65,10.18,vllm_flash_attn,0.677,PASS
+GB10,draft_noncausal,4,3,400,exact,DraftAttention CuTe,26.66,29.68,26.66,30.30,30.28,SGLang FI 0.7.1,0.880,PASS
+GB10,draft_noncausal,4,3,1000,exact,DraftAttention CuTe,59.06,62.00,59.06,61.60,62.14,vllm_flash_attn,0.959,PASS
+GB10,draft_noncausal,4,4,100,exact,DraftAttention CuTe,5.43,9.70,5.43,13.60,10.73,SGLang FI 0.7.1,0.506,PASS
+GB10,draft_noncausal,4,4,400,exact,DraftAttention CuTe,31.96,38.36,31.96,41.01,39.91,SGLang FI 0.7.1,0.801,PASS
+GB10,draft_noncausal,4,4,1000,exact,DraftAttention CuTe,74.80,81.27,74.80,84.10,81.40,SGLang FI 0.7.1,0.919,PASS
+GB10,draft_noncausal,5,1,100,exact,DraftAttention CuTe,5.32,8.49,5.32,5.07,8.74,vllm_flash_attn,1.049,LOSS
+GB10,draft_noncausal,5,1,400,exact,DraftAttention CuTe,13.03,14.25,13.03,15.08,14.45,SGLang FI 0.7.1,0.902,PASS
+GB10,draft_noncausal,5,1,1000,exact,DraftAttention CuTe,23.27,25.39,23.27,29.38,25.58,SGLang FI 0.7.1,0.910,PASS
+GB10,draft_noncausal,5,2,100,exact,DraftAttention CuTe,6.20,9.99,6.20,9.29,9.37,vllm_flash_attn,0.668,PASS
+GB10,draft_noncausal,5,2,400,exact,DraftAttention CuTe,20.27,22.08,20.27,27.44,22.09,SGLang FI 0.7.1,0.918,PASS
+GB10,draft_noncausal,5,2,1000,exact,DraftAttention CuTe,41.33,43.95,41.33,53.72,44.32,SGLang FI 0.7.1,0.933,PASS
+GB10,draft_noncausal,5,3,100,exact,DraftAttention CuTe,6.64,9.44,6.64,9.70,9.85,vllm_flash_attn,0.685,PASS
+GB10,draft_noncausal,5,3,400,exact,DraftAttention CuTe,26.92,30.61,26.92,31.24,30.62,SGLang FI 0.7.1,0.879,PASS
+GB10,draft_noncausal,5,3,1000,exact,DraftAttention CuTe,58.63,62.76,58.63,62.00,63.05,vllm_flash_attn,0.946,PASS
+GB10,draft_noncausal,5,4,100,exact,DraftAttention CuTe,6.41,13.79,6.41,13.79,14.14,vllm_flash_attn,0.464,PASS
+GB10,draft_noncausal,5,4,400,exact,DraftAttention CuTe,31.67,38.75,31.67,40.77,38.67,SGLang FI 0.7.1,0.819,PASS
+GB10,draft_noncausal,5,4,1000,exact,DraftAttention CuTe,74.89,81.58,74.89,83.21,82.04,SGLang FI 0.7.1,0.913,PASS
+GB10,draft_noncausal,6,1,100,exact,DraftAttention CuTe,5.71,8.99,5.71,5.58,9.08,vllm_flash_attn,1.024,LOSS
+GB10,draft_noncausal,6,1,400,exact,DraftAttention CuTe,13.24,14.53,13.24,14.76,14.76,vllm_flash_attn,0.897,PASS
+GB10,draft_noncausal,6,1,1000,exact,DraftAttention CuTe,23.19,25.66,23.19,28.27,25.89,SGLang FI 0.7.1,0.895,PASS
+GB10,draft_noncausal,6,2,100,exact,DraftAttention CuTe,6.64,9.51,6.64,9.67,9.63,SGLang FI 0.7.1,0.689,PASS
+GB10,draft_noncausal,6,2,400,exact,DraftAttention CuTe,20.19,22.85,20.19,27.69,22.46,SGLang FI 0.7.1,0.899,PASS
+GB10,draft_noncausal,6,2,1000,exact,DraftAttention CuTe,40.65,43.16,40.65,53.67,44.62,SGLang FI 0.7.1,0.911,PASS
+GB10,draft_noncausal,6,3,100,exact,DraftAttention CuTe,6.91,10.69,6.91,10.44,10.43,SGLang FI 0.7.1,0.662,PASS
+GB10,draft_noncausal,6,3,400,exact,DraftAttention CuTe,26.96,31.21,26.96,31.37,30.46,SGLang FI 0.7.1,0.885,PASS
+GB10,draft_noncausal,6,3,1000,exact,DraftAttention CuTe,58.06,62.95,58.06,61.05,62.41,vllm_flash_attn,0.951,PASS
+GB10,draft_noncausal,6,4,100,exact,DraftAttention CuTe,6.47,14.43,6.47,14.32,14.30,SGLang FI 0.7.1,0.452,PASS
+GB10,draft_noncausal,6,4,400,exact,DraftAttention CuTe,32.55,40.86,32.55,41.94,41.58,SGLang FI 0.7.1,0.783,PASS
+GB10,draft_noncausal,6,4,1000,exact,DraftAttention CuTe,76.12,82.66,76.12,82.68,82.07,SGLang FI 0.7.1,0.927,PASS
+GB10,draft_noncausal,8,1,100,exact,DraftAttention CuTe,5.90,9.08,5.90,5.44,9.62,vllm_flash_attn,1.086,LOSS
+GB10,draft_noncausal,8,1,400,exact,DraftAttention CuTe,13.60,15.18,13.60,15.18,15.14,SGLang FI 0.7.1,0.899,PASS
+GB10,draft_noncausal,8,1,1000,exact,DraftAttention CuTe,22.86,25.29,22.86,28.15,26.39,SGLang FI 0.7.1,0.866,PASS
+GB10,draft_noncausal,8,2,100,exact,DraftAttention CuTe,7.32,10.19,7.32,9.87,10.53,vllm_flash_attn,0.742,PASS
+GB10,draft_noncausal,8,2,400,exact,DraftAttention CuTe,20.62,23.63,20.62,27.84,23.82,SGLang FI 0.7.1,0.866,PASS
+GB10,draft_noncausal,8,2,1000,exact,DraftAttention CuTe,41.25,44.66,41.25,53.63,45.19,SGLang FI 0.7.1,0.913,PASS
+GB10,draft_noncausal,8,3,100,exact,DraftAttention CuTe,7.16,14.14,7.16,10.21,14.25,vllm_flash_attn,0.701,PASS
+GB10,draft_noncausal,8,3,400,exact,DraftAttention CuTe,27.36,32.64,27.36,31.17,33.22,vllm_flash_attn,0.878,PASS
+GB10,draft_noncausal,8,3,1000,exact,DraftAttention CuTe,58.44,63.91,58.44,61.16,64.26,vllm_flash_attn,0.956,PASS
+GB10,draft_noncausal,8,4,100,exact,DraftAttention CuTe,6.98,15.44,6.98,14.78,15.63,vllm_flash_attn,0.472,PASS
+GB10,draft_noncausal,8,4,400,exact,DraftAttention CuTe,32.47,42.69,32.47,42.34,42.67,vllm_flash_attn,0.767,PASS
+GB10,draft_noncausal,8,4,1000,exact,DraftAttention CuTe,73.68,84.28,73.68,83.07,84.65,vllm_flash_attn,0.887,PASS
+GB10,draft_noncausal,9,1,100,exact,DraftAttention CuTe,6.18,9.51,6.18,5.40,9.67,vllm_flash_attn,1.145,LOSS
+GB10,draft_noncausal,9,1,400,exact,DraftAttention CuTe,13.42,15.00,13.42,15.17,15.14,SGLang FI 0.7.1,0.886,PASS
+GB10,draft_noncausal,9,1,1000,exact,DraftAttention CuTe,25.04,26.15,25.04,29.67,26.32,SGLang FI 0.7.1,0.951,PASS
+GB10,draft_noncausal,9,2,100,exact,DraftAttention CuTe,5.61,13.81,5.61,9.31,13.65,vllm_flash_attn,0.603,PASS
+GB10,draft_noncausal,9,2,400,exact,DraftAttention CuTe,19.90,24.73,19.90,27.66,24.39,SGLang FI 0.7.1,0.816,PASS
+GB10,draft_noncausal,9,2,1000,exact,DraftAttention CuTe,42.87,46.65,42.87,54.60,46.68,SGLang FI 0.7.1,0.918,PASS
+GB10,draft_noncausal,9,3,100,exact,DraftAttention CuTe,9.18,15.20,9.18,9.98,13.90,vllm_flash_attn,0.919,PASS
+GB10,draft_noncausal,9,3,400,exact,DraftAttention CuTe,28.22,33.08,28.22,31.00,33.48,vllm_flash_attn,0.910,PASS
+GB10,draft_noncausal,9,3,1000,exact,DraftAttention CuTe,59.67,65.24,59.67,62.33,64.61,vllm_flash_attn,0.957,PASS
+GB10,draft_noncausal,9,4,100,exact,DraftAttention CuTe,7.89,14.82,7.89,13.98,15.82,vllm_flash_attn,0.564,PASS
+GB10,draft_noncausal,9,4,400,exact,DraftAttention CuTe,34.23,42.70,34.23,41.90,43.22,vllm_flash_attn,0.817,PASS
+GB10,draft_noncausal,9,4,1000,exact,DraftAttention CuTe,76.45,84.56,76.45,83.67,84.50,vllm_flash_attn,0.914,PASS
+GB10,draft_noncausal,12,1,100,exact,DraftAttention CuTe,6.22,9.16,6.22,5.15,9.24,vllm_flash_attn,1.207,LOSS
+GB10,draft_noncausal,12,1,400,exact,DraftAttention CuTe,13.27,15.39,13.27,14.95,15.74,vllm_flash_attn,0.888,PASS
+GB10,draft_noncausal,12,1,1000,exact,DraftAttention CuTe,25.23,26.99,25.23,29.35,27.09,SGLang FI 0.7.1,0.931,PASS
+GB10,draft_noncausal,12,2,100,exact,DraftAttention CuTe,5.70,13.80,5.70,9.54,14.41,vllm_flash_attn,0.597,PASS
+GB10,draft_noncausal,12,2,400,exact,DraftAttention CuTe,19.25,25.53,19.25,27.31,26.14,SGLang FI 0.7.1,0.736,PASS
+GB10,draft_noncausal,12,2,1000,exact,DraftAttention CuTe,42.73,47.91,42.73,54.07,47.87,SGLang FI 0.7.1,0.893,PASS
+GB10,draft_noncausal,12,3,100,exact,DraftAttention CuTe,9.25,14.96,9.25,10.31,14.96,vllm_flash_attn,0.897,PASS
+GB10,draft_noncausal,12,3,400,exact,DraftAttention CuTe,28.73,34.91,28.73,31.32,35.15,vllm_flash_attn,0.917,PASS
+GB10,draft_noncausal,12,3,1000,exact,DraftAttention CuTe,60.01,66.39,60.01,61.60,66.95,vllm_flash_attn,0.974,PASS
+GB10,draft_noncausal,12,4,100,exact,DraftAttention CuTe,7.73,15.35,7.73,14.10,15.83,vllm_flash_attn,0.549,PASS
+GB10,draft_noncausal,12,4,400,exact,DraftAttention CuTe,33.52,44.90,33.52,41.61,45.46,vllm_flash_attn,0.806,PASS
+GB10,draft_noncausal,12,4,1000,exact,DraftAttention CuTe,76.59,88.39,76.59,83.95,87.49,vllm_flash_attn,0.912,PASS
+GB10,draft_noncausal,16,1,100,32768,DraftAttention CuTe,6.85,9.72,6.85,5.38,10.26,vllm_flash_attn,1.273,LOSS
+GB10,draft_noncausal,16,1,100,exact,DraftAttention CuTe,6.35,9.47,6.35,5.24,10.31,vllm_flash_attn,1.212,LOSS
+GB10,draft_noncausal,16,1,400,32768,DraftAttention CuTe,13.07,16.67,13.07,15.20,16.93,vllm_flash_attn,0.860,PASS
+GB10,draft_noncausal,16,1,400,exact,DraftAttention CuTe,13.94,16.97,13.94,15.35,16.56,vllm_flash_attn,0.908,PASS
+GB10,draft_noncausal,16,1,1000,32768,DraftAttention CuTe,22.86,28.05,22.86,29.93,28.24,SGLang FI 0.7.1,0.810,PASS
+GB10,draft_noncausal,16,1,1000,exact,DraftAttention CuTe,25.31,28.46,25.31,29.85,28.03,SGLang FI 0.7.1,0.903,PASS
+GB10,draft_noncausal,16,2,100,32768,DraftAttention CuTe,10.83,14.16,10.83,9.58,14.56,vllm_flash_attn,1.131,LOSS
+GB10,draft_noncausal,16,2,100,exact,DraftAttention CuTe,6.12,14.56,6.12,9.72,14.70,vllm_flash_attn,0.630,PASS
+GB10,draft_noncausal,16,2,400,32768,DraftAttention CuTe,21.56,27.26,21.56,27.59,27.82,vllm_flash_attn,0.781,PASS
+GB10,draft_noncausal,16,2,400,exact,DraftAttention CuTe,19.80,27.62,19.80,27.59,27.29,SGLang FI 0.7.1,0.725,PASS
+GB10,draft_noncausal,16,2,1000,32768,DraftAttention CuTe,42.10,49.41,42.10,54.58,49.45,SGLang FI 0.7.1,0.851,PASS
+GB10,draft_noncausal,16,2,1000,exact,DraftAttention CuTe,44.27,49.10,44.27,54.65,49.63,SGLang FI 0.7.1,0.892,PASS
+GB10,draft_noncausal,16,3,100,32768,DraftAttention CuTe,11.66,15.04,11.66,13.63,16.24,vllm_flash_attn,0.855,PASS
+GB10,draft_noncausal,16,3,100,exact,DraftAttention CuTe,11.24,15.05,11.24,10.48,15.38,vllm_flash_attn,1.073,LOSS
+GB10,draft_noncausal,16,3,400,32768,DraftAttention CuTe,26.53,37.04,26.53,30.98,37.66,vllm_flash_attn,0.856,PASS
+GB10,draft_noncausal,16,3,400,exact,DraftAttention CuTe,29.37,37.35,29.37,30.66,37.70,vllm_flash_attn,0.958,PASS
+GB10,draft_noncausal,16,3,1000,32768,DraftAttention CuTe,58.45,68.93,58.45,62.43,69.52,vllm_flash_attn,0.936,PASS
+GB10,draft_noncausal,16,3,1000,exact,DraftAttention CuTe,62.57,69.29,62.57,63.07,69.32,vllm_flash_attn,0.992,PASS
+GB10,draft_noncausal,16,4,100,32768,DraftAttention CuTe,16.09,16.17,16.09,14.39,17.28,vllm_flash_attn,1.118,LOSS
+GB10,draft_noncausal,16,4,100,exact,DraftAttention CuTe,8.74,16.03,8.74,14.34,16.38,vllm_flash_attn,0.609,PASS
+GB10,draft_noncausal,16,4,400,32768,DraftAttention CuTe,34.91,48.50,34.91,42.25,48.45,vllm_flash_attn,0.826,PASS
+GB10,draft_noncausal,16,4,400,exact,DraftAttention CuTe,34.93,49.16,34.93,42.26,48.57,vllm_flash_attn,0.826,PASS
+GB10,draft_noncausal,16,4,1000,32768,DraftAttention CuTe,74.25,91.66,74.25,84.26,91.10,vllm_flash_attn,0.881,PASS
+GB10,draft_noncausal,16,4,1000,exact,DraftAttention CuTe,77.52,90.80,77.52,85.63,91.74,vllm_flash_attn,0.905,PASS
+GB10,q35_target,4,1,100,exact,FlashInferFixedQueryAttention,7.84,7.84,,7.80,8.39,vllm_flash_attn,1.005,LOSS
+GB10,q35_target,4,1,400,exact,FlashInferFixedQueryAttention,14.48,14.48,,20.72,14.95,SGLang FI 0.7.1,0.969,PASS
+GB10,q35_target,4,1,1000,exact,FlashInferFixedQueryAttention,25.34,25.34,,42.86,25.59,SGLang FI 0.7.1,0.990,PASS
+GB10,q35_target,4,2,100,exact,FlashInferFixedQueryAttention,8.09,8.09,,7.83,12.40,vllm_flash_attn,1.033,LOSS
+GB10,q35_target,4,2,400,exact,FlashInferFixedQueryAttention,21.02,21.02,,23.85,20.99,SGLang FI 0.7.1,1.001,LOSS
+GB10,q35_target,4,2,1000,exact,FlashInferFixedQueryAttention,41.75,41.75,,48.31,41.55,SGLang FI 0.7.1,1.005,LOSS
+GB10,q35_target,4,3,100,exact,FlashInferFixedQueryAttention,8.00,8.00,,8.29,12.65,vllm_flash_attn,0.965,PASS
+GB10,q35_target,4,3,400,exact,FlashInferFixedQueryAttention,27.48,27.48,,27.64,27.87,vllm_flash_attn,0.994,PASS
+GB10,q35_target,4,3,1000,exact,FlashInferFixedQueryAttention,59.24,59.24,,59.92,59.20,SGLang FI 0.7.1,1.001,LOSS
+GB10,q35_target,4,4,100,exact,FlashInferFixedQueryAttention,9.19,9.19,,15.02,12.95,SGLang FI 0.7.1,0.710,PASS
+GB10,q35_target,4,4,400,exact,FlashInferFixedQueryAttention,34.97,34.97,,44.82,35.02,SGLang FI 0.7.1,0.999,PASS
+GB10,q35_target,4,4,1000,exact,FlashInferFixedQueryAttention,77.41,77.41,,96.34,77.63,SGLang FI 0.7.1,0.997,PASS
+GB10,q35_target,5,1,100,exact,FlashInferFixedQueryAttention,7.50,7.50,,7.76,12.62,vllm_flash_attn,0.966,PASS
+GB10,q35_target,5,1,400,exact,FlashInferFixedQueryAttention,16.28,16.28,,20.79,16.36,SGLang FI 0.7.1,0.995,PASS
+GB10,q35_target,5,1,1000,exact,FlashInferFixedQueryAttention,24.27,24.27,,42.94,24.63,SGLang FI 0.7.1,0.985,PASS
+GB10,q35_target,5,2,100,exact,FlashInferFixedQueryAttention,7.92,7.92,,8.00,12.52,vllm_flash_attn,0.990,PASS
+GB10,q35_target,5,2,400,exact,FlashInferFixedQueryAttention,21.19,21.19,,23.53,21.63,SGLang FI 0.7.1,0.980,PASS
+GB10,q35_target,5,2,1000,exact,FlashInferFixedQueryAttention,41.74,41.74,,48.16,41.76,SGLang FI 0.7.1,1.000,PASS
+GB10,q35_target,5,3,100,exact,FlashInferFixedQueryAttention,8.89,8.89,,8.29,13.90,vllm_flash_attn,1.072,LOSS
+GB10,q35_target,5,3,400,exact,FlashInferFixedQueryAttention,27.46,27.46,,28.66,27.46,SGLang FI 0.7.1,1.000,PASS
+GB10,q35_target,5,3,1000,exact,FlashInferFixedQueryAttention,59.78,59.78,,59.81,59.47,SGLang FI 0.7.1,1.005,LOSS
+GB10,q35_target,5,4,100,exact,FlashInferFixedQueryAttention,9.36,9.36,,14.83,13.37,SGLang FI 0.7.1,0.700,PASS
+GB10,q35_target,5,4,400,exact,FlashInferFixedQueryAttention,35.32,35.32,,45.30,35.15,SGLang FI 0.7.1,1.005,LOSS
+GB10,q35_target,5,4,1000,exact,FlashInferFixedQueryAttention,78.62,78.62,,96.66,78.02,SGLang FI 0.7.1,1.008,LOSS
+GB10,q35_target,6,1,100,exact,FlashInferFixedQueryAttention,7.71,7.71,,8.02,13.29,vllm_flash_attn,0.962,PASS
+GB10,q35_target,6,1,400,exact,FlashInferFixedQueryAttention,16.88,16.88,,21.40,16.90,SGLang FI 0.7.1,0.999,PASS
+GB10,q35_target,6,1,1000,exact,FlashInferFixedQueryAttention,24.73,24.73,,44.05,24.75,SGLang FI 0.7.1,0.999,PASS
+GB10,q35_target,6,2,100,exact,FlashInferFixedQueryAttention,8.32,8.32,,8.27,13.35,vllm_flash_attn,1.005,LOSS
+GB10,q35_target,6,2,400,exact,FlashInferFixedQueryAttention,21.95,21.95,,24.23,21.47,SGLang FI 0.7.1,1.022,LOSS
+GB10,q35_target,6,2,1000,exact,FlashInferFixedQueryAttention,42.14,42.14,,48.75,42.35,SGLang FI 0.7.1,0.995,PASS
+GB10,q35_target,6,3,100,exact,FlashInferFixedQueryAttention,8.84,8.84,,8.64,13.94,vllm_flash_attn,1.023,LOSS
+GB10,q35_target,6,3,400,exact,FlashInferFixedQueryAttention,28.88,28.88,,28.34,28.33,SGLang FI 0.7.1,1.019,LOSS
+GB10,q35_target,6,3,1000,exact,FlashInferFixedQueryAttention,60.30,60.30,,59.40,60.12,vllm_flash_attn,1.015,LOSS
+GB10,q35_target,6,4,100,exact,FlashInferFixedQueryAttention,10.22,10.22,,15.84,13.55,SGLang FI 0.7.1,0.754,PASS
+GB10,q35_target,6,4,400,exact,FlashInferFixedQueryAttention,35.54,35.54,,45.66,35.53,SGLang FI 0.7.1,1.000,LOSS
+GB10,q35_target,6,4,1000,exact,FlashInferFixedQueryAttention,79.02,79.02,,97.25,79.68,SGLang FI 0.7.1,0.992,PASS
+GB10,q35_target,8,1,100,exact,FlashInferFixedQueryAttention,8.48,8.48,,8.35,13.00,vllm_flash_attn,1.016,LOSS
+GB10,q35_target,8,1,400,exact,FlashInferFixedQueryAttention,17.05,17.05,,21.50,17.23,SGLang FI 0.7.1,0.990,PASS
+GB10,q35_target,8,1,1000,exact,FlashInferFixedQueryAttention,24.98,24.98,,44.15,25.39,SGLang FI 0.7.1,0.984,PASS
+GB10,q35_target,8,2,100,exact,FlashInferFixedQueryAttention,9.13,9.13,,8.39,13.54,vllm_flash_attn,1.089,LOSS
+GB10,q35_target,8,2,400,exact,FlashInferFixedQueryAttention,22.17,22.17,,24.04,22.19,SGLang FI 0.7.1,0.999,PASS
+GB10,q35_target,8,2,1000,exact,FlashInferFixedQueryAttention,42.82,42.82,,48.62,43.19,SGLang FI 0.7.1,0.991,PASS
+GB10,q35_target,8,3,100,exact,FlashInferFixedQueryAttention,9.82,9.82,,8.69,14.44,vllm_flash_attn,1.130,LOSS
+GB10,q35_target,8,3,400,exact,FlashInferFixedQueryAttention,29.36,29.36,,28.16,28.12,SGLang FI 0.7.1,1.044,LOSS
+GB10,q35_target,8,3,1000,exact,FlashInferFixedQueryAttention,60.60,60.60,,59.84,61.39,vllm_flash_attn,1.013,LOSS
+GB10,q35_target,8,4,100,exact,FlashInferFixedQueryAttention,11.09,11.09,,15.68,13.91,SGLang FI 0.7.1,0.798,PASS
+GB10,q35_target,8,4,400,exact,FlashInferFixedQueryAttention,36.51,36.51,,45.78,36.70,SGLang FI 0.7.1,0.995,PASS
+GB10,q35_target,8,4,1000,exact,FlashInferFixedQueryAttention,80.96,80.96,,98.24,79.58,SGLang FI 0.7.1,1.017,LOSS
+GB10,q35_target,9,1,100,exact,FlashInferFixedQueryAttention,8.19,8.19,,7.80,12.74,vllm_flash_attn,1.050,LOSS
+GB10,q35_target,9,1,400,exact,FlashInferFixedQueryAttention,16.71,16.71,,20.80,16.79,SGLang FI 0.7.1,0.995,PASS
+GB10,q35_target,9,1,1000,exact,FlashInferFixedQueryAttention,25.07,25.07,,42.84,25.03,SGLang FI 0.7.1,1.001,LOSS
+GB10,q35_target,9,2,100,exact,FlashInferFixedQueryAttention,9.14,9.14,,8.26,13.64,vllm_flash_attn,1.107,LOSS
+GB10,q35_target,9,2,400,exact,FlashInferFixedQueryAttention,21.49,21.49,,23.69,21.86,SGLang FI 0.7.1,0.983,PASS
+GB10,q35_target,9,2,1000,exact,FlashInferFixedQueryAttention,42.30,42.30,,48.42,42.67,SGLang FI 0.7.1,0.991,PASS
+GB10,q35_target,9,3,100,exact,FlashInferFixedQueryAttention,10.24,10.24,,8.81,14.06,vllm_flash_attn,1.162,LOSS
+GB10,q35_target,9,3,400,exact,FlashInferFixedQueryAttention,28.09,28.09,,27.86,29.00,vllm_flash_attn,1.008,LOSS
+GB10,q35_target,9,3,1000,exact,FlashInferFixedQueryAttention,60.86,60.86,,59.90,61.34,vllm_flash_attn,1.016,LOSS
+GB10,q35_target,9,4,100,exact,FlashInferFixedQueryAttention,11.74,11.74,,15.51,13.60,SGLang FI 0.7.1,0.863,PASS
+GB10,q35_target,9,4,400,exact,FlashInferFixedQueryAttention,36.36,36.36,,45.28,36.40,SGLang FI 0.7.1,0.999,PASS
+GB10,q35_target,9,4,1000,exact,FlashInferFixedQueryAttention,81.04,81.04,,96.74,80.09,SGLang FI 0.7.1,1.012,LOSS
+GB10,q35_target,12,1,100,exact,FlashInferFixedQueryAttention,8.65,8.65,,7.84,12.92,vllm_flash_attn,1.104,LOSS
+GB10,q35_target,12,1,400,exact,FlashInferFixedQueryAttention,16.88,16.88,,20.89,17.05,SGLang FI 0.7.1,0.990,PASS
+GB10,q35_target,12,1,1000,exact,FlashInferFixedQueryAttention,25.58,25.58,,43.30,25.12,SGLang FI 0.7.1,1.018,LOSS
+GB10,q35_target,12,2,100,exact,FlashInferFixedQueryAttention,9.72,9.72,,8.02,13.40,vllm_flash_attn,1.212,LOSS
+GB10,q35_target,12,2,400,exact,FlashInferFixedQueryAttention,22.22,22.22,,24.19,21.87,SGLang FI 0.7.1,1.016,LOSS
+GB10,q35_target,12,2,1000,exact,FlashInferFixedQueryAttention,43.40,43.40,,48.72,44.07,SGLang FI 0.7.1,0.985,PASS
+GB10,q35_target,12,3,100,exact,FlashInferFixedQueryAttention,11.50,11.50,,8.93,13.81,vllm_flash_attn,1.288,LOSS
+GB10,q35_target,12,3,400,exact,FlashInferFixedQueryAttention,29.40,29.40,,27.68,29.90,vllm_flash_attn,1.062,LOSS
+GB10,q35_target,12,3,1000,exact,FlashInferFixedQueryAttention,62.70,62.70,,60.09,63.04,vllm_flash_attn,1.043,LOSS
+GB10,q35_target,12,4,100,exact,FlashInferFixedQueryAttention,13.00,13.00,,15.67,14.64,SGLang FI 0.7.1,0.888,PASS
+GB10,q35_target,12,4,400,exact,FlashInferFixedQueryAttention,37.48,37.48,,45.34,37.79,SGLang FI 0.7.1,0.992,PASS
+GB10,q35_target,12,4,1000,exact,FlashInferFixedQueryAttention,82.51,82.51,,97.08,84.86,SGLang FI 0.7.1,0.972,PASS
+GB10,q35_target,16,1,100,32768,FlashInferFixedQueryAttention,9.94,9.94,,8.02,14.79,vllm_flash_attn,1.240,LOSS
+GB10,q35_target,16,1,100,exact,FlashInferFixedQueryAttention,9.60,9.60,,7.97,14.48,vllm_flash_attn,1.204,LOSS
+GB10,q35_target,16,1,400,32768,FlashInferFixedQueryAttention,18.49,18.49,,21.03,18.12,SGLang FI 0.7.1,1.020,LOSS
+GB10,q35_target,16,1,400,exact,FlashInferFixedQueryAttention,18.03,18.03,,20.81,18.07,SGLang FI 0.7.1,0.997,PASS
+GB10,q35_target,16,1,1000,32768,FlashInferFixedQueryAttention,26.53,26.53,,43.34,26.80,SGLang FI 0.7.1,0.990,PASS
+GB10,q35_target,16,1,1000,exact,FlashInferFixedQueryAttention,26.80,26.80,,43.14,26.58,SGLang FI 0.7.1,1.008,LOSS
+GB10,q35_target,16,2,100,32768,FlashInferFixedQueryAttention,12.33,12.33,,8.82,15.34,vllm_flash_attn,1.398,LOSS
+GB10,q35_target,16,2,100,exact,FlashInferFixedQueryAttention,12.24,12.24,,8.93,15.06,vllm_flash_attn,1.371,LOSS
+GB10,q35_target,16,2,400,32768,FlashInferFixedQueryAttention,23.79,23.79,,24.37,30.02,vllm_flash_attn,0.976,PASS
+GB10,q35_target,16,2,400,exact,FlashInferFixedQueryAttention,23.96,23.96,,24.40,23.03,SGLang FI 0.7.1,1.040,LOSS
+GB10,q35_target,16,2,1000,32768,FlashInferFixedQueryAttention,46.03,46.03,,49.18,45.99,SGLang FI 0.7.1,1.001,LOSS
+GB10,q35_target,16,2,1000,exact,FlashInferFixedQueryAttention,46.37,46.37,,49.17,45.50,SGLang FI 0.7.1,1.019,LOSS
+GB10,q35_target,16,3,100,32768,FlashInferFixedQueryAttention,13.80,13.80,,9.03,15.98,vllm_flash_attn,1.529,LOSS
+GB10,q35_target,16,3,100,exact,FlashInferFixedQueryAttention,13.30,13.30,,12.99,15.45,vllm_flash_attn,1.024,LOSS
+GB10,q35_target,16,3,400,32768,FlashInferFixedQueryAttention,31.84,31.84,,28.64,31.56,vllm_flash_attn,1.112,LOSS
+GB10,q35_target,16,3,400,exact,FlashInferFixedQueryAttention,31.96,31.96,,29.25,31.23,vllm_flash_attn,1.093,LOSS
+GB10,q35_target,16,3,1000,32768,FlashInferFixedQueryAttention,65.52,65.52,,60.38,66.15,vllm_flash_attn,1.085,LOSS
+GB10,q35_target,16,3,1000,exact,FlashInferFixedQueryAttention,66.58,66.58,,60.99,65.56,vllm_flash_attn,1.092,LOSS
+GB10,q35_target,16,4,100,32768,FlashInferFixedQueryAttention,15.31,15.31,,15.85,16.53,vllm_flash_attn,0.966,PASS
+GB10,q35_target,16,4,100,exact,FlashInferFixedQueryAttention,16.19,16.19,,16.15,16.99,vllm_flash_attn,1.002,LOSS
+GB10,q35_target,16,4,400,32768,FlashInferFixedQueryAttention,40.02,40.02,,45.88,40.56,SGLang FI 0.7.1,0.987,PASS
+GB10,q35_target,16,4,400,exact,FlashInferFixedQueryAttention,40.61,40.61,,45.99,40.17,SGLang FI 0.7.1,1.011,LOSS
+GB10,q35_target,16,4,1000,32768,FlashInferFixedQueryAttention,95.61,95.61,,97.81,86.98,SGLang FI 0.7.1,1.099,LOSS
+GB10,q35_target,16,4,1000,exact,FlashInferFixedQueryAttention,87.51,87.51,,102.50,88.03,SGLang FI 0.7.1,0.994,PASS
+GB10,q3_target,4,1,100,exact,DraftAttention CuTe,5.28,7.67,5.28,5.20,7.64,vllm_flash_attn,1.015,LOSS
+GB10,q3_target,4,1,400,exact,DraftAttention CuTe,13.15,14.72,13.15,15.19,14.28,SGLang FI 0.7.1,0.921,PASS
+GB10,q3_target,4,1,1000,exact,DraftAttention CuTe,23.43,25.62,23.43,29.62,25.08,SGLang FI 0.7.1,0.934,PASS
+GB10,q3_target,4,2,100,exact,DraftAttention CuTe,8.41,10.40,8.41,10.73,10.11,SGLang FI 0.7.1,0.832,PASS
+GB10,q3_target,4,2,400,exact,DraftAttention CuTe,20.32,23.61,20.32,27.86,21.64,SGLang FI 0.7.1,0.939,PASS
+GB10,q3_target,4,2,1000,exact,DraftAttention CuTe,41.48,43.82,41.48,53.81,43.30,SGLang FI 0.7.1,0.958,PASS
+GB10,q3_target,4,3,100,exact,DraftAttention CuTe,10.96,12.65,10.96,12.56,12.10,SGLang FI 0.7.1,0.905,PASS
+GB10,q3_target,4,3,400,exact,DraftAttention CuTe,27.24,30.26,27.24,30.82,30.24,SGLang FI 0.7.1,0.901,PASS
+GB10,q3_target,4,3,1000,exact,DraftAttention CuTe,58.48,62.08,58.48,61.09,62.56,vllm_flash_attn,0.957,PASS
+GB10,q3_target,4,4,100,exact,DraftAttention CuTe,10.88,14.21,10.88,17.04,14.56,SGLang FI 0.7.1,0.747,PASS
+GB10,q3_target,4,4,400,exact,DraftAttention CuTe,32.53,39.86,32.53,41.83,39.93,SGLang FI 0.7.1,0.815,PASS
+GB10,q3_target,4,4,1000,exact,DraftAttention CuTe,74.38,81.79,74.38,83.15,81.34,SGLang FI 0.7.1,0.914,PASS
+GB10,q3_target,5,1,100,exact,DraftAttention CuTe,5.15,8.48,5.15,5.15,8.73,vllm_flash_attn,1.000,LOSS
+GB10,q3_target,5,1,400,exact,DraftAttention CuTe,13.15,14.49,13.15,15.39,13.65,SGLang FI 0.7.1,0.963,PASS
+GB10,q3_target,5,1,1000,exact,DraftAttention CuTe,23.41,25.27,23.41,29.60,24.72,SGLang FI 0.7.1,0.947,PASS
+GB10,q3_target,5,2,100,exact,DraftAttention CuTe,8.37,10.70,8.37,10.63,10.46,SGLang FI 0.7.1,0.800,PASS
+GB10,q3_target,5,2,400,exact,DraftAttention CuTe,20.26,22.36,20.26,28.14,21.59,SGLang FI 0.7.1,0.939,PASS
+GB10,q3_target,5,2,1000,exact,DraftAttention CuTe,41.13,44.17,41.13,54.10,43.99,SGLang FI 0.7.1,0.935,PASS
+GB10,q3_target,5,3,100,exact,DraftAttention CuTe,11.08,12.92,11.08,12.75,12.38,SGLang FI 0.7.1,0.896,PASS
+GB10,q3_target,5,3,400,exact,DraftAttention CuTe,27.12,30.65,27.12,31.01,30.73,SGLang FI 0.7.1,0.882,PASS
+GB10,q3_target,5,3,1000,exact,DraftAttention CuTe,58.72,62.79,58.72,61.42,62.82,vllm_flash_attn,0.956,PASS
+GB10,q3_target,5,4,100,exact,DraftAttention CuTe,11.19,16.55,11.19,17.03,16.85,SGLang FI 0.7.1,0.664,PASS
+GB10,q3_target,5,4,400,exact,DraftAttention CuTe,32.57,40.12,32.57,41.94,40.20,SGLang FI 0.7.1,0.810,PASS
+GB10,q3_target,5,4,1000,exact,DraftAttention CuTe,74.30,82.08,74.30,83.58,82.49,SGLang FI 0.7.1,0.901,PASS
+GB10,q3_target,6,1,100,exact,DraftAttention CuTe,5.48,8.74,5.48,5.70,9.00,vllm_flash_attn,0.962,PASS
+GB10,q3_target,6,1,400,exact,DraftAttention CuTe,13.42,14.73,13.42,15.38,13.82,SGLang FI 0.7.1,0.971,PASS
+GB10,q3_target,6,1,1000,exact,DraftAttention CuTe,22.72,24.69,22.72,27.98,24.83,SGLang FI 0.7.1,0.915,PASS
+GB10,q3_target,6,2,100,exact,DraftAttention CuTe,9.10,11.43,9.10,11.18,11.03,SGLang FI 0.7.1,0.825,PASS
+GB10,q3_target,6,2,400,exact,DraftAttention CuTe,20.42,22.75,20.42,28.17,22.19,SGLang FI 0.7.1,0.920,PASS
+GB10,q3_target,6,2,1000,exact,DraftAttention CuTe,40.84,44.22,40.84,53.75,43.53,SGLang FI 0.7.1,0.938,PASS
+GB10,q3_target,6,3,100,exact,DraftAttention CuTe,11.26,13.27,11.26,12.79,13.02,vllm_flash_attn,0.880,PASS
+GB10,q3_target,6,3,400,exact,DraftAttention CuTe,27.15,31.28,27.15,31.15,31.42,vllm_flash_attn,0.872,PASS
+GB10,q3_target,6,3,1000,exact,DraftAttention CuTe,57.87,62.31,57.87,60.45,62.79,vllm_flash_attn,0.957,PASS
+GB10,q3_target,6,4,100,exact,DraftAttention CuTe,11.35,17.33,11.35,17.43,17.28,SGLang FI 0.7.1,0.657,PASS
+GB10,q3_target,6,4,400,exact,DraftAttention CuTe,31.76,40.32,31.76,42.19,41.14,SGLang FI 0.7.1,0.772,PASS
+GB10,q3_target,6,4,1000,exact,DraftAttention CuTe,72.26,83.93,72.26,82.71,82.16,SGLang FI 0.7.1,0.880,PASS
+GB10,q3_target,8,1,100,exact,DraftAttention CuTe,5.91,9.09,5.91,5.53,9.24,vllm_flash_attn,1.067,LOSS
+GB10,q3_target,8,1,400,exact,DraftAttention CuTe,13.64,15.21,13.64,15.34,14.27,SGLang FI 0.7.1,0.956,PASS
+GB10,q3_target,8,1,1000,exact,DraftAttention CuTe,23.66,25.97,23.66,27.91,25.75,SGLang FI 0.7.1,0.919,PASS
+GB10,q3_target,8,2,100,exact,DraftAttention CuTe,9.74,11.77,9.74,11.43,11.37,SGLang FI 0.7.1,0.857,PASS
+GB10,q3_target,8,2,400,exact,DraftAttention CuTe,20.61,23.64,20.61,28.10,23.09,SGLang FI 0.7.1,0.893,PASS
+GB10,q3_target,8,2,1000,exact,DraftAttention CuTe,40.37,44.44,40.37,53.69,45.24,SGLang FI 0.7.1,0.892,PASS
+GB10,q3_target,8,3,100,exact,DraftAttention CuTe,11.69,16.54,11.69,12.99,15.96,vllm_flash_attn,0.900,PASS
+GB10,q3_target,8,3,400,exact,DraftAttention CuTe,27.41,32.92,27.41,31.05,33.05,vllm_flash_attn,0.883,PASS
+GB10,q3_target,8,3,1000,exact,DraftAttention CuTe,57.24,63.58,57.24,61.88,64.42,vllm_flash_attn,0.925,PASS
+GB10,q3_target,8,4,100,exact,DraftAttention CuTe,11.33,17.58,11.33,17.52,17.80,vllm_flash_attn,0.647,PASS
+GB10,q3_target,8,4,400,exact,DraftAttention CuTe,32.02,44.07,32.02,42.63,43.08,vllm_flash_attn,0.751,PASS
+GB10,q3_target,8,4,1000,exact,DraftAttention CuTe,73.42,83.78,73.42,82.74,84.82,vllm_flash_attn,0.887,PASS
+GB10,q3_target,9,1,100,exact,DraftAttention CuTe,5.62,8.79,5.62,5.46,9.08,vllm_flash_attn,1.029,LOSS
+GB10,q3_target,9,1,400,exact,DraftAttention CuTe,13.22,14.91,13.22,15.18,14.38,SGLang FI 0.7.1,0.919,PASS
+GB10,q3_target,9,1,1000,exact,DraftAttention CuTe,25.22,26.22,25.22,29.59,25.41,SGLang FI 0.7.1,0.992,PASS
+GB10,q3_target,9,2,100,exact,DraftAttention CuTe,7.56,15.15,7.56,11.13,14.55,vllm_flash_attn,0.679,PASS
+GB10,q3_target,9,2,400,exact,DraftAttention CuTe,19.65,24.52,19.65,27.92,23.82,SGLang FI 0.7.1,0.825,PASS
+GB10,q3_target,9,2,1000,exact,DraftAttention CuTe,42.77,48.34,42.77,53.98,46.03,SGLang FI 0.7.1,0.929,PASS
+GB10,q3_target,9,3,100,exact,DraftAttention CuTe,12.86,16.00,12.86,12.81,15.60,vllm_flash_attn,1.004,LOSS
+GB10,q3_target,9,3,400,exact,DraftAttention CuTe,28.43,33.25,28.43,31.06,33.49,vllm_flash_attn,0.915,PASS
+GB10,q3_target,9,3,1000,exact,DraftAttention CuTe,60.13,64.80,60.13,61.39,65.71,vllm_flash_attn,0.980,PASS
+GB10,q3_target,9,4,100,exact,DraftAttention CuTe,12.46,17.21,12.46,17.31,17.51,vllm_flash_attn,0.720,PASS
+GB10,q3_target,9,4,400,exact,DraftAttention CuTe,34.08,42.91,34.08,41.88,43.21,vllm_flash_attn,0.814,PASS
+GB10,q3_target,9,4,1000,exact,DraftAttention CuTe,76.58,86.89,76.58,83.60,85.25,vllm_flash_attn,0.916,PASS
+GB10,q3_target,12,1,100,exact,DraftAttention CuTe,5.84,9.04,5.84,5.46,9.35,vllm_flash_attn,1.070,LOSS
+GB10,q3_target,12,1,400,exact,DraftAttention CuTe,13.62,15.68,13.62,15.51,15.04,SGLang FI 0.7.1,0.906,PASS
+GB10,q3_target,12,1,1000,exact,DraftAttention CuTe,25.84,26.69,25.84,29.85,26.20,SGLang FI 0.7.1,0.986,PASS
+GB10,q3_target,12,2,100,exact,DraftAttention CuTe,7.61,15.24,7.61,11.20,14.77,vllm_flash_attn,0.680,PASS
+GB10,q3_target,12,2,400,exact,DraftAttention CuTe,19.64,25.57,19.64,28.09,24.79,SGLang FI 0.7.1,0.792,PASS
+GB10,q3_target,12,2,1000,exact,DraftAttention CuTe,42.52,47.68,42.52,54.28,46.91,SGLang FI 0.7.1,0.906,PASS
+GB10,q3_target,12,3,100,exact,DraftAttention CuTe,12.99,16.39,12.99,13.02,15.93,vllm_flash_attn,0.997,PASS
+GB10,q3_target,12,3,400,exact,DraftAttention CuTe,28.64,35.12,28.64,31.06,35.28,vllm_flash_attn,0.922,PASS
+GB10,q3_target,12,3,1000,exact,DraftAttention CuTe,60.11,66.88,60.11,61.60,67.02,vllm_flash_attn,0.976,PASS
+GB10,q3_target,12,4,100,exact,DraftAttention CuTe,12.16,17.62,12.16,17.46,18.14,vllm_flash_attn,0.696,PASS
+GB10,q3_target,12,4,400,exact,DraftAttention CuTe,34.15,45.36,34.15,42.05,45.57,vllm_flash_attn,0.812,PASS
+GB10,q3_target,12,4,1000,exact,DraftAttention CuTe,76.81,88.10,76.81,83.99,87.68,vllm_flash_attn,0.915,PASS
+GB10,q3_target,16,1,100,32768,DraftAttention CuTe,6.61,9.65,6.61,5.67,9.65,vllm_flash_attn,1.165,LOSS
+GB10,q3_target,16,1,100,exact,DraftAttention CuTe,6.21,9.34,6.21,5.56,9.29,vllm_flash_attn,1.116,LOSS
+GB10,q3_target,16,1,400,32768,DraftAttention CuTe,13.27,16.91,13.27,15.46,16.18,vllm_flash_attn,0.858,PASS
+GB10,q3_target,16,1,400,exact,DraftAttention CuTe,13.88,16.80,13.88,15.41,16.26,vllm_flash_attn,0.901,PASS
+GB10,q3_target,16,1,1000,32768,DraftAttention CuTe,24.38,27.95,24.38,29.80,27.40,SGLang FI 0.7.1,0.890,PASS
+GB10,q3_target,16,1,1000,exact,DraftAttention CuTe,25.34,27.67,25.34,29.69,27.19,SGLang FI 0.7.1,0.932,PASS
+GB10,q3_target,16,2,100,32768,DraftAttention CuTe,12.79,15.57,12.79,11.43,14.82,vllm_flash_attn,1.119,LOSS
+GB10,q3_target,16,2,100,exact,DraftAttention CuTe,7.90,15.57,7.90,11.45,14.99,vllm_flash_attn,0.689,PASS
+GB10,q3_target,16,2,400,32768,DraftAttention CuTe,22.50,27.61,22.50,28.10,27.01,SGLang FI 0.7.1,0.833,PASS
+GB10,q3_target,16,2,400,exact,DraftAttention CuTe,19.45,27.36,19.45,28.09,26.82,SGLang FI 0.7.1,0.725,PASS
+GB10,q3_target,16,2,1000,32768,DraftAttention CuTe,45.43,49.64,45.43,54.13,48.99,SGLang FI 0.7.1,0.927,PASS
+GB10,q3_target,16,2,1000,exact,DraftAttention CuTe,43.46,49.46,43.46,53.99,48.85,SGLang FI 0.7.1,0.890,PASS
+GB10,q3_target,16,3,100,32768,DraftAttention CuTe,14.51,16.90,14.51,13.30,16.46,vllm_flash_attn,1.091,LOSS
+GB10,q3_target,16,3,100,exact,DraftAttention CuTe,14.40,16.80,14.40,13.19,16.55,vllm_flash_attn,1.092,LOSS
+GB10,q3_target,16,3,400,32768,DraftAttention CuTe,29.20,37.62,29.20,31.23,37.77,vllm_flash_attn,0.935,PASS
+GB10,q3_target,16,3,400,exact,DraftAttention CuTe,29.62,37.69,29.62,31.35,37.70,vllm_flash_attn,0.945,PASS
+GB10,q3_target,16,3,1000,32768,DraftAttention CuTe,61.97,70.78,61.97,62.19,72.54,vllm_flash_attn,0.997,PASS
+GB10,q3_target,16,3,1000,exact,DraftAttention CuTe,61.40,69.48,61.40,62.56,70.53,vllm_flash_attn,0.981,PASS
+GB10,q3_target,16,4,100,32768,FlashInferFixedQueryAttention,18.77,18.77,19.45,17.66,20.63,vllm_flash_attn,1.063,LOSS
+GB10,q3_target,16,4,100,exact,DraftAttention CuTe,13.11,18.47,13.11,17.62,18.84,vllm_flash_attn,0.744,PASS
+GB10,q3_target,16,4,400,32768,DraftAttention CuTe,37.53,48.38,37.53,42.22,48.51,vllm_flash_attn,0.889,PASS
+GB10,q3_target,16,4,400,exact,DraftAttention CuTe,34.50,48.42,34.50,42.48,48.50,vllm_flash_attn,0.812,PASS
+GB10,q3_target,16,4,1000,32768,DraftAttention CuTe,81.48,91.67,81.48,88.95,93.58,vllm_flash_attn,0.916,PASS
+GB10,q3_target,16,4,1000,exact,DraftAttention CuTe,76.93,92.02,76.93,84.06,92.86,vllm_flash_attn,0.915,PASS
+RTX PRO 6000,draft_noncausal,4,1,100,exact,DraftAttention CuTe,5.53,7.40,5.53,5.24,8.23,vllm_flash_attn,1.057,LOSS
+RTX PRO 6000,draft_noncausal,4,1,400,exact,DraftAttention CuTe,7.21,9.42,7.21,13.26,10.53,SGLang FI 0.7.1,0.684,PASS
+RTX PRO 6000,draft_noncausal,4,1,1000,exact,DraftAttention CuTe,8.81,10.97,8.81,23.86,11.23,SGLang FI 0.7.1,0.785,PASS
+RTX PRO 6000,draft_noncausal,4,2,100,exact,DraftAttention CuTe,5.58,7.42,5.58,5.32,9.41,vllm_flash_attn,1.049,LOSS
+RTX PRO 6000,draft_noncausal,4,2,400,exact,DraftAttention CuTe,8.16,10.13,8.16,13.27,11.43,SGLang FI 0.7.1,0.714,PASS
+RTX PRO 6000,draft_noncausal,4,2,1000,exact,DraftAttention CuTe,11.30,12.74,11.30,23.95,12.97,SGLang FI 0.7.1,0.871,PASS
+RTX PRO 6000,draft_noncausal,4,3,100,exact,DraftAttention CuTe,5.57,7.42,5.57,5.37,9.62,vllm_flash_attn,1.036,LOSS
+RTX PRO 6000,draft_noncausal,4,3,400,exact,DraftAttention CuTe,9.29,11.28,9.29,13.50,12.10,SGLang FI 0.7.1,0.768,PASS
+RTX PRO 6000,draft_noncausal,4,3,1000,exact,DraftAttention CuTe,14.79,15.28,14.79,24.54,15.48,SGLang FI 0.7.1,0.955,PASS
+RTX PRO 6000,draft_noncausal,4,4,100,exact,DraftAttention CuTe,5.69,7.83,5.69,5.66,9.79,vllm_flash_attn,1.007,LOSS
+RTX PRO 6000,draft_noncausal,4,4,400,exact,DraftAttention CuTe,10.26,12.69,10.26,13.93,12.73,SGLang FI 0.7.1,0.807,PASS
+RTX PRO 6000,draft_noncausal,4,4,1000,exact,DraftAttention CuTe,17.69,18.88,17.69,25.56,19.04,SGLang FI 0.7.1,0.929,PASS
+RTX PRO 6000,draft_noncausal,5,1,100,exact,DraftAttention CuTe,5.39,6.99,5.39,5.26,9.32,vllm_flash_attn,1.024,LOSS
+RTX PRO 6000,draft_noncausal,5,1,400,exact,DraftAttention CuTe,7.04,8.84,7.04,13.24,11.06,SGLang FI 0.7.1,0.637,PASS
+RTX PRO 6000,draft_noncausal,5,1,1000,exact,DraftAttention CuTe,8.80,11.28,8.80,23.93,11.45,SGLang FI 0.7.1,0.768,PASS
+RTX PRO 6000,draft_noncausal,5,2,100,exact,DraftAttention CuTe,5.44,7.46,5.44,5.30,9.46,vllm_flash_attn,1.025,LOSS
+RTX PRO 6000,draft_noncausal,5,2,400,exact,DraftAttention CuTe,8.04,10.35,8.04,13.30,11.58,SGLang FI 0.7.1,0.694,PASS
+RTX PRO 6000,draft_noncausal,5,2,1000,exact,DraftAttention CuTe,11.24,13.09,11.24,24.08,13.15,SGLang FI 0.7.1,0.855,PASS
+RTX PRO 6000,draft_noncausal,5,3,100,exact,DraftAttention CuTe,5.48,7.69,5.48,5.40,9.74,vllm_flash_attn,1.014,LOSS
+RTX PRO 6000,draft_noncausal,5,3,400,exact,DraftAttention CuTe,9.16,11.51,9.16,13.52,12.26,SGLang FI 0.7.1,0.747,PASS
+RTX PRO 6000,draft_noncausal,5,3,1000,exact,DraftAttention CuTe,14.80,15.70,14.80,24.52,15.91,SGLang FI 0.7.1,0.930,PASS
+RTX PRO 6000,draft_noncausal,5,4,100,exact,DraftAttention CuTe,5.56,8.38,5.56,5.66,13.82,vllm_flash_attn,0.983,PASS
+RTX PRO 6000,draft_noncausal,5,4,400,exact,DraftAttention CuTe,10.11,15.00,10.11,13.94,16.58,vllm_flash_attn,0.725,PASS
+RTX PRO 6000,draft_noncausal,5,4,1000,exact,DraftAttention CuTe,17.65,19.47,17.65,25.42,19.50,SGLang FI 0.7.1,0.905,PASS
+RTX PRO 6000,draft_noncausal,6,1,100,exact,DraftAttention CuTe,5.36,7.16,5.36,5.14,9.40,vllm_flash_attn,1.042,LOSS
+RTX PRO 6000,draft_noncausal,6,1,400,exact,DraftAttention CuTe,6.64,8.46,6.64,13.17,10.80,SGLang FI 0.7.1,0.614,PASS
+RTX PRO 6000,draft_noncausal,6,1,1000,exact,DraftAttention CuTe,8.38,11.02,8.38,24.16,11.21,SGLang FI 0.7.1,0.747,PASS
+RTX PRO 6000,draft_noncausal,6,2,100,exact,DraftAttention CuTe,5.46,7.65,5.46,5.28,9.62,vllm_flash_attn,1.034,LOSS
+RTX PRO 6000,draft_noncausal,6,2,400,exact,DraftAttention CuTe,7.60,9.92,7.60,13.27,11.41,SGLang FI 0.7.1,0.666,PASS
+RTX PRO 6000,draft_noncausal,6,2,1000,exact,DraftAttention CuTe,10.76,12.70,10.76,24.25,12.95,SGLang FI 0.7.1,0.831,PASS
+RTX PRO 6000,draft_noncausal,6,3,100,exact,DraftAttention CuTe,5.47,7.75,5.47,5.32,9.90,vllm_flash_attn,1.027,LOSS
+RTX PRO 6000,draft_noncausal,6,3,400,exact,DraftAttention CuTe,8.66,11.20,8.66,13.29,11.98,SGLang FI 0.7.1,0.723,PASS
+RTX PRO 6000,draft_noncausal,6,3,1000,exact,DraftAttention CuTe,14.42,15.26,14.42,24.59,15.57,SGLang FI 0.7.1,0.926,PASS
+RTX PRO 6000,draft_noncausal,6,4,100,exact,DraftAttention CuTe,5.58,8.67,5.58,5.45,14.17,vllm_flash_attn,1.023,LOSS
+RTX PRO 6000,draft_noncausal,6,4,400,exact,DraftAttention CuTe,9.70,14.78,9.70,13.70,16.54,vllm_flash_attn,0.709,PASS
+RTX PRO 6000,draft_noncausal,6,4,1000,exact,DraftAttention CuTe,17.19,18.96,17.19,25.38,19.20,SGLang FI 0.7.1,0.895,PASS
+RTX PRO 6000,draft_noncausal,8,1,100,exact,DraftAttention CuTe,5.64,7.29,5.64,5.18,9.48,vllm_flash_attn,1.089,LOSS
+RTX PRO 6000,draft_noncausal,8,1,400,exact,DraftAttention CuTe,6.82,8.74,6.82,13.25,10.90,SGLang FI 0.7.1,0.626,PASS
+RTX PRO 6000,draft_noncausal,8,1,1000,exact,DraftAttention CuTe,8.55,11.10,8.55,24.10,11.35,SGLang FI 0.7.1,0.753,PASS
+RTX PRO 6000,draft_noncausal,8,2,100,exact,DraftAttention CuTe,5.69,7.73,5.69,5.24,9.75,vllm_flash_attn,1.085,LOSS
+RTX PRO 6000,draft_noncausal,8,2,400,exact,DraftAttention CuTe,7.85,10.25,7.85,13.25,11.61,SGLang FI 0.7.1,0.676,PASS
+RTX PRO 6000,draft_noncausal,8,2,1000,exact,DraftAttention CuTe,11.01,13.04,11.01,24.29,13.13,SGLang FI 0.7.1,0.838,PASS
+RTX PRO 6000,draft_noncausal,8,3,100,exact,DraftAttention CuTe,5.79,8.82,5.79,5.37,14.25,vllm_flash_attn,1.077,LOSS
+RTX PRO 6000,draft_noncausal,8,3,400,exact,DraftAttention CuTe,9.11,12.28,9.11,13.35,16.30,vllm_flash_attn,0.682,PASS
+RTX PRO 6000,draft_noncausal,8,3,1000,exact,DraftAttention CuTe,15.10,17.38,15.10,24.56,17.44,SGLang FI 0.7.1,0.866,PASS
+RTX PRO 6000,draft_noncausal,8,4,100,exact,DraftAttention CuTe,5.91,9.26,5.91,5.46,14.63,vllm_flash_attn,1.081,LOSS
+RTX PRO 6000,draft_noncausal,8,4,400,exact,DraftAttention CuTe,10.01,15.19,10.01,13.69,16.98,vllm_flash_attn,0.731,PASS
+RTX PRO 6000,draft_noncausal,8,4,1000,exact,DraftAttention CuTe,17.72,19.39,17.72,25.50,19.58,SGLang FI 0.7.1,0.905,PASS
+RTX PRO 6000,draft_noncausal,9,1,100,exact,DraftAttention CuTe,5.47,7.37,5.47,5.32,9.56,vllm_flash_attn,1.027,LOSS
+RTX PRO 6000,draft_noncausal,9,1,400,exact,DraftAttention CuTe,6.94,9.28,6.94,13.24,11.37,SGLang FI 0.7.1,0.611,PASS
+RTX PRO 6000,draft_noncausal,9,1,1000,exact,DraftAttention CuTe,8.72,11.67,8.72,23.93,11.83,SGLang FI 0.7.1,0.737,PASS
+RTX PRO 6000,draft_noncausal,9,2,100,exact,DraftAttention CuTe,5.60,8.54,5.60,5.37,13.98,vllm_flash_attn,1.042,LOSS
+RTX PRO 6000,draft_noncausal,9,2,400,exact,DraftAttention CuTe,8.34,11.36,8.34,13.32,16.15,vllm_flash_attn,0.626,PASS
+RTX PRO 6000,draft_noncausal,9,2,1000,exact,DraftAttention CuTe,11.85,16.74,11.85,24.06,16.95,SGLang FI 0.7.1,0.699,PASS
+RTX PRO 6000,draft_noncausal,9,3,100,exact,DraftAttention CuTe,5.66,9.02,5.66,5.52,14.29,vllm_flash_attn,1.026,LOSS
+RTX PRO 6000,draft_noncausal,9,3,400,exact,DraftAttention CuTe,10.02,12.80,10.02,13.60,16.72,vllm_flash_attn,0.737,PASS
+RTX PRO 6000,draft_noncausal,9,3,1000,exact,DraftAttention CuTe,16.24,17.89,16.24,24.60,18.00,SGLang FI 0.7.1,0.902,PASS
+RTX PRO 6000,draft_noncausal,9,4,100,exact,DraftAttention CuTe,5.85,9.37,5.85,5.79,14.62,vllm_flash_attn,1.011,LOSS
+RTX PRO 6000,draft_noncausal,9,4,400,exact,DraftAttention CuTe,11.42,15.82,11.42,13.99,17.40,vllm_flash_attn,0.816,PASS
+RTX PRO 6000,draft_noncausal,9,4,1000,exact,DraftAttention CuTe,19.01,20.17,19.01,25.55,20.33,SGLang FI 0.7.1,0.935,PASS
+RTX PRO 6000,draft_noncausal,12,1,100,exact,DraftAttention CuTe,5.58,7.79,5.58,5.46,9.79,vllm_flash_attn,1.022,LOSS
+RTX PRO 6000,draft_noncausal,12,1,400,exact,DraftAttention CuTe,7.05,9.43,7.05,13.27,11.77,SGLang FI 0.7.1,0.599,PASS
+RTX PRO 6000,draft_noncausal,12,1,1000,exact,DraftAttention CuTe,8.78,11.84,8.78,23.92,12.18,SGLang FI 0.7.1,0.720,PASS
+RTX PRO 6000,draft_noncausal,12,2,100,exact,DraftAttention CuTe,5.69,9.02,5.69,5.37,14.34,vllm_flash_attn,1.060,LOSS
+RTX PRO 6000,draft_noncausal,12,2,400,exact,DraftAttention CuTe,8.62,11.73,8.62,13.30,16.56,vllm_flash_attn,0.648,PASS
+RTX PRO 6000,draft_noncausal,12,2,1000,exact,DraftAttention CuTe,12.08,17.13,12.08,24.09,17.32,SGLang FI 0.7.1,0.697,PASS
+RTX PRO 6000,draft_noncausal,12,3,100,exact,DraftAttention CuTe,5.73,9.61,5.73,5.54,14.73,vllm_flash_attn,1.034,LOSS
+RTX PRO 6000,draft_noncausal,12,3,400,exact,DraftAttention CuTe,10.13,13.27,10.13,13.55,17.19,vllm_flash_attn,0.747,PASS
+RTX PRO 6000,draft_noncausal,12,3,1000,exact,DraftAttention CuTe,16.53,18.32,16.53,24.55,18.48,SGLang FI 0.7.1,0.894,PASS
+RTX PRO 6000,draft_noncausal,12,4,100,exact,DraftAttention CuTe,6.07,9.94,6.07,5.84,15.14,vllm_flash_attn,1.039,LOSS
+RTX PRO 6000,draft_noncausal,12,4,400,exact,DraftAttention CuTe,11.67,16.44,11.67,13.91,17.97,vllm_flash_attn,0.839,PASS
+RTX PRO 6000,draft_noncausal,12,4,1000,exact,DraftAttention CuTe,19.47,20.68,19.47,25.43,20.84,SGLang FI 0.7.1,0.934,PASS
+RTX PRO 6000,draft_noncausal,16,1,100,32768,DraftAttention CuTe,6.07,8.68,6.07,5.59,10.20,vllm_flash_attn,1.086,LOSS
+RTX PRO 6000,draft_noncausal,16,1,100,exact,DraftAttention CuTe,5.97,8.73,5.97,5.57,10.22,vllm_flash_attn,1.070,LOSS
+RTX PRO 6000,draft_noncausal,16,1,400,32768,DraftAttention CuTe,7.72,10.55,7.72,13.55,12.32,SGLang FI 0.7.1,0.626,PASS
+RTX PRO 6000,draft_noncausal,16,1,400,exact,DraftAttention CuTe,7.55,10.61,7.55,13.56,12.34,SGLang FI 0.7.1,0.612,PASS
+RTX PRO 6000,draft_noncausal,16,1,1000,32768,DraftAttention CuTe,9.40,12.64,9.40,24.43,12.74,SGLang FI 0.7.1,0.738,PASS
+RTX PRO 6000,draft_noncausal,16,1,1000,exact,DraftAttention CuTe,9.27,12.63,9.27,24.48,12.77,SGLang FI 0.7.1,0.726,PASS
+RTX PRO 6000,draft_noncausal,16,2,100,32768,DraftAttention CuTe,7.74,9.72,7.74,5.58,15.09,vllm_flash_attn,1.388,LOSS
+RTX PRO 6000,draft_noncausal,16,2,100,exact,DraftAttention CuTe,6.14,9.69,6.14,5.61,15.10,vllm_flash_attn,1.095,LOSS
+RTX PRO 6000,draft_noncausal,16,2,400,32768,DraftAttention CuTe,9.91,12.46,9.91,13.68,17.36,vllm_flash_attn,0.725,PASS
+RTX PRO 6000,draft_noncausal,16,2,400,exact,DraftAttention CuTe,8.92,12.50,8.92,13.66,17.30,vllm_flash_attn,0.653,PASS
+RTX PRO 6000,draft_noncausal,16,2,1000,32768,DraftAttention CuTe,13.57,17.91,13.57,24.63,18.08,SGLang FI 0.7.1,0.751,PASS
+RTX PRO 6000,draft_noncausal,16,2,1000,exact,DraftAttention CuTe,12.91,17.89,12.91,24.69,18.22,SGLang FI 0.7.1,0.708,PASS
+RTX PRO 6000,draft_noncausal,16,3,100,32768,DraftAttention CuTe,7.81,10.43,7.81,5.73,15.64,vllm_flash_attn,1.363,LOSS
+RTX PRO 6000,draft_noncausal,16,3,100,exact,DraftAttention CuTe,6.32,10.47,6.32,5.88,15.62,vllm_flash_attn,1.074,LOSS
+RTX PRO 6000,draft_noncausal,16,3,400,32768,DraftAttention CuTe,11.28,14.16,11.28,13.59,18.26,vllm_flash_attn,0.830,PASS
+RTX PRO 6000,draft_noncausal,16,3,400,exact,DraftAttention CuTe,10.64,14.21,10.64,13.90,18.27,vllm_flash_attn,0.766,PASS
+RTX PRO 6000,draft_noncausal,16,3,1000,32768,DraftAttention CuTe,15.90,19.21,15.90,25.31,19.51,SGLang FI 0.7.1,0.815,PASS
+RTX PRO 6000,draft_noncausal,16,3,1000,exact,DraftAttention CuTe,18.01,19.22,18.01,25.27,19.53,SGLang FI 0.7.1,0.922,PASS
+RTX PRO 6000,draft_noncausal,16,4,100,32768,DraftAttention CuTe,8.06,11.31,8.06,5.82,15.89,vllm_flash_attn,1.384,LOSS
+RTX PRO 6000,draft_noncausal,16,4,100,exact,DraftAttention CuTe,6.81,11.38,6.81,6.07,16.06,vllm_flash_attn,1.123,LOSS
+RTX PRO 6000,draft_noncausal,16,4,400,32768,DraftAttention CuTe,12.17,17.64,12.17,14.24,19.23,vllm_flash_attn,0.855,PASS
+RTX PRO 6000,draft_noncausal,16,4,400,exact,DraftAttention CuTe,12.22,17.65,12.22,14.38,19.12,vllm_flash_attn,0.850,PASS
+RTX PRO 6000,draft_noncausal,16,4,1000,32768,DraftAttention CuTe,18.47,21.44,18.47,26.19,21.98,SGLang FI 0.7.1,0.841,PASS
+RTX PRO 6000,draft_noncausal,16,4,1000,exact,DraftAttention CuTe,20.48,21.73,20.48,26.31,21.96,SGLang FI 0.7.1,0.933,PASS
+RTX PRO 6000,q35_target,4,1,100,exact,FlashInferFixedQueryAttention,7.70,7.70,,8.08,8.66,vllm_flash_attn,0.954,PASS
+RTX PRO 6000,q35_target,4,1,400,exact,FlashInferFixedQueryAttention,9.70,9.70,,21.28,10.74,SGLang FI 0.7.1,0.904,PASS
+RTX PRO 6000,q35_target,4,1,1000,exact,FlashInferFixedQueryAttention,11.37,11.37,,43.72,11.84,SGLang FI 0.7.1,0.961,PASS
+RTX PRO 6000,q35_target,4,2,100,exact,FlashInferFixedQueryAttention,6.69,6.69,,8.12,12.92,vllm_flash_attn,0.824,PASS
+RTX PRO 6000,q35_target,4,2,400,exact,FlashInferFixedQueryAttention,9.93,9.93,,21.29,15.80,SGLang FI 0.7.1,0.629,PASS
+RTX PRO 6000,q35_target,4,2,1000,exact,FlashInferFixedQueryAttention,16.27,16.27,,43.70,16.50,SGLang FI 0.7.1,0.987,PASS
+RTX PRO 6000,q35_target,4,3,100,exact,FlashInferFixedQueryAttention,6.59,6.59,,8.10,12.97,vllm_flash_attn,0.813,PASS
+RTX PRO 6000,q35_target,4,3,400,exact,FlashInferFixedQueryAttention,10.98,10.98,,21.23,16.09,SGLang FI 0.7.1,0.682,PASS
+RTX PRO 6000,q35_target,4,3,1000,exact,FlashInferFixedQueryAttention,16.76,16.76,,43.80,16.93,SGLang FI 0.7.1,0.990,PASS
+RTX PRO 6000,q35_target,4,4,100,exact,FlashInferFixedQueryAttention,7.00,7.00,,8.37,13.07,vllm_flash_attn,0.837,PASS
+RTX PRO 6000,q35_target,4,4,400,exact,FlashInferFixedQueryAttention,13.24,13.24,,21.38,16.29,SGLang FI 0.7.1,0.812,PASS
+RTX PRO 6000,q35_target,4,4,1000,exact,FlashInferFixedQueryAttention,18.53,18.53,,44.00,18.42,SGLang FI 0.7.1,1.006,LOSS
+RTX PRO 6000,q35_target,5,1,100,exact,FlashInferFixedQueryAttention,6.47,6.47,,8.11,12.92,vllm_flash_attn,0.797,PASS
+RTX PRO 6000,q35_target,5,1,400,exact,FlashInferFixedQueryAttention,8.87,8.87,,21.28,15.79,SGLang FI 0.7.1,0.562,PASS
+RTX PRO 6000,q35_target,5,1,1000,exact,FlashInferFixedQueryAttention,15.98,15.98,,43.83,16.05,SGLang FI 0.7.1,0.996,PASS
+RTX PRO 6000,q35_target,5,2,100,exact,FlashInferFixedQueryAttention,6.78,6.78,,8.14,12.94,vllm_flash_attn,0.833,PASS
+RTX PRO 6000,q35_target,5,2,400,exact,FlashInferFixedQueryAttention,9.98,9.98,,21.30,15.96,SGLang FI 0.7.1,0.625,PASS
+RTX PRO 6000,q35_target,5,2,1000,exact,FlashInferFixedQueryAttention,16.37,16.37,,43.82,16.56,SGLang FI 0.7.1,0.989,PASS
+RTX PRO 6000,q35_target,5,3,100,exact,FlashInferFixedQueryAttention,6.91,6.91,,8.15,13.02,vllm_flash_attn,0.847,PASS
+RTX PRO 6000,q35_target,5,3,400,exact,FlashInferFixedQueryAttention,11.37,11.37,,21.28,16.28,SGLang FI 0.7.1,0.698,PASS
+RTX PRO 6000,q35_target,5,3,1000,exact,FlashInferFixedQueryAttention,16.88,16.88,,43.81,17.23,SGLang FI 0.7.1,0.980,PASS
+RTX PRO 6000,q35_target,5,4,100,exact,FlashInferFixedQueryAttention,7.18,7.18,,8.38,13.21,vllm_flash_attn,0.857,PASS
+RTX PRO 6000,q35_target,5,4,400,exact,FlashInferFixedQueryAttention,13.35,13.35,,21.34,16.57,SGLang FI 0.7.1,0.806,PASS
+RTX PRO 6000,q35_target,5,4,1000,exact,FlashInferFixedQueryAttention,18.58,18.58,,44.01,18.66,SGLang FI 0.7.1,0.996,PASS
+RTX PRO 6000,q35_target,6,1,100,exact,FlashInferFixedQueryAttention,6.77,6.77,,7.99,13.19,vllm_flash_attn,0.847,PASS
+RTX PRO 6000,q35_target,6,1,400,exact,FlashInferFixedQueryAttention,8.54,8.54,,21.09,15.75,SGLang FI 0.7.1,0.542,PASS
+RTX PRO 6000,q35_target,6,1,1000,exact,FlashInferFixedQueryAttention,15.88,15.88,,44.20,15.88,SGLang FI 0.7.1,1.000,LOSS
+RTX PRO 6000,q35_target,6,2,100,exact,FlashInferFixedQueryAttention,7.31,7.31,,8.08,13.37,vllm_flash_attn,0.904,PASS
+RTX PRO 6000,q35_target,6,2,400,exact,FlashInferFixedQueryAttention,9.92,9.92,,21.20,15.78,SGLang FI 0.7.1,0.629,PASS
+RTX PRO 6000,q35_target,6,2,1000,exact,FlashInferFixedQueryAttention,16.38,16.38,,44.22,16.43,SGLang FI 0.7.1,0.997,PASS
+RTX PRO 6000,q35_target,6,3,100,exact,FlashInferFixedQueryAttention,7.28,7.28,,8.05,13.46,vllm_flash_attn,0.904,PASS
+RTX PRO 6000,q35_target,6,3,400,exact,FlashInferFixedQueryAttention,11.24,11.24,,21.15,16.29,SGLang FI 0.7.1,0.690,PASS
+RTX PRO 6000,q35_target,6,3,1000,exact,FlashInferFixedQueryAttention,16.86,16.86,,44.24,17.03,SGLang FI 0.7.1,0.990,PASS
+RTX PRO 6000,q35_target,6,4,100,exact,FlashInferFixedQueryAttention,7.54,7.54,,8.14,13.61,vllm_flash_attn,0.926,PASS
+RTX PRO 6000,q35_target,6,4,400,exact,FlashInferFixedQueryAttention,13.14,13.14,,21.23,16.53,SGLang FI 0.7.1,0.795,PASS
+RTX PRO 6000,q35_target,6,4,1000,exact,FlashInferFixedQueryAttention,18.20,18.20,,44.40,18.21,SGLang FI 0.7.1,0.999,PASS
+RTX PRO 6000,q35_target,8,1,100,exact,FlashInferFixedQueryAttention,7.08,7.08,,8.04,13.28,vllm_flash_attn,0.880,PASS
+RTX PRO 6000,q35_target,8,1,400,exact,FlashInferFixedQueryAttention,8.86,8.86,,21.18,15.99,SGLang FI 0.7.1,0.554,PASS
+RTX PRO 6000,q35_target,8,1,1000,exact,FlashInferFixedQueryAttention,16.18,16.18,,44.13,16.28,SGLang FI 0.7.1,0.994,PASS
+RTX PRO 6000,q35_target,8,2,100,exact,FlashInferFixedQueryAttention,7.72,7.72,,8.04,13.57,vllm_flash_attn,0.960,PASS
+RTX PRO 6000,q35_target,8,2,400,exact,FlashInferFixedQueryAttention,10.36,10.36,,21.19,16.13,SGLang FI 0.7.1,0.642,PASS
+RTX PRO 6000,q35_target,8,2,1000,exact,FlashInferFixedQueryAttention,16.79,16.79,,44.30,16.84,SGLang FI 0.7.1,0.997,PASS
+RTX PRO 6000,q35_target,8,3,100,exact,FlashInferFixedQueryAttention,7.92,7.92,,8.13,13.81,vllm_flash_attn,0.975,PASS
+RTX PRO 6000,q35_target,8,3,400,exact,FlashInferFixedQueryAttention,11.57,11.57,,21.21,16.59,SGLang FI 0.7.1,0.697,PASS
+RTX PRO 6000,q35_target,8,3,1000,exact,FlashInferFixedQueryAttention,17.31,17.31,,44.29,17.35,SGLang FI 0.7.1,0.997,PASS
+RTX PRO 6000,q35_target,8,4,100,exact,FlashInferFixedQueryAttention,8.22,8.22,,8.15,13.90,vllm_flash_attn,1.009,LOSS
+RTX PRO 6000,q35_target,8,4,400,exact,FlashInferFixedQueryAttention,13.65,13.65,,21.25,17.02,SGLang FI 0.7.1,0.802,PASS
+RTX PRO 6000,q35_target,8,4,1000,exact,FlashInferFixedQueryAttention,18.67,18.67,,44.46,18.70,SGLang FI 0.7.1,0.998,PASS
+RTX PRO 6000,q35_target,9,1,100,exact,FlashInferFixedQueryAttention,7.06,7.06,,8.23,13.13,vllm_flash_attn,0.859,PASS
+RTX PRO 6000,q35_target,9,1,400,exact,FlashInferFixedQueryAttention,9.03,9.03,,21.23,16.20,SGLang FI 0.7.1,0.558,PASS
+RTX PRO 6000,q35_target,9,1,1000,exact,FlashInferFixedQueryAttention,16.17,16.17,,43.83,16.45,SGLang FI 0.7.1,0.983,PASS
+RTX PRO 6000,q35_target,9,2,100,exact,FlashInferFixedQueryAttention,7.96,7.96,,8.31,13.49,vllm_flash_attn,0.958,PASS
+RTX PRO 6000,q35_target,9,2,400,exact,FlashInferFixedQueryAttention,10.77,10.77,,21.32,16.38,SGLang FI 0.7.1,0.657,PASS
+RTX PRO 6000,q35_target,9,2,1000,exact,FlashInferFixedQueryAttention,16.98,16.98,,43.80,17.32,SGLang FI 0.7.1,0.981,PASS
+RTX PRO 6000,q35_target,9,3,100,exact,FlashInferFixedQueryAttention,8.16,8.16,,8.22,13.60,vllm_flash_attn,0.992,PASS
+RTX PRO 6000,q35_target,9,3,400,exact,FlashInferFixedQueryAttention,12.16,12.16,,21.34,16.80,SGLang FI 0.7.1,0.724,PASS
+RTX PRO 6000,q35_target,9,3,1000,exact,FlashInferFixedQueryAttention,17.47,17.47,,43.91,17.72,SGLang FI 0.7.1,0.986,PASS
+RTX PRO 6000,q35_target,9,4,100,exact,FlashInferFixedQueryAttention,8.51,8.51,,8.47,13.83,vllm_flash_attn,1.004,LOSS
+RTX PRO 6000,q35_target,9,4,400,exact,FlashInferFixedQueryAttention,14.07,14.07,,21.34,17.37,SGLang FI 0.7.1,0.810,PASS
+RTX PRO 6000,q35_target,9,4,1000,exact,FlashInferFixedQueryAttention,19.14,19.14,,44.08,19.33,SGLang FI 0.7.1,0.990,PASS
+RTX PRO 6000,q35_target,12,1,100,exact,FlashInferFixedQueryAttention,7.62,7.62,,8.39,13.42,vllm_flash_attn,0.909,PASS
+RTX PRO 6000,q35_target,12,1,400,exact,FlashInferFixedQueryAttention,9.88,9.88,,21.33,16.60,SGLang FI 0.7.1,0.595,PASS
+RTX PRO 6000,q35_target,12,1,1000,exact,FlashInferFixedQueryAttention,16.63,16.63,,43.82,17.01,SGLang FI 0.7.1,0.978,PASS
+RTX PRO 6000,q35_target,12,2,100,exact,FlashInferFixedQueryAttention,8.65,8.65,,8.40,14.02,vllm_flash_attn,1.029,LOSS
+RTX PRO 6000,q35_target,12,2,400,exact,FlashInferFixedQueryAttention,11.31,11.31,,21.33,17.06,SGLang FI 0.7.1,0.663,PASS
+RTX PRO 6000,q35_target,12,2,1000,exact,FlashInferFixedQueryAttention,17.61,17.61,,43.86,18.02,SGLang FI 0.7.1,0.978,PASS
+RTX PRO 6000,q35_target,12,3,100,exact,FlashInferFixedQueryAttention,9.04,9.04,,8.28,14.17,vllm_flash_attn,1.091,LOSS
+RTX PRO 6000,q35_target,12,3,400,exact,FlashInferFixedQueryAttention,12.74,12.74,,21.34,17.67,SGLang FI 0.7.1,0.721,PASS
+RTX PRO 6000,q35_target,12,3,1000,exact,FlashInferFixedQueryAttention,18.02,18.02,,43.91,18.39,SGLang FI 0.7.1,0.980,PASS
+RTX PRO 6000,q35_target,12,4,100,exact,FlashInferFixedQueryAttention,9.36,9.36,,8.54,14.49,vllm_flash_attn,1.096,LOSS
+RTX PRO 6000,q35_target,12,4,400,exact,FlashInferFixedQueryAttention,15.18,15.18,,21.33,18.10,SGLang FI 0.7.1,0.838,PASS
+RTX PRO 6000,q35_target,12,4,1000,exact,FlashInferFixedQueryAttention,19.58,19.58,,44.06,20.05,SGLang FI 0.7.1,0.977,PASS
+RTX PRO 6000,q35_target,16,1,100,32768,FlashInferFixedQueryAttention,8.92,8.92,,8.46,15.31,vllm_flash_attn,1.054,LOSS
+RTX PRO 6000,q35_target,16,1,100,exact,FlashInferFixedQueryAttention,8.85,8.85,,8.54,15.33,vllm_flash_attn,1.036,LOSS
+RTX PRO 6000,q35_target,16,1,400,32768,FlashInferFixedQueryAttention,11.73,11.73,,21.71,17.64,SGLang FI 0.7.1,0.665,PASS
+RTX PRO 6000,q35_target,16,1,400,exact,FlashInferFixedQueryAttention,11.71,11.71,,21.72,17.75,SGLang FI 0.7.1,0.660,PASS
+RTX PRO 6000,q35_target,16,1,1000,32768,FlashInferFixedQueryAttention,18.45,18.45,,44.61,18.22,SGLang FI 0.7.1,1.013,LOSS
+RTX PRO 6000,q35_target,16,1,1000,exact,FlashInferFixedQueryAttention,18.42,18.42,,44.65,18.30,SGLang FI 0.7.1,1.007,LOSS
+RTX PRO 6000,q35_target,16,2,100,32768,FlashInferFixedQueryAttention,9.88,9.88,,8.48,16.29,vllm_flash_attn,1.165,LOSS
+RTX PRO 6000,q35_target,16,2,100,exact,FlashInferFixedQueryAttention,9.91,9.91,,8.58,16.33,vllm_flash_attn,1.155,LOSS
+RTX PRO 6000,q35_target,16,2,400,32768,FlashInferFixedQueryAttention,13.35,13.35,,21.78,18.25,SGLang FI 0.7.1,0.732,PASS
+RTX PRO 6000,q35_target,16,2,400,exact,FlashInferFixedQueryAttention,13.39,13.39,,21.77,18.29,SGLang FI 0.7.1,0.732,PASS
+RTX PRO 6000,q35_target,16,2,1000,32768,FlashInferFixedQueryAttention,19.45,19.45,,44.66,19.33,SGLang FI 0.7.1,1.007,LOSS
+RTX PRO 6000,q35_target,16,2,1000,exact,FlashInferFixedQueryAttention,19.49,19.49,,44.67,19.33,SGLang FI 0.7.1,1.008,LOSS
+RTX PRO 6000,q35_target,16,3,100,32768,FlashInferFixedQueryAttention,10.69,10.69,,8.72,16.48,vllm_flash_attn,1.226,LOSS
+RTX PRO 6000,q35_target,16,3,100,exact,FlashInferFixedQueryAttention,10.38,10.38,,8.57,16.52,vllm_flash_attn,1.211,LOSS
+RTX PRO 6000,q35_target,16,3,400,32768,FlashInferFixedQueryAttention,14.81,14.81,,21.79,18.85,SGLang FI 0.7.1,0.786,PASS
+RTX PRO 6000,q35_target,16,3,400,exact,FlashInferFixedQueryAttention,14.84,14.84,,21.79,18.99,SGLang FI 0.7.1,0.781,PASS
+RTX PRO 6000,q35_target,16,3,1000,32768,FlashInferFixedQueryAttention,20.04,20.04,,44.75,19.94,SGLang FI 0.7.1,1.005,LOSS
+RTX PRO 6000,q35_target,16,3,1000,exact,FlashInferFixedQueryAttention,19.96,19.96,,44.73,19.91,SGLang FI 0.7.1,1.002,LOSS
+RTX PRO 6000,q35_target,16,4,100,32768,FlashInferFixedQueryAttention,10.92,10.92,,8.61,16.93,vllm_flash_attn,1.269,LOSS
+RTX PRO 6000,q35_target,16,4,100,exact,FlashInferFixedQueryAttention,11.18,11.18,,8.83,16.93,vllm_flash_attn,1.267,LOSS
+RTX PRO 6000,q35_target,16,4,400,32768,FlashInferFixedQueryAttention,17.71,17.71,,21.83,19.49,SGLang FI 0.7.1,0.908,PASS
+RTX PRO 6000,q35_target,16,4,400,exact,FlashInferFixedQueryAttention,17.91,17.91,,21.95,19.37,SGLang FI 0.7.1,0.924,PASS
+RTX PRO 6000,q35_target,16,4,1000,32768,FlashInferFixedQueryAttention,21.04,21.04,,44.81,21.36,SGLang FI 0.7.1,0.985,PASS
+RTX PRO 6000,q35_target,16,4,1000,exact,FlashInferFixedQueryAttention,21.45,21.45,,45.11,21.31,SGLang FI 0.7.1,1.007,LOSS
+RTX PRO 6000,q3_target,4,1,100,exact,DraftAttention CuTe,5.43,7.52,5.43,5.32,8.15,vllm_flash_attn,1.022,LOSS
+RTX PRO 6000,q3_target,4,1,400,exact,DraftAttention CuTe,7.18,9.43,7.18,13.81,9.79,SGLang FI 0.7.1,0.734,PASS
+RTX PRO 6000,q3_target,4,1,1000,exact,DraftAttention CuTe,8.80,10.95,8.80,24.53,10.52,SGLang FI 0.7.1,0.836,PASS
+RTX PRO 6000,q3_target,4,2,100,exact,DraftAttention CuTe,5.58,7.45,5.58,5.42,9.30,vllm_flash_attn,1.030,LOSS
+RTX PRO 6000,q3_target,4,2,400,exact,DraftAttention CuTe,8.14,10.21,8.14,13.76,10.72,SGLang FI 0.7.1,0.759,PASS
+RTX PRO 6000,q3_target,4,2,1000,exact,DraftAttention CuTe,11.25,12.73,11.25,24.49,12.46,SGLang FI 0.7.1,0.903,PASS
+RTX PRO 6000,q3_target,4,3,100,exact,DraftAttention CuTe,5.58,7.73,5.58,5.45,9.48,vllm_flash_attn,1.023,LOSS
+RTX PRO 6000,q3_target,4,3,400,exact,DraftAttention CuTe,9.21,11.38,9.21,13.86,12.14,SGLang FI 0.7.1,0.759,PASS
+RTX PRO 6000,q3_target,4,3,1000,exact,DraftAttention CuTe,14.87,15.34,14.87,24.91,15.54,SGLang FI 0.7.1,0.957,PASS
+RTX PRO 6000,q3_target,4,4,100,exact,DraftAttention CuTe,5.72,8.09,5.72,5.59,9.92,vllm_flash_attn,1.022,LOSS
+RTX PRO 6000,q3_target,4,4,400,exact,DraftAttention CuTe,10.18,12.72,10.18,14.26,13.06,SGLang FI 0.7.1,0.780,PASS
+RTX PRO 6000,q3_target,4,4,1000,exact,DraftAttention CuTe,17.58,19.04,17.58,25.75,19.06,SGLang FI 0.7.1,0.922,PASS
+RTX PRO 6000,q3_target,5,1,100,exact,DraftAttention CuTe,5.26,6.87,5.26,5.31,9.25,vllm_flash_attn,0.990,PASS
+RTX PRO 6000,q3_target,5,1,400,exact,DraftAttention CuTe,7.02,8.94,7.02,13.82,10.41,SGLang FI 0.7.1,0.674,PASS
+RTX PRO 6000,q3_target,5,1,1000,exact,DraftAttention CuTe,8.82,11.26,8.82,24.59,10.78,SGLang FI 0.7.1,0.818,PASS
+RTX PRO 6000,q3_target,5,2,100,exact,DraftAttention CuTe,5.44,7.62,5.44,5.42,9.39,vllm_flash_attn,1.003,LOSS
+RTX PRO 6000,q3_target,5,2,400,exact,DraftAttention CuTe,8.02,10.40,8.02,13.81,10.92,SGLang FI 0.7.1,0.735,PASS
+RTX PRO 6000,q3_target,5,2,1000,exact,DraftAttention CuTe,11.18,13.11,11.18,24.65,12.67,SGLang FI 0.7.1,0.883,PASS
+RTX PRO 6000,q3_target,5,3,100,exact,DraftAttention CuTe,5.49,7.97,5.49,5.49,9.65,vllm_flash_attn,0.999,PASS
+RTX PRO 6000,q3_target,5,3,400,exact,DraftAttention CuTe,9.13,11.60,9.13,13.90,12.36,SGLang FI 0.7.1,0.738,PASS
+RTX PRO 6000,q3_target,5,3,1000,exact,DraftAttention CuTe,14.93,15.64,14.93,24.94,15.84,SGLang FI 0.7.1,0.942,PASS
+RTX PRO 6000,q3_target,5,4,100,exact,DraftAttention CuTe,5.59,8.73,5.59,5.59,14.08,vllm_flash_attn,1.000,PASS
+RTX PRO 6000,q3_target,5,4,400,exact,DraftAttention CuTe,10.11,15.18,10.11,14.32,16.76,vllm_flash_attn,0.706,PASS
+RTX PRO 6000,q3_target,5,4,1000,exact,DraftAttention CuTe,17.49,19.38,17.49,25.74,19.46,SGLang FI 0.7.1,0.899,PASS
+RTX PRO 6000,q3_target,6,1,100,exact,DraftAttention CuTe,5.41,7.29,5.41,5.26,9.63,vllm_flash_attn,1.028,LOSS
+RTX PRO 6000,q3_target,6,1,400,exact,DraftAttention CuTe,6.62,8.53,6.62,13.43,10.96,SGLang FI 0.7.1,0.604,PASS
+RTX PRO 6000,q3_target,6,1,1000,exact,DraftAttention CuTe,8.38,11.00,8.38,24.59,11.35,SGLang FI 0.7.1,0.739,PASS
+RTX PRO 6000,q3_target,6,2,100,exact,DraftAttention CuTe,5.46,7.78,5.46,5.36,9.82,vllm_flash_attn,1.018,LOSS
+RTX PRO 6000,q3_target,6,2,400,exact,DraftAttention CuTe,7.61,10.01,7.61,13.48,11.56,SGLang FI 0.7.1,0.658,PASS
+RTX PRO 6000,q3_target,6,2,1000,exact,DraftAttention CuTe,10.74,12.72,10.74,24.59,12.88,SGLang FI 0.7.1,0.833,PASS
+RTX PRO 6000,q3_target,6,3,100,exact,DraftAttention CuTe,5.47,7.86,5.47,5.40,10.11,vllm_flash_attn,1.012,LOSS
+RTX PRO 6000,q3_target,6,3,400,exact,DraftAttention CuTe,8.67,11.27,8.67,13.53,12.07,SGLang FI 0.7.1,0.718,PASS
+RTX PRO 6000,q3_target,6,3,1000,exact,DraftAttention CuTe,14.50,15.19,14.50,24.83,15.40,SGLang FI 0.7.1,0.942,PASS
+RTX PRO 6000,q3_target,6,4,100,exact,DraftAttention CuTe,5.59,8.81,5.59,5.53,14.38,vllm_flash_attn,1.010,LOSS
+RTX PRO 6000,q3_target,6,4,400,exact,DraftAttention CuTe,9.66,15.01,9.66,13.95,16.62,vllm_flash_attn,0.693,PASS
+RTX PRO 6000,q3_target,6,4,1000,exact,DraftAttention CuTe,17.15,18.96,17.15,25.53,19.12,SGLang FI 0.7.1,0.897,PASS
+RTX PRO 6000,q3_target,8,1,100,exact,DraftAttention CuTe,5.69,7.42,5.69,5.29,9.82,vllm_flash_attn,1.077,LOSS
+RTX PRO 6000,q3_target,8,1,400,exact,DraftAttention CuTe,6.84,8.79,6.84,13.48,11.05,SGLang FI 0.7.1,0.619,PASS
+RTX PRO 6000,q3_target,8,1,1000,exact,DraftAttention CuTe,8.54,11.10,8.54,24.49,11.52,SGLang FI 0.7.1,0.741,PASS
+RTX PRO 6000,q3_target,8,2,100,exact,DraftAttention CuTe,5.69,7.90,5.69,5.31,9.99,vllm_flash_attn,1.070,LOSS
+RTX PRO 6000,q3_target,8,2,400,exact,DraftAttention CuTe,7.90,10.29,7.90,13.45,11.76,SGLang FI 0.7.1,0.672,PASS
+RTX PRO 6000,q3_target,8,2,1000,exact,DraftAttention CuTe,11.03,13.04,11.03,24.62,13.21,SGLang FI 0.7.1,0.836,PASS
+RTX PRO 6000,q3_target,8,3,100,exact,DraftAttention CuTe,5.79,8.93,5.79,5.45,14.42,vllm_flash_attn,1.063,LOSS
+RTX PRO 6000,q3_target,8,3,400,exact,DraftAttention CuTe,9.14,12.36,9.14,13.57,16.39,vllm_flash_attn,0.674,PASS
+RTX PRO 6000,q3_target,8,3,1000,exact,DraftAttention CuTe,15.19,17.34,15.19,24.78,17.56,SGLang FI 0.7.1,0.865,PASS
+RTX PRO 6000,q3_target,8,4,100,exact,DraftAttention CuTe,5.92,9.40,5.92,5.53,14.78,vllm_flash_attn,1.071,LOSS
+RTX PRO 6000,q3_target,8,4,400,exact,DraftAttention CuTe,10.00,15.37,10.00,13.92,17.02,vllm_flash_attn,0.719,PASS
+RTX PRO 6000,q3_target,8,4,1000,exact,DraftAttention CuTe,17.70,19.49,17.70,25.56,19.59,SGLang FI 0.7.1,0.904,PASS
+RTX PRO 6000,q3_target,9,1,100,exact,DraftAttention CuTe,5.28,7.30,5.28,5.33,9.58,vllm_flash_attn,0.991,PASS
+RTX PRO 6000,q3_target,9,1,400,exact,DraftAttention CuTe,6.92,9.41,6.92,13.79,10.72,SGLang FI 0.7.1,0.646,PASS
+RTX PRO 6000,q3_target,9,1,1000,exact,DraftAttention CuTe,8.70,11.71,8.70,24.60,11.16,SGLang FI 0.7.1,0.779,PASS
+RTX PRO 6000,q3_target,9,2,100,exact,DraftAttention CuTe,5.55,8.84,5.55,5.60,13.85,vllm_flash_attn,0.991,PASS
+RTX PRO 6000,q3_target,9,2,400,exact,DraftAttention CuTe,8.29,11.39,8.29,13.84,15.48,vllm_flash_attn,0.599,PASS
+RTX PRO 6000,q3_target,9,2,1000,exact,DraftAttention CuTe,11.83,16.75,11.83,24.63,16.32,SGLang FI 0.7.1,0.725,PASS
+RTX PRO 6000,q3_target,9,3,100,exact,DraftAttention CuTe,5.64,9.20,5.64,5.56,14.20,vllm_flash_attn,1.015,LOSS
+RTX PRO 6000,q3_target,9,3,400,exact,DraftAttention CuTe,9.95,12.88,9.95,14.01,16.82,vllm_flash_attn,0.710,PASS
+RTX PRO 6000,q3_target,9,3,1000,exact,DraftAttention CuTe,16.35,17.79,16.35,24.92,18.07,SGLang FI 0.7.1,0.905,PASS
+RTX PRO 6000,q3_target,9,4,100,exact,DraftAttention CuTe,5.84,9.73,5.84,5.65,14.82,vllm_flash_attn,1.033,LOSS
+RTX PRO 6000,q3_target,9,4,400,exact,DraftAttention CuTe,11.21,16.06,11.21,14.33,17.61,vllm_flash_attn,0.782,PASS
+RTX PRO 6000,q3_target,9,4,1000,exact,DraftAttention CuTe,18.95,20.21,18.95,25.65,20.32,SGLang FI 0.7.1,0.932,PASS
+RTX PRO 6000,q3_target,12,1,100,exact,DraftAttention CuTe,5.36,7.66,5.36,5.40,9.86,vllm_flash_attn,0.993,PASS
+RTX PRO 6000,q3_target,12,1,400,exact,DraftAttention CuTe,7.05,9.45,7.05,13.87,11.14,SGLang FI 0.7.1,0.632,PASS
+RTX PRO 6000,q3_target,12,1,1000,exact,DraftAttention CuTe,8.75,11.82,8.75,24.59,11.46,SGLang FI 0.7.1,0.763,PASS
+RTX PRO 6000,q3_target,12,2,100,exact,DraftAttention CuTe,5.60,9.31,5.60,5.68,14.29,vllm_flash_attn,0.986,PASS
+RTX PRO 6000,q3_target,12,2,400,exact,DraftAttention CuTe,8.60,11.82,8.60,13.81,15.86,vllm_flash_attn,0.622,PASS
+RTX PRO 6000,q3_target,12,2,1000,exact,DraftAttention CuTe,12.04,17.15,12.04,24.63,16.68,SGLang FI 0.7.1,0.722,PASS
+RTX PRO 6000,q3_target,12,3,100,exact,DraftAttention CuTe,5.73,9.86,5.73,5.56,14.66,vllm_flash_attn,1.030,LOSS
+RTX PRO 6000,q3_target,12,3,400,exact,DraftAttention CuTe,10.03,13.39,10.03,13.94,17.29,vllm_flash_attn,0.720,PASS
+RTX PRO 6000,q3_target,12,3,1000,exact,DraftAttention CuTe,16.65,18.35,16.65,24.92,18.64,SGLang FI 0.7.1,0.893,PASS
+RTX PRO 6000,q3_target,12,4,100,exact,DraftAttention CuTe,6.07,10.39,6.07,5.68,15.39,vllm_flash_attn,1.068,LOSS
+RTX PRO 6000,q3_target,12,4,400,exact,DraftAttention CuTe,11.47,16.65,11.47,14.28,18.22,vllm_flash_attn,0.803,PASS
+RTX PRO 6000,q3_target,12,4,1000,exact,DraftAttention CuTe,19.31,20.64,19.31,25.74,20.82,SGLang FI 0.7.1,0.928,PASS
+RTX PRO 6000,q3_target,16,1,100,32768,DraftAttention CuTe,5.94,8.51,5.94,5.56,10.39,vllm_flash_attn,1.069,LOSS
+RTX PRO 6000,q3_target,16,1,100,exact,DraftAttention CuTe,5.81,8.58,5.81,5.56,10.44,vllm_flash_attn,1.046,LOSS
+RTX PRO 6000,q3_target,16,1,400,32768,DraftAttention CuTe,7.72,10.70,7.72,14.17,11.78,SGLang FI 0.7.1,0.655,PASS
+RTX PRO 6000,q3_target,16,1,400,exact,DraftAttention CuTe,7.56,10.64,7.56,14.18,11.77,SGLang FI 0.7.1,0.642,PASS
+RTX PRO 6000,q3_target,16,1,1000,32768,DraftAttention CuTe,9.50,12.76,9.50,25.03,12.28,SGLang FI 0.7.1,0.774,PASS
+RTX PRO 6000,q3_target,16,1,1000,exact,DraftAttention CuTe,9.31,12.70,9.31,25.04,12.29,SGLang FI 0.7.1,0.758,PASS
+RTX PRO 6000,q3_target,16,2,100,32768,DraftAttention CuTe,7.52,9.95,7.52,5.76,15.06,vllm_flash_attn,1.304,LOSS
+RTX PRO 6000,q3_target,16,2,100,exact,DraftAttention CuTe,6.11,9.90,6.11,5.78,15.02,vllm_flash_attn,1.056,LOSS
+RTX PRO 6000,q3_target,16,2,400,32768,DraftAttention CuTe,9.88,12.60,9.88,14.20,16.65,vllm_flash_attn,0.696,PASS
+RTX PRO 6000,q3_target,16,2,400,exact,DraftAttention CuTe,9.01,12.60,9.01,14.19,16.64,vllm_flash_attn,0.635,PASS
+RTX PRO 6000,q3_target,16,2,1000,32768,DraftAttention CuTe,13.46,17.89,13.46,24.96,17.65,SGLang FI 0.7.1,0.762,PASS
+RTX PRO 6000,q3_target,16,2,1000,exact,DraftAttention CuTe,12.91,17.96,12.91,25.24,17.54,SGLang FI 0.7.1,0.736,PASS
+RTX PRO 6000,q3_target,16,3,100,32768,DraftAttention CuTe,7.63,10.64,7.63,5.78,15.55,vllm_flash_attn,1.321,LOSS
+RTX PRO 6000,q3_target,16,3,100,exact,DraftAttention CuTe,6.33,10.65,6.33,5.88,15.54,vllm_flash_attn,1.076,LOSS
+RTX PRO 6000,q3_target,16,3,400,32768,DraftAttention CuTe,11.16,14.27,11.16,14.27,18.39,vllm_flash_attn,0.782,PASS
+RTX PRO 6000,q3_target,16,3,400,exact,DraftAttention CuTe,10.75,14.22,10.75,14.24,18.37,vllm_flash_attn,0.755,PASS
+RTX PRO 6000,q3_target,16,3,1000,32768,DraftAttention CuTe,15.86,19.27,15.86,25.26,19.65,SGLang FI 0.7.1,0.807,PASS
+RTX PRO 6000,q3_target,16,3,1000,exact,DraftAttention CuTe,18.18,19.28,18.18,25.59,19.68,SGLang FI 0.7.1,0.924,PASS
+RTX PRO 6000,q3_target,16,4,100,32768,DraftAttention CuTe,7.93,11.57,7.93,5.84,16.38,vllm_flash_attn,1.357,LOSS
+RTX PRO 6000,q3_target,16,4,100,exact,DraftAttention CuTe,6.84,11.64,6.84,6.11,16.31,vllm_flash_attn,1.120,LOSS
+RTX PRO 6000,q3_target,16,4,400,32768,DraftAttention CuTe,12.13,17.85,12.13,14.30,19.39,vllm_flash_attn,0.848,PASS
+RTX PRO 6000,q3_target,16,4,400,exact,DraftAttention CuTe,12.28,17.81,12.28,14.77,19.46,vllm_flash_attn,0.832,PASS
+RTX PRO 6000,q3_target,16,4,1000,32768,DraftAttention CuTe,18.32,21.48,18.32,25.26,22.05,SGLang FI 0.7.1,0.831,PASS
+RTX PRO 6000,q3_target,16,4,1000,exact,DraftAttention CuTe,20.45,21.86,20.45,25.74,22.04,SGLang FI 0.7.1,0.928,PASS

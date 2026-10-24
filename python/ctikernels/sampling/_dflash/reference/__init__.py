@@ -1,0 +1,63 @@
+# SPDX-License-Identifier: MIT
+# SPDX-FileCopyrightText: Copyright (c) 2026 cti-engine contributors
+"""CPU sampling provider and deterministic FP32/RNG helpers."""
+
+from .ops import (
+    CHUNK,
+    TILE,
+    VEC,
+    Provider,
+    candidate_cdf_parts,
+    categorical,
+    cdf_parts,
+    fixed_mass,
+    min_p_row,
+    probability_chunk_sum,
+    probability_row,
+    probability_sum,
+    request_seed,
+    residual,
+    sparse_dense,
+)
+from .rng import (
+    ACCEPT,
+    BONUS,
+    CORRECTION,
+    K1_RNG_ABI_VERSION,
+    MASK,
+    ORDINARY_NAMESPACE,
+    ORDINARY_NAMESPACE_END,
+    PROPOSAL,
+    philox4x32,
+    uniform,
+    words,
+)
+
+__all__ = [
+    "Provider",
+    "CHUNK",
+    "TILE",
+    "VEC",
+    "request_seed",
+    "cdf_parts",
+    "candidate_cdf_parts",
+    "categorical",
+    "residual",
+    "sparse_dense",
+    "fixed_mass",
+    "min_p_row",
+    "probability_chunk_sum",
+    "probability_sum",
+    "probability_row",
+    "K1_RNG_ABI_VERSION",
+    "PROPOSAL",
+    "ACCEPT",
+    "CORRECTION",
+    "BONUS",
+    "ORDINARY_NAMESPACE",
+    "ORDINARY_NAMESPACE_END",
+    "MASK",
+    "philox4x32",
+    "words",
+    "uniform",
+]

@@ -1,0 +1,411 @@
+{
+ "op": "linear.nvfp4_w4a16.provider",
+ "version": 1,
+ "keep": 1.03,
+ "device_class": "sm120-188",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "source": "benchmark rows: per-provider medians, CUDA graphs, 27B head 248320x5120, at 6b44c978",
+ "sensitivity": {},
+ "rows": [
+  {
+   "shape": {
+    "m": 1,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    1,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 2,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    2,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 4,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    4,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 64,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    64,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 128,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    128,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 256,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    256,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "triton"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 512,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    512,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "dequant_cublas"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 1024,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    1024,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "dequant_cublas"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 2048,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    2048,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "dequant_cublas"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 4096,
+    "n": 248320,
+    "k": 5120,
+    "direction": "dx"
+   },
+   "bucket": [
+    4096,
+    262144,
+    8192,
+    "dx"
+   ],
+   "config": {
+    "provider": "dequant_cublas"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 1,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    1,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 2,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    2,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 4,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    4,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 64,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    64,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 128,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    128,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 256,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    256,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 512,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    512,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 1024,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    1024,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 2048,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    2048,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 4096,
+    "n": 248320,
+    "k": 5120,
+    "direction": "forward"
+   },
+   "bucket": [
+    4096,
+    262144,
+    8192,
+    "forward"
+   ],
+   "config": {
+    "provider": "marlin"
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  }
+ ]
+}

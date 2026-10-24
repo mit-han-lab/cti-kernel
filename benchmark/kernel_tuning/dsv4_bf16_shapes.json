@@ -1,0 +1,4 @@
+{"models": {"dsv4-flash": [
+ {"name": "lm_head", "N": 129280, "K": 4096, "count_per_step": 1},
+ {"name": "indexer.weights_proj", "N": 64, "K": 4096, "count_per_step": 21}
+]}}

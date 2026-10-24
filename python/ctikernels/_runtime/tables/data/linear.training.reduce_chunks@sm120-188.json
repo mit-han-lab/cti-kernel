@@ -1,0 +1,1 @@
+{"format": 1, "op": "linear.training.reduce_chunks", "version": 1, "dims": ["m", "n", "world"], "params": ["chunks"], "rows": []}

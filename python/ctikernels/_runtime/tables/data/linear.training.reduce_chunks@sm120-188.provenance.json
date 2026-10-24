@@ -1,0 +1,101 @@
+{
+ "op": "linear.training.reduce_chunks",
+ "version": 1,
+ "keep": 1.03,
+ "device_class": "sm120-188",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "source": "TP2 NCCL whole gated_mlp_lora fwd+bwd (Qwen3-8B MLP, r16, n=4096), 10-iteration means, at 5e9a130c",
+ "sensitivity": {},
+ "rows": [
+  {
+   "shape": {
+    "m": 1024,
+    "n": 4096,
+    "world": 2
+   },
+   "bucket": [
+    1024,
+    4096,
+    2
+   ],
+   "config": {
+    "chunks": 4
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 2048,
+    "n": 4096,
+    "world": 2
+   },
+   "bucket": [
+    2048,
+    4096,
+    2
+   ],
+   "config": {
+    "chunks": 4
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0128,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 4096,
+    "n": 4096,
+    "world": 2
+   },
+   "bucket": [
+    4096,
+    4096,
+    2
+   ],
+   "config": {
+    "chunks": 4
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0055,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 8192,
+    "n": 4096,
+    "world": 2
+   },
+   "bucket": [
+    8192,
+    4096,
+    2
+   ],
+   "config": {
+    "chunks": 8
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  },
+  {
+   "shape": {
+    "m": 16384,
+    "n": 4096,
+    "world": 2
+   },
+   "bucket": [
+    16384,
+    4096,
+    2
+   ],
+   "config": {
+    "chunks": 8
+   },
+   "kept": false,
+   "speedup_vs_inherited": 1.0,
+   "speedup_vs_default": 1.0
+  }
+ ]
+}

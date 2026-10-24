@@ -1,0 +1,97 @@
+device,variant,env,shape,head_dim,Q,B,ctx,capacity,op_provider,splits,key_tile,short_union,merge_mode,candidate_us,vllm_flash_attn_us,sglang_fi071_us,ratio_vs_vllm,ratio_vs_sglang,epsilon_vllm,epsilon_sglang,market_gate,candidate_correct
+RTX 5090,pdl,{},q35_target,256,4,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.145,26.837,8.887,0.3037,0.9159,0.0004,0.0022,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,4,1,4000,32768,flashinfer-fa2-device-schedule,,,,,17.411,219.99,17.066,0.0791,1.0136,0.0005,0.0067,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,4,2,400,32768,flashinfer-fa2-device-schedule,,,,,8.616,26.891,17.949,0.3204,0.4794,0.003,0.002,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,4,2,4000,32768,flashinfer-fa2-device-schedule,,,,,26.305,220.73,25.766,0.119,1.0171,0.0021,0.0098,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,4,3,400,32768,flashinfer-fa2-device-schedule,,,,,9.598,26.876,18.156,0.3568,0.5274,0.0043,0.0031,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,4,3,4000,32768,flashinfer-fa2-device-schedule,,,,,36.81,221.525,36.607,0.1659,1.0034,0.0022,0.0055,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,4,4,400,32768,flashinfer-fa2-device-schedule,,,,,11.952,27.015,18.338,0.4429,0.6518,0.0058,0.0027,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,4,4,4000,32768,flashinfer-fa2-device-schedule,,,,,46.686,221.979,46.837,0.2102,0.9975,0.002,0.0047,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,1,400,32768,flashinfer-fa2-device-schedule,,,,,7.63,26.841,17.974,0.2842,0.423,0.0015,0.0023,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,1,4000,32768,flashinfer-fa2-device-schedule,,,,,19.8,219.951,19.619,0.09,1.0089,0.0011,0.005,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,5,2,400,32768,flashinfer-fa2-device-schedule,,,,,8.713,26.843,18.038,0.3246,0.4817,0.0033,0.0015,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,2,4000,32768,flashinfer-fa2-device-schedule,,,,,26.395,221.457,25.941,0.1192,1.0124,0.0021,0.0084,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,5,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.048,26.936,18.361,0.3736,0.5461,0.0045,0.0042,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,3,4000,32768,flashinfer-fa2-device-schedule,,,,,36.809,221.663,36.64,0.166,1.0035,0.0024,0.0051,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.124,27.088,18.566,0.4472,0.6517,0.004,0.0057,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,5,4,4000,32768,flashinfer-fa2-device-schedule,,,,,46.825,222.045,46.745,0.2109,0.9991,0.0018,0.0057,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,1,400,32768,flashinfer-fa2-device-schedule,,,,,7.865,26.819,18.014,0.2934,0.4359,0.0014,0.0025,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,1,4000,32768,flashinfer-fa2-device-schedule,,,,,19.939,219.72,19.738,0.0908,1.0077,0.0019,0.007,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,6,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.012,26.891,18.158,0.3353,0.495,0.0034,0.004,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,2,4000,32768,flashinfer-fa2-device-schedule,,,,,26.439,221.501,26.191,0.1193,1.0071,0.0023,0.007,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,6,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.147,26.981,18.535,0.3762,0.5476,0.0046,0.0059,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,3,4000,32768,flashinfer-fa2-device-schedule,,,,,37.01,221.647,36.696,0.167,1.0057,0.0015,0.0078,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.313,27.059,18.796,0.4547,0.6549,0.0044,0.0081,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,6,4,4000,32768,flashinfer-fa2-device-schedule,,,,,46.957,222.131,46.939,0.2113,1.0013,0.0017,0.0039,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,1,400,32768,flashinfer-fa2-device-schedule,,,,,7.836,26.827,18.171,0.2922,0.4305,0.0011,0.0021,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,1,4000,32768,flashinfer-fa2-device-schedule,,,,,20.092,220.93,20.005,0.0909,1.0059,0.0012,0.0058,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,8,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.471,27.005,18.374,0.3513,0.515,0.0034,0.0036,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,2,4000,32768,flashinfer-fa2-device-schedule,,,,,26.893,221.113,26.531,0.1216,1.0099,0.0025,0.0081,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,8,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.718,26.99,18.792,0.3969,0.5692,0.0033,0.0027,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,3,4000,32768,flashinfer-fa2-device-schedule,,,,,37.451,221.365,37.198,0.1691,1.0042,0.001,0.0045,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.888,27.187,19.028,0.4741,0.6769,0.0034,0.0051,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,8,4,4000,32768,flashinfer-fa2-device-schedule,,,,,47.497,222.163,47.479,0.2138,1.002,0.0012,0.0038,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.032,26.944,18.288,0.2981,0.438,0.0013,0.0023,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,1,4000,32768,flashinfer-fa2-device-schedule,,,,,20.282,220.736,20.009,0.0918,1.0105,0.0014,0.0086,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,9,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.483,27.025,18.472,0.3509,0.5128,0.003,0.0021,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,2,4000,32768,flashinfer-fa2-device-schedule,,,,,26.861,221.534,26.539,0.1212,1.0119,0.0018,0.0088,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,9,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.932,27.021,18.903,0.4042,0.5765,0.0041,0.0032,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,3,4000,32768,flashinfer-fa2-device-schedule,,,,,37.575,221.553,37.527,0.1695,1.0002,0.0021,0.0049,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,4,400,32768,flashinfer-fa2-device-schedule,,,,,13.246,27.148,19.143,0.4879,0.6897,0.0025,0.0029,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,9,4,4000,32768,flashinfer-fa2-device-schedule,,,,,48.163,222.114,48.206,0.2168,0.9973,0.0014,0.0098,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,1,400,32768,cute-splitkv,21,32,160,distributed,10.961,27.027,19.202,0.4056,0.5704,0.0016,0.0016,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,1,4000,32768,cute-splitkv,21,32,160,distributed,19.839,221.127,21.381,0.0897,0.9281,0.0004,0.0042,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,2,400,32768,cute-splitkv,10,32,160,distributed,11.665,27.111,19.648,0.4303,0.5927,0.0015,0.0022,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,2,4000,32768,cute-splitkv,10,32,160,distributed,28.995,221.435,28.423,0.1309,1.0166,0.0023,0.0057,FAIL,PASS
+RTX 5090,pdl,{},q35_target,256,16,3,400,32768,cute-splitkv,7,32,160,distributed,12.671,27.165,20.242,0.4667,0.6253,0.0025,0.0021,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,3,4000,32768,cute-splitkv,7,32,160,distributed,39.394,221.949,39.077,0.1775,1.0046,0.0017,0.0055,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,4,400,32768,cute-splitkv,5,32,160,distributed,13.58,27.27,20.62,0.4981,0.6583,0.006,0.0048,PASS,PASS
+RTX 5090,pdl,{},q35_target,256,16,4,4000,32768,cute-splitkv,5,32,160,distributed,49.373,222.277,50.001,0.2221,0.9856,0.0018,0.0058,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,1,400,32768,flashinfer-fa2-device-schedule,,,,,9.449,20.81,9.983,0.4541,0.9461,0.0006,0.0018,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,1,4000,32768,flashinfer-fa2-device-schedule,,,,,18.968,160.179,19.087,0.1184,0.9943,0.001,0.0184,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.446,20.917,15.006,0.4517,0.6296,0.0016,0.0027,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,2,4000,32768,flashinfer-fa2-device-schedule,,,,,28.661,160.569,28.584,0.1783,1.0057,0.0022,0.0107,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.319,20.905,15.286,0.4932,0.6757,0.0022,0.0029,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,3,4000,32768,flashinfer-fa2-device-schedule,,,,,40.363,160.928,40.435,0.2506,0.9994,0.0023,0.0051,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.486,21.003,15.503,0.5929,0.8038,0.0067,0.0055,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,4,4,4000,32768,flashinfer-fa2-device-schedule,,,,,50.415,161.276,50.422,0.3125,0.9989,0.0015,0.0205,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.202,20.854,15.106,0.3934,0.5422,0.0045,0.0036,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,1,4000,32768,flashinfer-fa2-device-schedule,,,,,18.275,160.201,18.108,0.1141,1.0091,0.0019,0.0064,FAIL,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.478,20.929,15.139,0.4529,0.6256,0.0018,0.0021,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,2,4000,32768,flashinfer-fa2-device-schedule,,,,,28.702,160.554,28.821,0.1789,0.9993,0.0026,0.011,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,3,400,32768,flashinfer-fa2-device-schedule,,,,,10.798,20.931,15.517,0.516,0.6959,0.0025,0.0119,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,3,4000,32768,flashinfer-fa2-device-schedule,,,,,40.527,160.851,40.706,0.2518,1.002,0.0022,0.0044,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.723,21.01,15.74,0.6053,0.8081,0.0019,0.004,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,5,4,4000,32768,flashinfer-fa2-device-schedule,,,,,50.471,161.265,50.667,0.313,0.9976,0.0023,0.0054,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.306,20.885,15.143,0.3977,0.5481,0.001,0.0016,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,1,4000,32768,flashinfer-fa2-device-schedule,,,,,18.338,160.499,18.253,0.1142,1.0044,0.0009,0.0077,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,2,400,32768,flashinfer-fa2-device-schedule,,,,,9.559,20.882,15.276,0.4577,0.6261,0.0028,0.0025,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,2,4000,32768,flashinfer-fa2-device-schedule,,,,,28.993,160.445,28.853,0.1806,1.0063,0.0016,0.0121,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,3,400,32768,flashinfer-fa2-device-schedule,,,,,11.045,20.861,15.701,0.5291,0.7041,0.0022,0.0193,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,3,4000,32768,flashinfer-fa2-device-schedule,,,,,40.788,160.903,41.02,0.2535,0.9988,0.0014,0.0039,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,4,400,32768,flashinfer-fa2-device-schedule,,,,,12.753,21.05,15.85,0.6057,0.8052,0.0024,0.0042,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,6,4,4000,32768,flashinfer-fa2-device-schedule,,,,,50.423,161.097,50.768,0.313,0.9974,0.0023,0.0045,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.535,20.867,15.414,0.409,0.5536,0.0014,0.0017,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,1,4000,32768,flashinfer-fa2-device-schedule,,,,,18.51,160.418,18.39,0.1153,1.012,0.0014,0.0058,FAIL,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,2,400,32768,flashinfer-fa2-device-schedule,,,,,10.057,20.931,15.572,0.4802,0.6459,0.0021,0.0025,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,2,4000,32768,flashinfer-fa2-device-schedule,,,,,29.355,160.845,29.434,0.1826,1.0027,0.0032,0.0067,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,3,400,32768,flashinfer-fa2-device-schedule,,,,,11.231,20.937,16.057,0.5363,0.7008,0.0025,0.0015,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,3,4000,32768,flashinfer-fa2-device-schedule,,,,,40.957,160.931,41.299,0.2545,0.9975,0.001,0.0044,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,4,400,32768,flashinfer-fa2-device-schedule,,,,,13.359,20.93,16.338,0.6384,0.819,0.0023,0.0032,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,8,4,4000,32768,flashinfer-fa2-device-schedule,,,,,51.163,159.415,51.455,0.3191,0.9956,0.0022,0.0044,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,1,400,32768,flashinfer-fa2-device-schedule,,,,,8.703,20.926,15.319,0.4159,0.5678,0.0011,0.0015,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,1,4000,32768,flashinfer-fa2-device-schedule,,,,,18.52,160.519,18.435,0.1153,1.0069,0.0009,0.0065,FAIL,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,2,400,32768,flashinfer-fa2-device-schedule,,,,,10.227,20.973,15.723,0.4876,0.6502,0.0017,0.0037,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,2,4000,32768,flashinfer-fa2-device-schedule,,,,,29.593,160.567,29.501,0.1843,1.0055,0.0029,0.0041,FAIL,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,3,400,32768,flashinfer-fa2-device-schedule,,,,,11.702,20.987,16.177,0.5572,0.724,0.0013,0.0029,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,3,4000,32768,flashinfer-fa2-device-schedule,,,,,41.463,160.855,41.805,0.2578,0.9973,0.0011,0.004,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,4,400,32768,flashinfer-fa2-device-schedule,,,,,13.626,21.009,16.505,0.6487,0.8263,0.0019,0.003,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,9,4,4000,32768,flashinfer-fa2-device-schedule,,,,,51.248,159.565,51.613,0.3196,0.9967,0.0015,0.0067,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,1,400,32768,flashinfer-fa2-device-schedule,,,,,10.691,21.055,16.676,0.5078,0.6412,0.0009,0.0011,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,1,4000,32768,flashinfer-fa2-device-schedule,,,,,20.233,160.45,20.178,0.1261,1.0056,0.0011,0.0099,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,2,400,32768,flashinfer-fa2-device-schedule,,,,,12.269,21.602,17.117,0.5676,0.7167,0.0015,0.0023,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,2,4000,32768,flashinfer-fa2-device-schedule,,,,,31.219,160.765,31.478,0.1942,0.9991,0.0013,0.0077,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,3,400,32768,cute-splitkv,7,32,288,distributed,14.287,21.04,17.732,0.6791,0.8054,0.0051,0.0039,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,3,4000,32768,cute-splitkv,7,32,288,distributed,43.315,160.922,44.355,0.2691,0.9847,0.002,0.0249,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,4,400,32768,cute-splitkv,5,32,288,distributed,15.159,21.16,18.237,0.7156,0.832,0.0022,0.005,PASS,PASS
+RTX PRO 6000,pdl,{},q35_target,256,16,4,4000,32768,cute-splitkv,5,32,288,distributed,53.884,161.377,54.355,0.3336,0.9974,0.0016,0.0026,PASS,PASS

@@ -1,0 +1,23 @@
+# Exemptions from the architecture guards. Nothing here applies until `signed_by` is filled in: until then every
+# ledger count includes these paths. Signing lowers some counts, and the same change must lower
+# the matching ledger.toml entries. Paths are globs relative to python/ctikernels.
+status = "unsigned"
+signed_by = ""
+signed_on = ""
+
+[[exemption]]
+decision = "D14 (recommended option: exempt all of MoE and the paused DSV4 additions)"
+reason = "MoE/DSV4 are paused; only the mechanical B1/B3/B5 edits of D14 touch them."
+guards = ["owners", "selection", "public_api", "layout"]
+paths = [
+    "moe/*",
+    # The root MoE stack until B1 moves it under moe/.
+    "moe_impl.py",
+    "moe_block_fp8.py",
+    "_moe_block_fp8_*.py",
+    "triton/*",
+    # Paused DSV4 branches add these on old paths.
+    "attention/dsv4/*",
+    "attention/_dsv4_*",
+    "mhc/*",
+]

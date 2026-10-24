@@ -1,0 +1,45 @@
+# Architecture ledger. Exact counts on this tree; each guard fails when a
+# count differs from its entry. Entries may only go down: a change that fixes a violation lowers
+# the entry in the same change. Exemptions come only from the signed exemptions.toml.
+# Regenerate the numbers with `python -m tests.quality.architecture.measure`.
+
+[layers]
+import_time_cycles = 0
+local_import_cycles = 12
+function_local_imports = 292
+cross_unit_pairs = 88
+cross_unit_private_imports = 14
+lateral_private_imports = 5
+op_edges_outside_dag = 3
+
+[layout]
+root_loose_modules = 24
+root_extra_folders = 2
+op_level_extra_files = 81
+op_level_extra_folders = 15
+nonempty_op_inits = 7
+libraries_outside_source = 87
+
+[owners]
+cute_compile_calls = 53
+cute_compile_files = 42
+capture_checks = 132
+device_queries = 211
+env_reads = 82
+env_writes = 8
+dsl_pin_files = 24
+module_locks = 49
+module_empty_containers = 78
+cache_decorators = 76
+side_streams = 5
+hidden_pools = 4
+asserts = 38
+
+[selection]
+table_constants = 53
+device_name_key_lines = 193
+
+[public_api]
+public_modules = 68
+public_modules_without_all = 18
+exported_names = 176

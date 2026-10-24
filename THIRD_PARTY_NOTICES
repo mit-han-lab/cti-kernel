@@ -1,0 +1,1148 @@
+THIRD-PARTY NOTICES
+
+cti-kernels is licensed under the MIT License (see LICENSE). The files listed
+below adapt third-party code and keep their upstream licenses; their copyright
+notices and license texts follow.
+
+Copyright 2026 cti-engine contributors covers original code and local modifications;
+upstream attribution and applicable license terms are preserved below. Each entry
+names the project, revision, local files, upstream paths, copyright lines and
+license. MIT, BSD-2-Clause and BSD-3-Clause texts are reproduced in their entries.
+The Apache License 2.0 text shared by every Apache-2.0 entry is reproduced once,
+verbatim, under "Apache License 2.0" at the end of this file.
+
+CuTe DSL grouped block-FP8 MoE design references
+========================================================================
+Local files:
+  python/ctikernels/_moe_block_fp8_cute.py
+Upstream paths:
+  examples/python/CuTeDSL/blackwell_geforce/dense_gemm.py (CUTLASS bundled with FlashInfer 0.7.1)
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_fp8_gemm.py (FlashInfer 0.7.1)
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_fp8_fc1_act.py (FlashInfer 0.7.1)
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_fp8_fc1_act_q1.py (FlashInfer 0.7.1)
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_fp8_fc2_finalize.py (FlashInfer 0.7.1)
+  quack/gemm_sm120.py (QuACK 0.6.5, studied through CTI dense gated-FP8)
+
+Original implementation, independently rewritten after studying:
+
+NVIDIA CUTLASS, bundled with FlashInfer 0.7.1:
+  examples/python/CuTeDSL/blackwell_geforce/dense_gemm.py
+  https://github.com/NVIDIA/cutlass
+Copyright (c) 2025 - 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Design elements: staged TMA, dedicated producer warp, shared-memory barriers,
+ldmatrix and warp MMA. The BSD-3-Clause license is retained below.
+
+FlashInfer 0.7.1 (0b46115d238d29ea2e92c6b9b2cb077d40fbc352):
+  https://github.com/flashinfer-ai/flashinfer/tree/v0.7.1/flashinfer/fused_moe/cute_dsl/blackwell_sm12x
+  kernel_moe_fp8_gemm.py
+  kernel_moe_fp8_fc1_act.py
+  kernel_moe_fp8_fc1_act_q1.py
+  kernel_moe_fp8_fc2_finalize.py
+Copyright (c) 2025 by FlashInfer team. Apache-2.0 (full text at the end of this file).
+Design elements: grouped scheduling, separate 128-K FP32 partials, fused SiLU
+and route finalization. FlashInfer's upstream NOTICE is retained below in its
+existing section. This implementation does not depend on FlashInfer 0.7.1.
+
+QuACK 0.6.5:
+  https://github.com/Dao-AILab/quack
+  quack/gemm_sm120.py
+Copyright (c) 2025-2026, QuACK team. Apache-2.0 (full text at the end of this file);
+the quack-kernels 0.6.5 distribution ships no NOTICE file.
+Unit-scale MXF8 design studied through CTI's dense gated-FP8 kernel: use UE8M0
+0x7f in register scale fragments and apply real block scales in FP32. Scale
+layout construction uses the public CuTe DSL 4.8.0 API. No QuACK import.
+
+No third-party implementation is copied verbatim. Gather/quantization,
+static grouped ownership, route scatter and host composition are original
+CTI code. The only handwritten assembly is public PTX (RN FP32 division);
+there is no handwritten SASS or cross-worktree runtime import.
+
+----- BEGIN CUTLASS BSD 3-CLAUSE LICENSE -----
+Copyright (c) 2025 - 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+----- END CUTLASS BSD 3-CLAUSE LICENSE -----
+
+QuACK (quack-kernels) is used only as an external library through its public
+epilogue API; no QuACK source is copied or redistributed here. The local NVFP4
+wrappers and epilogues are original cti-kernels work. The source-attribution
+entries below cover adapted code.
+
+The NVFP4 provider in python/ctikernels/linear/_nvfp4_flashinfer/ wraps the
+public mm_fp4 API (CUTLASS backend) of flashinfer-python 0.7.0.post1, the product
+pin; 0.6.11.post3 and 0.7.1 are also qualified.
+FlashInfer is Apache-2.0 licensed (https://github.com/flashinfer-ai/flashinfer).
+This adapter is original cti-kernels work; no FlashInfer code is copied or
+redistributed by it. This external-library use is separate from the adapted
+FlashInfer sources attributed below.
+
+ctikernels.sampling.topk_by_id calls the public top_k API of the installed
+flashinfer-python (CUB DeviceBatchedTopK, tie_break=1) as its selector; the
+signed-zero fix-up and the ID ordering around it are original cti-kernels work.
+No FlashInfer code is copied or redistributed by it.
+
+The NVFP4 benchmark comparator (benchmark/kernel_tuning/nvfp4_sglang.py) also
+uses SGLang revision 72730d6 and FlashInfer 0.7.1 as external runtime imports.
+Both projects are Apache-2.0 licensed:
+  SGLang: https://github.com/sgl-project/sglang
+  FlashInfer: https://github.com/flashinfer-ai/flashinfer
+The comparator and its CPU tests are original cti-kernels work; no SGLang or
+FlashInfer implementation is copied or redistributed by this comparator.
+benchmark/kernel_tuning/nvfp4_sglang_manifest.json records only the SGLang
+revision, relative source paths and SHA256 hashes. This external-library use
+is separate from the adapted source files attributed below.
+
+FlashInfer NVFP4 market recipe (design reference only)
+========================================================================
+Version: flashinfer-python 0.7.0.post1 (Apache-2.0)
+Project: https://github.com/flashinfer-ai/flashinfer
+Local files:
+  python/ctikernels/linear/_nvfp4_recipe.py
+  python/ctikernels/linear/_nvfp4_cute_recipe.py
+  python/ctikernels/linear/_nvfp4_cute_quant/kernel.py
+  python/ctikernels/linear/_nvfp4_cute_small/kernel.py
+  python/ctikernels/linear/_nvfp4_triton.py
+  tests/gpu/nvfp4_oracle_cute.py
+Upstream paths:
+  csrc/nv_internal/tensorrt_llm/kernels/quantization_utils.cuh (cvt_warp_fp16_to_fp4: default fast math, E4M3, non-4over6)
+  csrc/nv_internal/tensorrt_llm/kernels/quantization.cuh (quantize_with_block_size)
+
+The recipe follows FlashInfer 0.7.0.post1 as a design reference only; the test
+helper is a scalar CuTe FP32/BF16/FP16 oracle. These implementations use the
+public PTX ISA; no upstream source is copied verbatim.
+
+FlashInfer
+========================================================================
+Project: https://github.com/flashinfer-ai/flashinfer
+Source revision: fa381e5162d9b6ab5479b77e5b6d287b732d108e
+Local files:
+  python/ctikernels/attention/_flashinfer.py
+  python/ctikernels/attention/_flashinfer_schedule.py
+  python/ctikernels/csrc/jit/request_local_sampling.cu
+Upstream paths:
+  include/flashinfer/attention/scheduler.cuh
+  include/flashinfer/utils.cuh
+  include/flashinfer/allocator.h
+  include/flashinfer/sampling.cuh
+
+Copyright (c) 2023 FlashInfer team (scheduling, allocator and utilities).
+Copyright (c) 2024 FlashInfer team (sampling).
+Modified for device-resident scheduling/workspace sizing (including padded fixed-row
+DRAFT prepare, sliding-window work bounds and empty schedules) and per-request RNG streams.
+This is the exact source revision embedded in flashinfer-python 0.6.11.post3.
+The original wrapper python/ctikernels/linear/flashinfer/_block_fp8.py calls
+FlashInfer's gemm_fp8_nt_groupwise from that version; no library code is adapted in it.
+The NOTICE below is retained verbatim; its licenses/ reference refers to upstream’s tree.
+FlashInfer’s LICENSE also lists bundled third-party components; none of the upstream paths above
+is among them, and CTI does not redistribute them.
+----- BEGIN UPSTREAM NOTICE (VERBATIM) -----
+FlashInfer
+Copyright 2025-2026 NVIDIA
+Copyright 2023-2026 FlashInfer community (https://flashinfer.ai/)
+
+-------------------------------------------------------------------------------------------------
+Some of the code in this project are adapted from other open-source projects with different
+licenses. This product also bundles some third-party components under other open source licenses.
+See licenses/ for text of these licenses.
+----- END UPSTREAM NOTICE -----
+The NOTICE is the repository file at fa381e5; the 0.6.11.post3, 0.7.0.post1 and 0.7.1
+wheels ship only LICENSE, so it also serves the two FlashInfer entries below.
+
+License source: LICENSE
+Notice source: NOTICE
+
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+FlashInfer (GDN chunk prefill)
+========================================================================
+Project: https://github.com/flashinfer-ai/flashinfer
+Source: flashinfer-python 0.7.0.post1 wheel
+Source revision: 946200de1ae94fc93fdd0926f0a13afd1fa7f0f1 (the wheel's flashinfer/_build_meta.py)
+Local files:
+  python/ctikernels/gdn/chunk_ws/_gates.py
+  python/ctikernels/gdn/chunk_ws/_inverse.py
+  python/ctikernels/gdn/chunk_ws/_o_store.py
+  python/ctikernels/gdn/chunk_ws/_mma.py
+  python/ctikernels/gdn/chunk_ws/_kernel.py
+  python/ctikernels/gdn/chunk_ws/_launch.py
+  python/ctikernels/gdn/chunk_ws/_fused.py
+  python/ctikernels/gdn/chunk_ws/prefill.py
+  python/ctikernels/gdn/chunk_ws/_cp.py
+  python/ctikernels/gdn/chunk_ws/_cp_fixup.py
+Upstream paths:
+  flashinfer/gdn_kernels/delta_rule_dsl/alpha.py
+  flashinfer/gdn_kernels/delta_rule_dsl/collective_inverse_hmma.py
+  flashinfer/gdn_kernels/delta_rule_dsl/collective_store_tma.py
+  flashinfer/gdn_kernels/delta_rule_dsl/helpers.py
+  flashinfer/gdn_kernels/delta_rule_dsl/schedule.py
+  flashinfer/gdn_kernels/delta_rule_dsl/delta_rule_sm120.py
+  flashinfer/gdn_kernels/delta_rule_dsl/delta_rule_cp_sm120.py
+  flashinfer/gdn_kernels/delta_rule_dsl/varlen_helper.py
+
+The upstream delta_rule_dsl files carry no copyright line of their own. The local
+headers credit "Copyright (c) 2025-2026 FlashInfer team"; FlashInfer's NOTICE (in
+the FlashInfer entry above) names the holders:
+Copyright 2025-2026 NVIDIA
+Copyright 2023-2026 FlashInfer community (https://flashinfer.ai/)
+Modified for CTI's log-domain decay input, BF16 D=128 GVA geometry, dynamically
+selected in-place FP32 state pool rows, and symbolic token/sequence/pool sizes.
+The SM12x warp-specialized schedule, inverse, TMA pipeline and output-tail handling
+are retained. Checkpointing, alternative state layouts/dtypes, unused architecture
+helpers and upstream compile-cache integration are removed; the lazy host adapter
+owns a construction-time nsmid-sized workspace and a graph-capturable launcher.
+Single-sequence CP adapts the MN/fixup/prefill decomposition with a bounded planner
+using CTI's provisional constants. M/N reuse CTI's gated-before-inverse chunk math
+with identity initialization and zero V, without upstream T precompute. Segment
+zero's initial state is copied to workspace so final pool writes never alias an
+initial-state read in the same launch. Fixup uses FP32 IEEE SIMT arithmetic.
+
+License source: LICENSE
+Notice source: NOTICE (retained verbatim in the FlashInfer block above)
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+FlashInfer (W4A8 MoE)
+========================================================================
+Project: https://github.com/flashinfer-ai/flashinfer
+Source revision: 0b46115d238d29ea2e92c6b9b2cb077d40fbc352 (flashinfer-python 0.7.1)
+Local files:
+  python/ctikernels/moe/cute/_w4a8.py
+  python/ctikernels/moe/cute/_w4a8_epilogue.py
+  python/ctikernels/moe/cute/_w4a8_fc1.py
+  python/ctikernels/moe/cute/_w4a8_fc2.py
+  python/ctikernels/moe/cute/_w4a8_gemm.py
+  python/ctikernels/moe/cute/_w4a8_layout.py
+  python/ctikernels/moe/cute/_w4a8_schedule.py
+Upstream paths:
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/moe_mxfp8_mxfp4_fc1_act_q1.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/moe_mxfp8_mxfp4_fc2_finalize.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_mxfp8_mxfp4_fc1_act_q1.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/kernel_moe_mxfp8_mxfp4_fc2_finalize.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/heuristic.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/moe_epilogue.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/moe_activation.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/moe_kernel_builder.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/sm12x_blockscaled_layout.py
+  flashinfer/fused_moe/cute_dsl/blackwell_sm12x/_moe_utils/moe_scheduler.py
+
+Copyright (c) 2025 by FlashInfer team.
+Every upstream path above carries this line and the Apache-2.0 header; per-file
+headers name the paths each local file adapts. Ported for the DSV4 W4A8 routed experts:
+native gate/up addressing, equal K32 scale cadence and K32 Q1, producer/consumer
+staging with L2 row prefetch, explicit resource accounting, any local expert count,
+masked BF16 atomic or row-store epilogues, and CTI's runtime, compilation and
+workspace ownership. The other moe/cute/_w4a8_*.py files are original; _w4a8_prepare.py
+references moe_mxfp8_q0_route_triton.py as a design only. None of the upstream paths
+above is among the third-party components FlashInfer's LICENSE lists.
+License source: LICENSE
+Notice source: NOTICE (retained verbatim in the FlashInfer block above)
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+Mini-SGLang
+========================================================================
+Project: https://github.com/sgl-project/mini-sglang
+Source revision: 9a91cfafe754aa85daee49998176275667eb58f2
+Local files:
+  python/ctikernels/__init__.py
+  python/ctikernels/__main__.py
+  python/ctikernels/attention/inference.py
+  python/ctikernels/csrc/include/ctiengine/tensor.h
+  python/ctikernels/csrc/include/ctiengine/utils.cuh
+  python/ctikernels/csrc/include/ctiengine/utils.h
+  python/ctikernels/csrc/include/ctiengine/warp.cuh
+  python/ctikernels/csrc/jit/index.cu
+  python/ctikernels/csrc/jit/store.cu
+  python/ctikernels/csrc/src/pynccl.cu
+  python/ctikernels/csrc/src/radix.cpp
+  python/ctikernels/csrc/src/tensor.cpp
+  python/ctikernels/index.py
+  python/ctikernels/moe_impl.py
+  python/ctikernels/pynccl.py
+  python/ctikernels/radix.py
+  python/ctikernels/sampling/_categorical.py
+  python/ctikernels/store.py
+  python/ctikernels/tensor.py
+  python/ctikernels/triton/fused_moe.py
+  python/ctikernels/utils.py
+Upstream paths:
+  python/minisgl/kernel/
+  python/minisgl/kernel/triton/fused_moe.py
+  python/minisgl/attention/fi.py
+  python/minisgl/attention/fa.py
+  python/minisgl/attention/trtllm.py
+  python/minisgl/engine/sample.py
+
+Retained utilities and adapters were modified by cti-engine contributors.
+Per-file headers identify exact paths. The MoE files also retain SGLang/vLLM/Triton
+lineage recorded separately below; Mini-SGLang MIT terms do not erase those terms.
+NCCL’s generated header is attributed separately to NVIDIA NCCL.
+License source: LICENSE
+
+----- BEGIN MINI-SGLANG MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2026 sgl-project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END MINI-SGLANG MIT LICENSE (VERBATIM) -----
+
+SGLang
+========================================================================
+Project: https://github.com/sgl-project/sglang
+Source revisions:
+  023288645b80fb41b3eed55fd413dd69a7904593 (MoE and block-FP8 GEMM)
+  ae848116662ece923501131ce773a4602223237e (per-token-group quantizer)
+Local files:
+  python/ctikernels/linear/triton/_block_fp8.py
+  python/ctikernels/moe_impl.py
+  python/ctikernels/triton/fused_moe.py
+Upstream paths:
+  python/sglang/srt/layers/moe/fused_moe_triton/fused_moe.py
+  python/sglang/srt/layers/quantization/fp8_kernel.py
+  python/sglang/kernels/aot/csrc/gemm/per_token_group_quant_8bit_v2.cu (quantizer revision)
+
+Copyright 2023-2024 SGLang Team.
+SGLang MoE launch/reduction and kernel lineage inherited through Mini-SGLang.
+Block-FP8 (128 x 128 weight, 1 x 128 activation) GEMM structure and quantizer recipe follow
+SGLang's Triton block-FP8 GEMM and sgl-kernel's group quantizer (SGLang's block-FP8 Triton
+kernels descend from vLLM's); the quantizer is reimplemented in Triton. The block-FP8 scaling
+of the fused MoE kernel and the first block-FP8 entry points were contributed by Waterpine,
+following SGLang's fused_moe block-FP8 path.
+
+Additional design reference: SGLang 72730d6
+Local files:
+  python/ctikernels/csrc/jit/store.cu
+Upstream paths:
+  python/sglang/kernels/jit/csrc/elementwise/kvcache.cuh
+  python/sglang/kernels/ops/kvcache/kvcache.py
+Row splitting, occupancy-sized blocks and early PDL trigger design ideas;
+independent implementation. No upstream implementation copied. The existing
+Mini-SGLang attribution for the store wrapper and infrastructure still applies.
+
+Tuned fused-MoE launch configurations: SGLang 72730d6360a5894b167500d5d1ad82c34c6bb116
+Local files:
+  python/ctikernels/moe/_configs.py (RTX PRO 6000 Server Edition, E=256 N=512, M 256-2048)
+Upstream paths:
+  python/sglang/srt/layers/moe/moe_runner/triton_utils/configs/triton_3_6_0/
+    E=256,N=512,device_name=NVIDIA_RTX_PRO_6000_Blackwell_Server_Edition.json
+    E=256,N=512,device_name=NVIDIA_RTX_PRO_6000_Blackwell_Server_Edition_down.json
+The up and down entries for M 256-2048 equal these tables (USE_TMA dropped); the
+source comment cites them as SGLang 0.5.22's shipped table.
+
+SGLang 0.5.22 baa9befa381511cd4d56f83980951e5a45fffc6d also supplied the Marlin NVFP4
+port; see the Marlin entry below.
+
+License source: LICENSE
+
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+Marlin (through SGLang)
+========================================================================
+Project: https://github.com/IST-DASLab/marlin
+Received through: https://github.com/sgl-project/sglang (SGLang 0.5.22)
+Source revision: baa9befa381511cd4d56f83980951e5a45fffc6d (SGLang; stopgap port, own provider)
+Local files:
+  python/ctikernels/csrc/jit/marlin_nvfp4.cu
+  python/ctikernels/linear/cuda/_marlin_nvfp4.py
+Upstream paths:
+  python/sglang/kernels/jit/csrc/gemm/marlin/{marlin.cuh,marlin_template.h,dequant.h,
+    marlin_dtypes.cuh,gptq_marlin.cuh,gptq_marlin_repack.cuh}
+  python/sglang/kernels/ops/gemm/gptq_marlin.py
+  python/sglang/srt/layers/quantization/marlin_utils_fp4.py
+
+Copyright (C) Marlin.2024 Elias Frantar
+Modified by Neural Magic
+Copyright 2023-2024 SGLang Team
+The first two lines are the upstream headers of marlin_template.h, gptq_marlin.cuh and
+gptq_marlin_repack.cuh (checked at SGLang 72730d6), which license those files under
+Apache-2.0; Marlin originates at IST-DASLab. The SGLang Team line is SGLang's LICENSE appendix.
+Pruned to E2M1 weights with group-16 E4M3 scales; the FP32 global scale, the in-order
+FP32 split-K reduction, the BF16 scale decode and the weight/scale repack (reading the
+checkpoint layout) are changed or rewritten locally.
+
+License source: LICENSE (SGLang) and the upstream file headers
+
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+Triton tutorials
+========================================================================
+Project: https://github.com/triton-lang/triton
+Source revision: f797708c0626e5f9840ca5b0a98790e2c7cb09ad (contains the adapted code)
+Local files:
+  python/ctikernels/triton/fused_moe.py
+Upstream paths:
+  python/tutorials/03-matrix-multiplication.py
+
+License source: LICENSE
+
+----- BEGIN TRITON MIT LICENSE (VERBATIM) -----
+/*
+* Copyright 2018-2020 Philippe Tillet
+* Copyright 2020-2022 OpenAI
+*
+* Permission is hereby granted, free of charge, to any person obtaining
+* a copy of this software and associated documentation files
+* (the "Software"), to deal in the Software without restriction,
+* including without limitation the rights to use, copy, modify, merge,
+* publish, distribute, sublicense, and/or sell copies of the Software,
+* and to permit persons to whom the Software is furnished to do so,
+* subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+* MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+* IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+* CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+* TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+----- END TRITON MIT LICENSE (VERBATIM) -----
+
+FlashMLA
+========================================================================
+Project: https://github.com/deepseek-ai/FlashMLA (fork https://github.com/sgl-project/FlashMLA)
+Source revision: 05e26647fe840b8baedae486c2d86d5ce4efeb7c (the fork SGLang ae84811666 builds)
+Local files:
+  python/ctikernels/csrc/jit/flashmla/defines.h
+  python/ctikernels/csrc/jit/flashmla/flashmla_utils.h
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/common/common.h
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/common.h
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/device.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm100/gemm.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm100/helpers.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm100/intrinsics.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm100/tma_cta_group2_nosplit.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm80/helpers.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm80/intrinsics.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm90/helpers.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/device/sm90/intrinsics.cuh
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/host/host.h
+  python/ctikernels/csrc/jit/flashmla/kerutils/include/kerutils/kerutils.cuh
+  python/ctikernels/csrc/jit/flashmla/params.h
+  python/ctikernels/csrc/jit/flashmla/sm100/helpers.h
+  python/ctikernels/csrc/jit/flashmla/sm100/prefill/sparse/common_subroutine.h
+  python/ctikernels/csrc/jit/flashmla/sm100/prefill/sparse/fwd/head64/config.h
+  python/ctikernels/csrc/jit/flashmla/sm100/prefill/sparse/fwd/head64/phase1.cuh
+  python/ctikernels/csrc/jit/flashmla/sm100/prefill/sparse/fwd/head64/phase1.h
+  python/ctikernels/csrc/jit/flashmla/utils.h
+Upstream paths:
+  csrc/defines.h
+  csrc/flashmla_utils.h
+  csrc/kerutils/include/kerutils/common/common.h
+  csrc/kerutils/include/kerutils/device/common.h
+  csrc/kerutils/include/kerutils/device/device.cuh
+  csrc/kerutils/include/kerutils/device/sm100/gemm.cuh
+  csrc/kerutils/include/kerutils/device/sm100/helpers.cuh
+  csrc/kerutils/include/kerutils/device/sm100/intrinsics.cuh
+  csrc/kerutils/include/kerutils/device/sm100/tma_cta_group2_nosplit.cuh
+  csrc/kerutils/include/kerutils/device/sm80/helpers.cuh
+  csrc/kerutils/include/kerutils/device/sm80/intrinsics.cuh
+  csrc/kerutils/include/kerutils/device/sm90/helpers.cuh
+  csrc/kerutils/include/kerutils/device/sm90/intrinsics.cuh
+  csrc/kerutils/include/kerutils/host/host.h
+  csrc/kerutils/include/kerutils/kerutils.cuh
+  csrc/params.h
+  csrc/sm100/helpers.h
+  csrc/sm100/prefill/sparse/common_subroutine.h
+  csrc/sm100/prefill/sparse/fwd/head64/config.h
+  csrc/sm100/prefill/sparse/fwd/head64/phase1.cuh
+  csrc/sm100/prefill/sparse/fwd/head64/phase1.h
+  csrc/utils.h
+
+The sm100 sparse prefill (64 heads) and its helper headers, unmodified apart from the
+attribution header, as a stopgap DeepSeek-V4 sparse prefill until an own kernel replaces it;
+python/ctikernels/csrc/jit/dsv4_flashmla.cu is the original tvm-ffi entry around it.
+
+License source: LICENSE
+Fork evidence: sgl-project/FlashMLA's LICENSE at 05e26647 is this MIT text (SHA256 6c73a30c).
+
+----- BEGIN FLASHMLA MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2025 DeepSeek
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END FLASHMLA MIT LICENSE (VERBATIM) -----
+
+Transformers
+========================================================================
+Project: https://github.com/huggingface/transformers
+Source revision: 93c8b7b485963a10800c91f55304db6be211c2bd (through cti-engine 21b8c1812)
+Local files:
+  tests/gpu/test_bilinear_pos_embed.py
+Upstream paths:
+  src/transformers/models/qwen3_5/modeling_qwen3_5.py
+  src/transformers/vision_utils.py
+
+Copyright 2025 The Qwen Team and The HuggingFace Inc. team. All rights reserved.
+Copyright 2026 The HuggingFace Inc. team. All rights reserved.
+The test's reference copies cti-engine 21b8c1812's python/ctiengine/models/qwen3_5/vision.py
+position-embedding path (merge-window coordinates, bilinear taps and the embedding
+forward), which adapts the upstream paths above.
+License source: LICENSE
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+Liger Kernel
+========================================================================
+Project: https://github.com/linkedin/Liger-Kernel
+Source revision: c4b16d43f9d8f69068e6a15bd879dfc6a63b2449
+Local files:
+  python/ctikernels/cross_entropy.py
+Upstream paths:
+  src/liger_kernel/ops/fused_linear_cross_entropy.py
+  src/liger_kernel/ops/cross_entropy.py
+
+Modified to provide explicit hard-label summed-loss chunking.
+The low-level CE kernel remains an external dependency.
+Relevant upstream NOTICE attribution, retained with its original spelling/year:
+
+Copyright 2024 LinkedIn Corporation
+All Rights Reserved.
+This product includes software developed by LinkedIn Corporation.
+
+3. Efficient Cross Entropy
+   Copyright (c) 2023 Mohamed Malek
+   Licensed under the MIT License
+   Source: https://github.com/mgmalek/efficient_cross_entropy
+
+   The idea of gradient-in-forward and chunking was used in the Linear Cross Entropy implementation.
+
+License source: LICENSE
+Notice source: NOTICE
+
+----- BEGIN LIGER KERNEL BSD 2-CLAUSE LICENSE (VERBATIM) -----
+BSD 2-CLAUSE LICENSE
+Copyright 2024 LinkedIn Corporation
+All Rights Reserved.
+Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following
+conditions are met:
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials provided
+with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+----- END LIGER KERNEL BSD 2-CLAUSE LICENSE (VERBATIM) -----
+
+Flash Linear Attention
+========================================================================
+Project: https://github.com/fla-org/flash-linear-attention
+Source revisions:
+  bce39a4efe9b2c70f546133ef51bb875e3e00071 (SwiGLU)
+  9c8e42e762fce087c27b673af4922795d9edb85e (Gated DeltaNet, v0.5.2)
+Local files:
+  python/ctikernels/activation/_silu_and_mul.py
+  python/ctikernels/gdn/_gated_norm.py
+  python/ctikernels/gdn/_l2norm.py
+  python/ctikernels/gdn/_fla_fixed.py
+  python/ctikernels/gdn/_fla.py
+  python/ctikernels/gdn/_fla_training.py
+  tests/modules/_gdn_training_reference.py
+  python/ctikernels/gdn/_cute.py
+  python/ctikernels/gdn/_cute_bwd.py
+  tests/gpu/test_gdn_cute.py
+  python/ctikernels/gdn/triton/_train_intra.py
+  python/ctikernels/gdn/triton/_train_state.py
+  python/ctikernels/gdn/triton/_train_output.py
+  python/ctikernels/gdn/triton/_train_conv.py
+Upstream paths:
+  fla/modules/activations.py (SwiGLU revision)
+  fla/modules/fused_norm_gate.py
+  fla/modules/l2norm.py
+  fla/modules/conv/triton/ops.py
+  fla/modules/conv/triton/kernels.py
+  fla/ops/gated_delta_rule/chunk.py
+  fla/ops/gated_delta_rule/gate.py
+  fla/ops/gated_delta_rule/chunk_fwd.py
+  fla/ops/gated_delta_rule/wy_fast.py
+  fla/ops/common/chunk_delta_h.py
+  fla/ops/common/chunk_scaled_dot_kkt.py
+  fla/ops/utils/cumsum.py
+  fla/ops/utils/solve_tril.py
+  fla/ops/common/chunk_o.py
+
+SwiGLU consumes merged gate/up tensors and returns a merged input gradient;
+provider dispatch, autotuning and fused-linear orchestration were removed.
+python/ctikernels/gdn/_fla.py adapts the forward/backward composition from
+fla/ops/gated_delta_rule/chunk.py. python/ctikernels/gdn/triton/_train_{intra,state,output,conv}.py
+adapt the chunked gated delta rule's forward and backward kernels (kkt solve, recompute_w_u,
+chunk_delta_h, chunk_o's output, dv_local and dqkwg, prepare_wy_repr_bwd, the gate backward)
+for K = V = 128 and 64-token chunks: fixed launch configurations, varlen chunk tables, the
+reverse cumulative sum and the gate and beta-sigmoid backward fused into the WY backward, and
+the q/k L2 norm backward fused into the conv's input gradient. Other provider calls are dependency use.
+python/ctikernels/gdn/_fla_fixed.py adapts training host wrappers, preserving
+allocations and reductions while launching the original JIT kernels with fixed configs.
+python/ctikernels/gdn/_l2norm.py adapts the l2norm_fwd/l2norm_bwd wrappers,
+calling the original FLA JIT kernels with a fixed configuration instead of autotuning.
+python/ctikernels/gdn/_gated_norm.py adapts layer_norm_gated_bwd_kernel from
+fla/modules/fused_norm_gate.py, retaining its products, order and tile shape
+while removing weight/bias gradients, residuals, layer-norm/sigmoid variants
+and autotuning. The gdn extra pins fla-core 0.5.2.
+python/ctikernels/gdn/_fla_training.py adapts the causal conv forward and input
+gradient from fla/modules/conv/triton/ops.py and fla/modules/conv/triton/kernels.py,
+and gate_gradient's da arithmetic from gdn_gate_bwd in
+fla/ops/gated_delta_rule/gate.py, omitting A_log and dt_bias weight gradients.
+The local conv kernels write directly into contiguous q/k/v and recompute
+pre-activations. Conv backward uses Gluon on NVIDIA GeForce RTX 5090,
+NVIDIA RTX PRO 6000 Blackwell Server Edition and NVIDIA GB10; other devices
+use Triton. tests/modules/_gdn_training_reference.py restates the same conv
+and gate arithmetic from these three upstream paths in PyTorch.
+python/ctikernels/gdn/_cute.py restates _fla.py's training composition (from
+chunk.py) around the CuTe DSL provider's own chunk kernels on sm_120 / sm_121.
+tests/gpu/test_gdn_cute.py restates chunk_gated_delta_rule_bwd's composition of
+fla-core's backward kernels as its comparison reference.
+python/ctikernels/gdn/_cute_bwd.py's GradQK adapts chunk_bwd_kernel_dqkwg's
+organization from fla/ops/common/chunk_o.py: one CTA per key split, chunk and
+value head, accumulating over value tiles, a gate-gradient plane per key split
+and the last-row correction. Its other kernels, and _cute_fwd.py, implement the
+algorithm in CuTe DSL and carry no FLA code.
+CUTLASS / CuTe DSL is an external dependency.
+License source: LICENSE
+
+----- BEGIN FLASH LINEAR ATTENTION MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2023-2026 Songlin Yang, Yu Zhang, Zhiyuan Li
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END FLASH LINEAR ATTENTION MIT LICENSE (VERBATIM) -----
+
+Efficient Cross Entropy (attribution carried through Liger)
+========================================================================
+Project: https://github.com/mgmalek/efficient_cross_entropy
+Source revision: 049d44460051a82f58f7ff49a2ad0653ecf026d8
+Local files:
+  python/ctikernels/cross_entropy.py
+Upstream paths:
+  none (the code follows Liger Kernel; Liger's NOTICE credits this project
+  for the gradient-in-forward and chunking idea)
+
+License source: LICENSE
+----- BEGIN EFFICIENT CROSS ENTROPY MIT LICENSE (VERBATIM) -----
+MIT License
+
+Copyright (c) 2024 mgmalek
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+----- END EFFICIENT CROSS ENTROPY MIT LICENSE (VERBATIM) -----
+
+Unsloth
+========================================================================
+Project: https://github.com/unslothai/unsloth
+Source revision: 4c06c1dcc771f3d4f2aecc8d3ab77f2e01aa9107
+Local files:
+  python/ctikernels/norm/_frozen_rms_norm.py
+Upstream paths:
+  unsloth/kernels/rms_layernorm.py
+
+Copyright 2023-present Daniel Han-Chen & the Unsloth team. All rights reserved.
+Modified for prefix strides, non-dense views, fresh outputs and frozen-weight gradients.
+Upstream credits Triton’s layer-norm tutorial as inspiration.
+License source: LICENSE
+
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+Upstream LICENSE fills in the Apache appendix as follows:
+----- BEGIN UNSLOTH LICENSE APPENDIX (VERBATIM) -----
+   Copyright [2024-] [Unsloth AI. Inc team, Daniel Han-Chen & Michael Han-Chen]
+   Files under unsloth/*, tests/*, scripts/* are Apache 2.0 licensed.
+   Files under studio/*, unsloth_cli/* which is optional to install are AGPLv3 licensed.
+----- END UNSLOTH LICENSE APPENDIX (VERBATIM) -----
+
+Unsloth Zoo (MoE training numerics)
+========================================================================
+Project: https://github.com/unslothai/unsloth-zoo
+Source revision: unsloth_zoo 2026.10.7 (PyPI release)
+Local files:
+  python/ctikernels/moe/_training_backend.py
+  python/ctikernels/moe/cute/_gemm.py
+  python/ctikernels/moe/triton/_kernels.py
+Upstream paths:
+  unsloth_zoo/temporary_patches/qwen3_5_moe.py
+  unsloth_zoo/temporary_patches/moe_utils.py
+  unsloth_zoo/temporary_patches/moe_triton_kernels.py
+
+moe_block's training numerics follow Unsloth's grouped-GEMM Qwen3-MoE path: its
+routing, BF16 rounding points and fixed-order weighted combine. No upstream code
+is copied; cti implements this order independently, and none of its code is
+distributed here. The unsloth_zoo package is licensed LGPL-3.0-or-later (package
+metadata of 2026.7.6 and 2026.8.3); in those releases qwen3_5_moe.py is
+LGPL-3.0-or-later and moe_utils.py AGPL-3.0-or-later, both
+Copyright 2023-present Daniel Han-Chen, Michael Han-Chen & the Unsloth team.
+
+vLLM
+========================================================================
+Project: https://github.com/vllm-project/vllm
+Source revisions:
+  0decac0d96c42b49572498019f0a0e3600f50398 (LoRA)
+  a6221a144af772fd1a68fe7e627935dc53e81738 (MoE, 2024-11-15)
+  db9527a46873454610df6dbedf79a36d6bf1a7f6 (paged attention, DFlash2 block convolution, logit
+    steering; v0.31.0)
+Local files:
+  python/ctikernels/attention/triton/_paged.py
+  python/ctikernels/linear/_lora_inference.py
+  python/ctikernels/moe_impl.py
+  python/ctikernels/sampling/triton/_steer.py
+  python/ctikernels/speculative/triton/_block_conv.py
+  python/ctikernels/triton/fused_moe.py
+Upstream paths:
+  vllm/lora/ops/triton_ops/lora_shrink_op.py
+  vllm/lora/ops/triton_ops/lora_expand_op.py
+  vllm/lora/ops/triton_ops/kernel_utils.py
+  vllm/lora/ops/triton_ops/utils.py
+  vllm/model_executor/layers/fused_moe/fused_moe.py (MoE revision)
+  vllm/v1/attention/ops/triton_unified_attention.py (paged attention revision)
+  vllm/model_executor/models/qwen3_dflash2.py (DFlash2 block convolution, v0.31.0 revision)
+  vllm/v1/worker/gpu/sample/logit_bias.py (logit steering, v0.31.0 revision)
+
+Copyright contributors to the vLLM project.
+LoRA is modified for one always-active adapter and projection-owned metadata.
+MoE launcher and kernel adapted from vLLM a6221a1 through SGLang and Mini-SGLang.
+Paged attention adapts unified_attention (upstream authors: Burkhard Ringlein, Jan van
+Lunteren, Chih-Chieh Yang, Thomas Parnell) to a token CSR, FP8 KV and DRAFT rows.
+The DFlash2 block convolution adapts qwen3_dflash2's dynamic block convolution (its header
+credits LightSeek TokenSpeed PR #1399) with FP32 math without FMA contraction, matching
+cti-engine's composed form bitwise.
+The logit steering kernel adapts the V2 GPU sampler's _bias_kernel (logit bias, then min_tokens
+stop-token masking) to CSR lists, without allowed token ids or the all-masked restore.
+LoRA paper attribution: Chen, Lequn, et al., “Punica: Multi-Tenant LoRA Serving.”
+MLSys 2024, https://arxiv.org/abs/2310.18547 .
+License source: LICENSE
+
+Additional design reference: vLLM 0.31.0 (release wheel)
+Local files:
+  python/ctikernels/csrc/jit/store.cu
+Upstream kernel:
+  reshape_and_cache_flash (as compiled in the vllm 0.31.0 wheel)
+Per-thread K-then-V copy order, used for mid-sized batches; read from the
+compiled kernel. Independent implementation; no upstream implementation copied.
+
+Licensed under the Apache License, Version 2.0; full text at the end of this file.
+
+NVIDIA NCCL
+========================================================================
+Project: https://github.com/NVIDIA/nccl
+Source revision: f1308997d0420148b1be1c24d63f19d902ae589b
+Local files:
+  python/ctikernels/csrc/include/ctiengine/nccl227.h
+Upstream paths:
+  src/nccl.h.in
+
+Source header: Copyright (c) 2015-2021, NVIDIA CORPORATION. All rights reserved.
+Generated with major=2, minor=27, patch=1, suffix="", version=22701.
+Inherited through Mini-SGLang 9a91cfafe754aa85daee49998176275667eb58f2
+(`python/minisgl/kernel/csrc/include/minisgl/nccl227.h`); introduced there in
+80e7cfd74b8aed13e92fa98e125e5c5061cf664e.
+Generated declarations SHA256 (from #ifndef):
+  4d4956afe21b4208c071a681b54c13343ea71129b17a019e949d418c8fa3f423.
+The license-file copyright range below differs from the header and is retained verbatim.
+License source: LICENSE.txt
+
+----- BEGIN NVIDIA NCCL BSD 3-CLAUSE LICENSE (VERBATIM) -----
+
+ Copyright (c) 2015-2020, NVIDIA CORPORATION. All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+  * Neither the name of NVIDIA CORPORATION, Lawrence Berkeley National
+    Laboratory, the U.S. Department of Energy, nor the names of their
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ The U.S. Department of Energy funded the development of this software
+ under subcontract 7078610 with Lawrence Berkeley National Laboratory.
+
+
+This code also includes files from the NVIDIA Tools Extension SDK project.
+
+See:
+
+   https://github.com/NVIDIA/NVTX
+
+for more information and license details.
+----- END NVIDIA NCCL BSD 3-CLAUSE LICENSE (VERBATIM) -----
+
+Block-FP8 CuTe design references
+-------------------------------
+The cti-engine contributors' dense GEMM was integrated from our own earlier
+block-FP8 CuTe kernel at revision 950aa9e. Local files:
+  python/ctikernels/linear/cute/_block_fp8_gemm.py
+  python/ctikernels/linear/cute/_block_fp8_provider.py
+The kernel retains its design-reference attribution to FlashInfer 0.7.1
+blackwell_sm12x/kernel_moe_fp8_gemm.py, CUTLASS blackwell_geforce/dense_gemm.py,
+and QuACK 0.6.5 gemm_sm120.py (unit-scale MXF8). Hybrid DP + Stream-K
+scheduling additionally references NVIDIA CUTLASS
+  https://github.com/NVIDIA/cutlass/tree/main/examples/47_ampere_gemm_universal_streamk
+The helper-first schedule and register-fragment fixup are independently written;
+no source from that example was copied. The host tile policy references
+SGLang 72730d6. This integration copies only our own package code; it adds no
+verbatim third-party source. Existing SPDX copyright and design-reference lines
+are preserved in the integrated files.
+
+Block-FP8 gated activation lineage and DSV4 reference
+---------------------------------------------------
+Local file: python/ctikernels/linear/cute/_block_fp8_act_quant.py
+Shared arithmetic: python/ctikernels/linear/cute/_block_fp8_quant_math.py
+The shared helpers were extracted from the local activation quantizer for reuse
+by python/ctikernels/linear/cute/_block_fp8_fused.py. The fused FC1 kernel and
+_block_fp8_fused_provider.py implement a matched-column/last-CTA design
+independently in CuTe DSL and public PTX; no third-party code was copied.
+The SiLU arithmetic is rebuilt from our earlier CuTe variant (revision 950aa9e),
+retaining its Apache-2.0 attribution:
+  SGLang 2428d0f531602b882892f9f29521cd07ddd3c959
+    python/sglang/kernels/ops/quantization/fp8_kernel.py
+    Copyright 2024 SGLang Team
+  vLLM f4b8d43a681a908ce22b63ece3a86ab5b198e760
+    vllm/model_executor/layers/fusion/fused_act_quant.py
+    Copyright contributors to the vLLM project
+Both are Apache-2.0 (full text at the end of this file). No third-party source was copied
+verbatim in this port; the DSL implementation and PTX arithmetic are local.
+Reference design: SGLang 72730d6
+  python/sglang/kernels/jit/csrc/deepseek_v4/silu_and_mul_masked_post_quant.cuh
+  python/sglang/kernels/jit/csrc/gemm/per_token_group_quant_8bit_v2.cuh
+  python/sglang/kernels/ops/quantization/fp8_kernel.py
+DSV4 BF16 clamp ordering and UE8M0 exponent rounding were independently
+implemented from these numerical contracts. The CPU torch reference in
+ tests/modules/_block_fp8_gated_reference.py follows the same contracts.
+FlashInfer FC1 is called as an external library from
+ python/ctikernels/linear/flashinfer/_block_fp8_gated.py; no library code copied.
+
+Activation C3 design credit (no copied or derived kernel source)
+-------------------------------------------------------------
+The original CuTe SiLU-times-multiply implementation studies SGLang's flat
+vector scheduling and PDL design at revision
+72730d6360a5894b167500d5d1ad82c34c6bb116, in
+python/sglang/kernels/jit/csrc/elementwise/activation.cuh and its activation
+loader, and vLLM 0.31.0's SiluAndMul.forward_native in
+vllm/model_executor/layers/activation.py as an Inductor fusion reference.
+Projects: https://github.com/sgl-project/sglang and
+https://github.com/vllm-project/vllm. The benchmark compiles user-supplied
+SGLang source outside the distribution. CTI does not redistribute that source.
+
+Apache License 2.0
+------------------------------------------------------------------------
+The entries above that name the Apache License, Version 2.0 (FlashInfer, SGLang,
+Marlin, Unsloth, vLLM, QuACK, Transformers) refer to this text; their copyright
+lines are in their entries.
+
+----- BEGIN APACHE LICENSE 2.0 (VERBATIM) -----
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+----- END APACHE LICENSE 2.0 (VERBATIM) -----

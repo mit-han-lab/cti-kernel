@@ -1,0 +1,163 @@
+device,build,shape,B,ctx,Q,capacity,variant,metadata_index,median_ratio_vs_csr,variant_us,csr_us,self_pair_epsilon
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,row,1.0154,4.853,4.78,0.0015
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,request,1.0397,4.97,4.78,0.0015
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,row,1.0191,4.958,4.866,0.0013
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,request,1.0413,5.064,4.863,0.0013
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,row,1.0161,4.958,4.879,0.0023
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,request,1.0372,5.058,4.877,0.0023
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,row,1.0131,7.328,7.235,0.0033
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,request,1.0306,7.453,7.233,0.0033
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,row,0.9868,7.86,7.967,0.0019
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,request,1.006,8.016,7.967,0.0019
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,row,1.0054,8.058,8.016,0.0026
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,request,1.0188,8.168,8.016,0.0026
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,row,1.0022,8.816,8.797,0.0029
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,request,1.0174,8.942,8.793,0.0029
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,row,0.9977,9.125,9.147,0.0029
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,request,1.022,9.341,9.137,0.0029
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,row,1.0232,9.4,9.198,0.0032
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,request,1.0289,9.468,9.203,0.0032
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,row,1.0124,4.861,4.801,0.0024
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,request,1.0341,4.965,4.801,0.0024
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,row,1.0124,4.944,4.883,0.0027
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,request,1.0341,5.05,4.883,0.0027
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,row,1.0237,5.059,4.945,0.0022
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,request,1.0349,5.116,4.945,0.0022
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,row,0.9961,8.357,8.391,0.0034
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,request,1.0146,8.518,8.395,0.0034
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,row,0.993,8.989,9.056,0.0059
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,request,1.0032,9.084,9.053,0.0059
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,row,0.9954,9.275,9.308,0.0061
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,request,1.0121,9.426,9.318,0.0061
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,row,1.0101,11.166,11.058,0.0035
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,request,1.0229,11.305,11.056,0.0035
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,row,0.9996,11.484,11.489,0.0032
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,request,1.0142,11.661,11.493,0.0032
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,row,0.9995,12.007,12.019,0.0039
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,request,1.0216,12.272,12.023,0.0039
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,row,1.015,4.958,4.884,0.0039
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,request,1.0375,5.068,4.884,0.0039
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,row,1.0124,5.032,4.974,0.0044
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,request,1.0429,5.187,4.972,0.0044
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,row,1.0117,5.086,5.027,0.0037
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,request,1.0396,5.227,5.029,0.0037
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,row,0.9995,10.285,10.294,0.0057
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,request,1.0248,10.542,10.297,0.0057
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,row,0.9949,10.812,10.866,0.006
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,request,1.0006,10.895,10.894,0.006
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,row,1.006,12.042,11.975,0.0055
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,request,1.0173,12.173,11.961,0.0055
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,row,1.0062,16.159,16.055,0.0095
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,request,1.0133,16.242,16.053,0.0095
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,row,1.0012,16.633,16.596,0.0054
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,request,1.0046,16.718,16.636,0.0054
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,row,1.0077,17.528,17.396,0.0101
+RTX 5090,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,request,1.011,17.572,17.385,0.0101
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,row,1.0079,5.283,5.241,0.0009
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,request,1.0306,5.4,5.24,0.0009
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,row,1.0153,5.315,5.234,0.0014
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,request,1.05,5.496,5.234,0.0014
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,row,1.0202,5.34,5.233,0.001
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,request,1.0507,5.497,5.234,0.001
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,row,1.0039,8.618,8.583,0.0017
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,request,1.0187,8.744,8.585,0.0017
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,row,1.0001,9.447,9.448,0.0023
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,request,1.0005,9.449,9.448,0.0023
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,row,1.0068,9.513,9.445,0.0019
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,request,1.0076,9.519,9.446,0.0019
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,row,1.0095,10.272,10.17,0.0026
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,request,1.0223,10.394,10.168,0.0026
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,row,0.9891,10.583,10.697,0.0023
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,request,0.9986,10.685,10.699,0.0023
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,row,1.0116,10.958,10.834,0.0033
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,request,1.0216,11.067,10.836,0.0033
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,row,1.0197,5.274,5.171,0.0016
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,request,1.0473,5.418,5.172,0.0016
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,row,1.0084,5.291,5.245,0.0015
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,request,1.0396,5.45,5.243,0.0015
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,row,1.0287,5.503,5.349,0.0016
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,request,1.0426,5.577,5.349,0.0016
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,row,1.0101,9.757,9.656,0.0029
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,request,1.0215,9.875,9.662,0.0029
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,row,0.9946,10.51,10.566,0.0028
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,request,0.9972,10.532,10.563,0.0028
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,row,0.9972,10.81,10.837,0.0039
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,request,1.0168,11.016,10.833,0.0039
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,row,1.0008,12.715,12.708,0.0051
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,request,1.0042,12.756,12.707,0.0051
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,row,1.0011,13.168,13.153,0.0031
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,request,1.0128,13.293,13.136,0.0031
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,row,1.0152,14.362,14.145,0.0044
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,request,1.0211,14.437,14.142,0.0044
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,row,1.0161,5.288,5.202,0.0027
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,request,1.0433,5.44,5.207,0.0027
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,row,1.0115,5.351,5.289,0.0045
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,request,1.0366,5.495,5.296,0.0045
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,row,1.0181,5.544,5.44,0.0053
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,request,1.032,5.643,5.469,0.0053
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,row,1.0061,11.77,11.69,0.0053
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,request,1.023,11.946,11.674,0.0053
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,row,1.0021,11.729,11.71,0.0026
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,request,1.0163,11.884,11.696,0.0026
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,row,1.0138,11.833,11.665,0.0032
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,request,1.0216,11.918,11.679,0.0032
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,row,1.0012,18.17,18.149,0.0054
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,request,1.0179,18.437,18.114,0.0054
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,row,0.9989,18.907,18.939,0.0094
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,request,0.9994,18.942,18.939,0.0094
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,row,1.0106,20.095,19.915,0.0042
+RTX PRO 6000,per-key staging branch (7fcc4a9),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,request,1.0037,20.021,19.93,0.0042
+RTX 5090,split staging (bcd5522),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,row,1.0007,4.753,4.751,0.0213
+RTX 5090,split staging (bcd5522),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,row,1.0023,4.845,4.833,0.0171
+RTX 5090,split staging (bcd5522),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,row,1.0021,4.889,4.879,0.0018
+RTX 5090,split staging (bcd5522),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,row,0.9837,7.162,7.28,0.0197
+RTX 5090,split staging (bcd5522),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,row,0.9677,7.658,7.914,0.0032
+RTX 5090,split staging (bcd5522),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,row,0.963,7.797,8.093,0.023
+RTX 5090,split staging (bcd5522),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,row,0.9901,8.661,8.763,0.0191
+RTX 5090,split staging (bcd5522),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,row,0.9854,8.992,9.131,0.0094
+RTX 5090,split staging (bcd5522),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,row,1.003,9.244,9.217,0.0033
+RTX 5090,split staging (bcd5522),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,row,0.9952,4.738,4.761,0.037
+RTX 5090,split staging (bcd5522),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,row,1.0117,4.866,4.81,0.0672
+RTX 5090,split staging (bcd5522),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,row,1.0087,4.98,4.936,0.0026
+RTX 5090,split staging (bcd5522),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,row,0.9983,8.262,8.278,0.0051
+RTX 5090,split staging (bcd5522),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,row,0.9867,8.847,8.977,0.009
+RTX 5090,split staging (bcd5522),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,row,0.9796,9.129,9.32,0.0075
+RTX 5090,split staging (bcd5522),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,row,0.9898,10.906,11.013,0.01
+RTX 5090,split staging (bcd5522),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,row,0.9906,11.295,11.404,0.0095
+RTX 5090,split staging (bcd5522),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,row,0.9953,11.893,11.948,0.0206
+RTX 5090,split staging (bcd5522),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,row,0.9983,4.822,4.827,0.0835
+RTX 5090,split staging (bcd5522),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,row,1.0064,4.982,4.951,0.0645
+RTX 5090,split staging (bcd5522),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,row,1.0009,5.01,5.01,0.115
+RTX 5090,split staging (bcd5522),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,row,0.9941,10.184,10.248,0.1157
+RTX 5090,split staging (bcd5522),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,row,0.9862,10.699,10.867,0.0046
+RTX 5090,split staging (bcd5522),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,row,0.9908,11.809,11.916,0.0204
+RTX 5090,split staging (bcd5522),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,row,0.9918,15.827,15.968,0.1251
+RTX 5090,split staging (bcd5522),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,row,0.989,16.384,16.559,0.008
+RTX 5090,split staging (bcd5522),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,row,0.9981,17.349,17.427,0.0064
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,100,4,32768,CacheTableDraftAttention,row,0.9995,5.197,5.2,0.0013
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,100,8,32768,CacheTableDraftAttention,row,0.9956,5.246,5.268,0.0016
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,100,16,32768,CacheTableDraftAttention,row,1.0086,5.304,5.259,0.0016
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,400,4,32768,CacheTableDraftAttention,row,0.983,8.273,8.418,0.0029
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,400,8,32768,CacheTableDraftAttention,row,0.9651,9.122,9.452,0.0017
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,400,16,32768,CacheTableDraftAttention,row,0.9928,9.379,9.452,0.0008
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,1000,4,32768,CacheTableDraftAttention,row,0.9868,9.918,10.046,0.0023
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,1000,8,32768,CacheTableDraftAttention,row,0.9868,10.349,10.486,0.0028
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,1,1000,16,32768,CacheTableDraftAttention,row,0.9903,10.617,10.714,0.0025
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,100,4,32768,CacheTableDraftAttention,row,1.0007,5.222,5.22,0.0029
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,100,8,32768,CacheTableDraftAttention,row,0.9984,5.276,5.286,0.0021
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,100,16,32768,CacheTableDraftAttention,row,1.0012,5.351,5.345,0.0016
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,400,4,32768,CacheTableDraftAttention,row,0.994,9.452,9.504,0.0033
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,400,8,32768,CacheTableDraftAttention,row,0.9749,10.196,10.453,0.0019
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,400,16,32768,CacheTableDraftAttention,row,0.983,10.611,10.791,0.0029
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,1000,4,32768,CacheTableDraftAttention,row,0.9939,12.562,12.637,0.0033
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,1000,8,32768,CacheTableDraftAttention,row,0.987,12.894,13.061,0.0051
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,2,1000,16,32768,CacheTableDraftAttention,row,0.9986,14.115,14.139,0.0042
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,100,4,32768,CacheTableDraftAttention,row,0.9998,5.229,5.231,0.0024
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,100,8,32768,CacheTableDraftAttention,row,0.9956,5.325,5.347,0.0045
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,100,16,32768,CacheTableDraftAttention,row,0.9982,5.311,5.322,0.0037
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,400,4,32768,CacheTableDraftAttention,row,1.0018,11.53,11.519,0.0045
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,400,8,32768,CacheTableDraftAttention,row,0.9956,11.585,11.646,0.0052
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,400,16,32768,CacheTableDraftAttention,row,1.0013,11.59,11.578,0.0049
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,1000,4,32768,CacheTableDraftAttention,row,0.9933,17.92,18.034,0.0086
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,1000,8,32768,CacheTableDraftAttention,row,0.9928,18.587,18.713,0.0053
+RTX PRO 6000,split staging (bcd5522),draft_noncausal,4,1000,16,32768,CacheTableDraftAttention,row,0.9973,19.721,19.793,0.0059

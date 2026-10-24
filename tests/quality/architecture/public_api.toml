@@ -1,0 +1,235 @@
+# B0 snapshot of every public module's __all__ (test_public_api.py), one entry per module.
+# Not the target list: the target exports (D13) are fixed before B1.
+
+"ctikernels" = [
+    "GraphWorkspace",
+    "PYNCCL_DTYPES",
+    "PYNCCL_REDUCE_OPS",
+    "PyNCCLCommunicator",
+    "fast_compare_key",
+    "fused_moe_kernel_triton",
+    "indexing",
+    "init_pynccl",
+    "moe_align_block_size",
+    "moe_sum_reduce_triton",
+    "prewarm_flashinfer",
+    "store_cache",
+    "test_tensor",
+    "weak_tensor_alias",
+]
+"ctikernels.activation.inference" = [
+    "SiluAndMul",
+    "gelu_and_mul",
+    "gelu_tanh_and_mul",
+    "relu2",
+    "silu_and_mul",
+    "warm_up_gelu_and_mul",
+    "warm_up_gelu_tanh_and_mul",
+    "warm_up_silu_and_mul",
+]
+"ctikernels.activation.training" = ["gelu_and_mul", "silu_and_mul"]
+"ctikernels.kvcache.inference" = ["RowCopy"]
+"ctikernels.attention.draft" = ["CacheTableDraftAttention", "DraftAttention"]
+"ctikernels.attention.varlen" = ["CausalVarlenAttention", "NoncausalVarlenAttention"]
+"ctikernels.cross_entropy" = ["FusedLinearCrossEntropyLoss", "LinearCrossEntropyLoss"]
+"ctikernels.dsv4_indexer.inference" = [
+    "DSV4Compressor",
+    "DSV4Indexer",
+    "INDEX_PAGE_BYTES",
+    "INDEX_ROW_BYTES",
+    "LATENT_ROW_BYTES",
+    "PAGE_TOKENS",
+    "latent_page_bytes",
+]
+"ctikernels.embedding.inference" = ["bilinear_pos_embed_"]
+"ctikernels.gdn" = [
+    "GatedDeltaNetDecode",
+    "GatedDeltaNetPrefill",
+    "GatedDeltaNetReplay",
+    "GatedDeltaNetTraining",
+    "ReplayLayers",
+    "ReplayPending",
+    "ReplayState",
+    "replay_sizes",
+]
+"ctikernels.gdn.chunk_ws" = ["available", "load"]
+"ctikernels.gdn.inference" = ["GatedDeltaNetDecode", "GatedDeltaNetPrefill"]
+"ctikernels.gdn.replay" = [
+    "GatedDeltaNetReplay",
+    "ReplayLayers",
+    "ReplayPending",
+    "ReplayState",
+    "ReplayStatus",
+    "graph_control_sizes",
+    "read_status_copy",
+    "replay_sizes",
+]
+"ctikernels.gdn.replay.torch_reference" = ["lifecycle", "run"]
+"ctikernels.gdn.training" = ["GatedDeltaNetTraining"]
+"ctikernels.linear" = [
+    "Linear",
+    "LoRAChunkTable",
+    "MAX_M",
+    "autotune",
+    "autotune_entries",
+    "gated_input",
+    "last_config",
+    "lora_delta_factors_",
+    "lora_segment_metadata",
+    "lora_segmented_delta_",
+    "lora_segmented_projection",
+    "release_cublas_workspaces",
+    "release_scratch",
+    "scratch_bytes",
+]
+"ctikernels.linear.block_fp8" = [
+    "BlockFP8Linear",
+    "GroupedBlockFP8Linear",
+    "HYBRID",
+    "PROVIDERS",
+    "default_provider",
+    "dequantize_block_fp8",
+    "dgrad_bf16",
+    "quantize_per_token_group_fp8",
+    "slice_block_fp8",
+]
+"ctikernels.linear.block_fp8_gated" = [
+    "BlockFP8GateUpSiLU",
+    "CUTE_ACT_QUANT",
+    "CUTE_FP8_FUSED",
+    "FLASHINFER_CUTE_DSL",
+    "FusedConfig",
+    "HYBRID",
+    "PROVIDERS",
+    "silu_and_mul_quantize_fp8",
+]
+"ctikernels.linear.fp8_static" = ["PROVIDERS", "StaticFP8Linear", "quantize_static_fp8"]
+"ctikernels.linear.inference" = ["Linear"]
+"ctikernels.linear.lora" = [
+    "LoRAEpilogue",
+    "LoRAInferencePlan",
+    "lora_projection",
+    "lora_segmented_delta_",
+    "lora_segmented_projection",
+    "lora_shrink",
+    "try_prepare_lora_inference_plan",
+]
+"ctikernels.linear.mxfp8" = ["dequantize_mxfp8", "quantize_mxfp8"]
+"ctikernels.linear.nvfp4" = [
+    "NVFP4Activation",
+    "NVFP4GateUpSiLU",
+    "NVFP4Linear",
+    "NVFP4Weight",
+    "blocked_scale",
+    "dequantize_nvfp4",
+    "quantize_nvfp4",
+    "scale_shape",
+    "unblocked_scale",
+]
+"ctikernels.linear.training" = [
+    "BlockFP8Product",
+    "CommStreamExchange",
+    "DenseProduct",
+    "Exchange",
+    "FrozenProduct",
+    "NVFP4W4A16Linear",
+    "ProcessGroupExchange",
+    "lora_projection_training",
+]
+"ctikernels.logprob" = ["ChunkedLinearSelectedTokenLogprobs", "LinearSelectedTokenLogprobs"]
+"ctikernels.logprob.linear" = ["ChunkedLinearSelectedTokenLogprobs", "LinearSelectedTokenLogprobs"]
+"ctikernels.mhc" = ["MhcExit", "exact_reference", "measured_floor", "reference", "support"]
+"ctikernels.mlp.training" = ["gated_mlp_lora"]
+"ctikernels.moe" = [
+    "Experts",
+    "MXFP4Experts",
+    "MoEBlock",
+    "align_allocations",
+    "fused_experts",
+    "hash_route",
+    "moe_align_block_size_local",
+    "moe_block",
+    "moe_block_training_bytes",
+    "pack_mxfp4_experts",
+    "route",
+    "to_local_topk_ids",
+]
+"ctikernels.moe.lora" = [
+    "MoELoRAWeights",
+    "fused_experts_lora",
+    "fused_experts_lora_training_bytes",
+    "moe_lora_sorted_shrink_",
+    "moe_lora_w13_",
+    "moe_lora_w13_act_",
+    "moe_lora_w2_",
+    "shared_expert_lora",
+    "shared_lora_w13_",
+    "shared_lora_w13_act_",
+    "shared_lora_w2_",
+    "supported",
+    "validate_rank",
+]
+"ctikernels.moe.training" = ["moe_block", "moe_block_training_bytes"]
+"ctikernels.norm.inference" = [
+    "AddRMSNorm",
+    "add_layer_norm_",
+    "add_rms_norm_",
+    "residual_rms_norm",
+    "rms_norm",
+    "rms_norm_",
+    "warm_up_add_rms_norm",
+]
+"ctikernels.norm.training" = ["add_rms_norm", "residual_rms_norm", "rms_norm"]
+"ctikernels.rotary.inference" = ["apply_rotary_", "apply_rotary_key_"]
+"ctikernels.rotary.training" = ["apply_rotary"]
+"ctikernels.rotary.vision" = ["apply_rotary"]
+"ctikernels.sampling" = [
+    "CategoricalSampling",
+    "ChainSampling",
+    "LogitPenalties",
+    "ORDINARY",
+    "RequestLocalCategorical",
+    "RequestLocalChainSampling",
+    "RequestLocalSampling",
+    "RowArgmax",
+    "TopLogprobs",
+    "steer_logits_",
+    "topk_by_id",
+]
+"ctikernels.sampling.inference" = [
+    "CategoricalSampling",
+    "ChainSampling",
+    "RequestLocalCategorical",
+    "RequestLocalChainSampling",
+    "steer_logits_",
+    "topk_by_id",
+]
+"ctikernels.speculative" = [
+    "ALL_VARIANTS",
+    "RoundVariant",
+    "block_conv",
+    "commit_block",
+    "compile_count",
+    "fixed_query_addresses",
+    "prepare_block",
+    "prepare_round",
+    "warm_up",
+]
+"ctikernels.speculative.inference" = [
+    "ALL_VARIANTS",
+    "RoundVariant",
+    "block_conv",
+    "commit_block",
+    "compile_count",
+    "fixed_query_addresses",
+    "prepare_block",
+    "prepare_round",
+    "warm_up",
+]
+"ctikernels.vocab_parallel" = [
+    "SHARD_CHUNK_SIZE",
+    "VocabShardPartials",
+    "merge_vocab_shard_stats",
+    "vocab_shard_merged_from_sums",
+    "vocab_shard_sum_terms",
+]
